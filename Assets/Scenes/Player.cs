@@ -23,12 +23,14 @@ public class Player : MonoBehaviour
     [SerializeField] private LayerMask interactableLayer;
 
     private Interactable currentInteractable;
+    public Inventory Inventory { get; private set; }
 
     private void OnEnable() => InputActions.FindActionMap("Player").Enable();
     private void OnDisable() => InputActions.FindActionMap("Player").Disable();
 
     private void Awake()
     {
+        Inventory = GetComponent<Inventory>();
         playerMoveAction = InputSystem.actions.FindAction("Move");
         playerInteractAction = InputSystem.actions.FindAction("Interact");
     }

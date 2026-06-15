@@ -3,13 +3,18 @@ using UnityEngine;
 
 public class InventoryInteractable : Interactable
 {
-    [SerializeField] private string itemId;
-    [SerializeField] private Sprite itemIcon;
+    [SerializeField] private ItemData item;
 
     public override void Interact(Player player)
     {
-        Debug.Log($"Added to inventory: {itemId}");
-        // player.inventory.Add(itemId, itemIcon);
+        if (item == null)
+        {
+            Debug.LogWarning("InventoryInteractable: no ItemData asignado.");
+            return;
+        }
+
+        player.Inventory.AddItem(item);
+        Debug.Log($"Added to inventory: {item.itemName}");
         gameObject.SetActive(false);
     }
 }
