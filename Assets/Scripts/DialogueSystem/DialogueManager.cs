@@ -86,7 +86,19 @@ public class DialogueManager : MonoBehaviour
 
         if (typewriterCoroutine != null)
             StopCoroutine(typewriterCoroutine);
-        typewriterCoroutine = StartCoroutine(TypewriterEffect(line.text));
+
+        typewriterCoroutine = StartCoroutine(TypewriterEffect(line.text, () =>
+        {
+            if (line.choices != null && line.choices.Length > 0)
+                ChoiceManager.Instance.ShowChoices(line.choices, OnChoiceSelected);
+        }));
+    }
+    private void OnChoiceSelected(DialogueChoice choice)
+    {
+        if (choice.responseLines != null && choice.responseLines.Length > 0)
+            StartDialogue(choice.responseLines);
+        else
+            EndDialogue();
     }
 
     private void ApplySpeakerStyle(DialogueSpeaker speaker)
@@ -116,7 +128,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    private IEnumerator TypewriterEffect(string text)
+    private IEnumerator TypewriterEffect(string text, System.Action onComplete = null)
     {
         isTyping = true;
         dialogueText.text = "";
@@ -128,6 +140,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         isTyping = false;
+        onComplete?.Invoke();
     }
 
     // private void SkipTypewriter()
