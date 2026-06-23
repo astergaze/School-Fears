@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
 
     private InputAction playerMoveAction;
     private InputAction playerInteractAction;
+    private InputAction playerInventoryAction;
 
     [SerializeField] public Transform playerCamera;
 
@@ -24,15 +25,22 @@ public class Player : MonoBehaviour
 
     private Interactable currentInteractable;
     public Inventory Inventory { get; private set; }
+    public static Player Instance { get; private set; }
 
     private void OnEnable() => InputActions.FindActionMap("Player").Enable();
     private void OnDisable() => InputActions.FindActionMap("Player").Disable();
 
     private void Awake()
     {
+        Instance = this;
         Inventory = GetComponent<Inventory>();
-        playerMoveAction = InputSystem.actions.FindAction("Move");
-        playerInteractAction = InputSystem.actions.FindAction("Interact");
+        var playerMap = InputActions.FindActionMap("Player");
+        playerMoveAction     = playerMap.FindAction("Move");
+        playerInteractAction = playerMap.FindAction("Interact");
+        playerInventoryAction = playerMap.FindAction("Inventory");
+        // playerMoveAction = InputSystem.actions.FindAction("Move");
+        // playerInteractAction = InputSystem.actions.FindAction("Interact");
+        // playerInventoryAction = InputSystem.actions.FindAction("Inventory");
     }
 
     private void Update()
@@ -43,6 +51,8 @@ public class Player : MonoBehaviour
 
         if (playerInteractAction.WasPressedThisFrame())
             PlayerInteract();
+        if (playerInventoryAction.WasPressedThisFrame())
+            InventoryUI.Instance.Toggle();
     }
 
     private void CheckForInteractable()
