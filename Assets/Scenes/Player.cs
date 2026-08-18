@@ -94,22 +94,26 @@ public class Player : MonoBehaviour
 
     private void PlayerMoveAndRotate()
     {
-        Vector3 playerDirection = new Vector3(playerMoveAmount.x, 0f, playerMoveAmount.y).normalized;
+        // 1. Obtenemos las direcciones forward y right de la cámara proyectadas en el plano XZ (sin inclinación vertical)
+        Vector3 camForward = playerCamera.forward;
+        Vector3 camRight = playerCamera.right;
+
+        camForward.y = 0f;
+        camRight.y = 0f;
+        camForward.Normalize();
+        camRight.Normalize();
+
+        // 2. Calculamos el vector de movimiento relativo a la cámara
+        Vector3 moveDirection = (camRight * playerMoveAmount.x + camForward * playerMoveAmount.y);
         Vector3 verticalMove = new Vector3(0f, verticalVelocity, 0f) * Time.deltaTime;
 
-        if (playerDirection.magnitude >= 0.1f)
-        {
-            float targetAngle = Mathf.Atan2(playerDirection.x, playerDirection.z) * Mathf.Rad2Deg + playerCamera.eulerAngles.y;
-            float smoothTargetAngle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothingVelocity, playerRotateDampening);
+        // 3. Movemos el CharacterController
+        playerCharacterController.Move(moveDirection * playerWalkSpeed * Time.deltaTime + verticalMove);
 
-            transform.rotation = Quaternion.Euler(0f, smoothTargetAngle, 0f);
-
-            Vector3 moveDirection = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-            playerCharacterController.Move(moveDirection.normalized * playerWalkSpeed * Time.deltaTime + verticalMove);
-        }
-        else
+        // 4. Si quieres que el cuerpo del player rote automáticamente con la vista horizontal:
+        if (camForward != Vector3.zero)
         {
-            playerCharacterController.Move(verticalMove);
+            transform.rotation = Quaternion.LookRotation(camForward);
         }
     }
 
