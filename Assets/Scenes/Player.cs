@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     private float playerRotateDampening = 0.1f;
     private float turnSmoothingVelocity;
     private float verticalVelocity = 0f;
+    private float gravity = -9.81f;
 
     [Header("Interaction")]
     [SerializeField] private float interactRange = 3f;
@@ -103,8 +104,22 @@ public class Player : MonoBehaviour
         camForward.Normalize();
         camRight.Normalize();
 
+        // --- CÁLCULO DE GRAVEDAD ---
+        // Si el jugador toca el suelo, reiniciamos la velocidad vertical
+        // Usamos -2f en lugar de 0f para que se mantenga bien pegado al piso en las bajadas
+        if (playerCharacterController.isGrounded && verticalVelocity < 0)
+        {
+            verticalVelocity = -2f;
+        }
+
+        // Aumentamos la velocidad de caída con el paso del tiempo
+        verticalVelocity += gravity * Time.deltaTime;
+        // ---------------------------
+
         // 2. Calculamos el vector de movimiento relativo a la cámara
         Vector3 moveDirection = (camRight * playerMoveAmount.x + camForward * playerMoveAmount.y);
+
+        // verticalVelocity ahora tiene la fuerza de la gravedad acumulada
         Vector3 verticalMove = new Vector3(0f, verticalVelocity, 0f) * Time.deltaTime;
 
         // 3. Movemos el CharacterController
