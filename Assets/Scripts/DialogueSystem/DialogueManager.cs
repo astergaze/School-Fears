@@ -87,7 +87,8 @@ public class DialogueManager : MonoBehaviour
         if (typewriterCoroutine != null)
             StopCoroutine(typewriterCoroutine);
 
-        typewriterCoroutine = StartCoroutine(TypewriterEffect(line.text, () =>
+        string lineText = LocalizationManager.Instance.GetText(line.textId);
+        typewriterCoroutine = StartCoroutine(TypewriterEffect(lineText, () =>
         {
             if (line.choices != null && line.choices.Length > 0)
                 ChoiceManager.Instance.ShowChoices(line.choices, OnChoiceSelected);

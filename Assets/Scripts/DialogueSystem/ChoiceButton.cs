@@ -24,10 +24,10 @@ public class ChoiceButton : MonoBehaviour
         choiceData = data;
         onSelected = callback;
 
-        choiceText.text = data.text;
+        choiceText.text = LocalizationManager.Instance.GetText(data.textId);
         ApplyState(data.state);
         SetSelected(false);
-    }
+    } 
 
     private void ApplyState(ChoiceState state)
     {

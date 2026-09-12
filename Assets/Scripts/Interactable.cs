@@ -3,7 +3,7 @@ using UnityEngine;
 public abstract class Interactable : MonoBehaviour
 {
     [Header("Interaction Settings")]
-    public float interactionRange = 2.5f;
+    public float interactionRange = 1f;
     public string interactionPrompt = "Interact";
 
     private OutlineEffect outline;
