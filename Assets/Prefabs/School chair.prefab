@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: baf91af690bcc584bac435864be9d855, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.815062
+      value: -2.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: baf91af690bcc584bac435864be9d855, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.00012267362
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: baf91af690bcc584bac435864be9d855, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.0813384
+      value: -6.15
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: baf91af690bcc584bac435864be9d855, type: 3}
       propertyPath: m_LocalRotation.w
@@ -26,19 +26,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: baf91af690bcc584bac435864be9d855, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.50000006
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: baf91af690bcc584bac435864be9d855, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.4999999
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: baf91af690bcc584bac435864be9d855, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.5
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: baf91af690bcc584bac435864be9d855, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: baf91af690bcc584bac435864be9d855, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -46,11 +46,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: baf91af690bcc584bac435864be9d855, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: baf91af690bcc584bac435864be9d855, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 63dcd0132b213ad499b0894e206aa1cd, type: 2}
     - target: {fileID: 919132149155446097, guid: baf91af690bcc584bac435864be9d855, type: 3}
       propertyPath: m_Name
       value: School chair
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: baf91af690bcc584bac435864be9d855, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
