@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 4e6bcb16e6e0a21fcab4021a970e42c7, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -577,8 +577,8 @@ GameObject:
   - component: {fileID: 171232308}
   - component: {fileID: 171232307}
   - component: {fileID: 171232306}
-  - component: {fileID: 171232305}
   - component: {fileID: 171232304}
+  - component: {fileID: 171232305}
   m_Layer: 12
   m_Name: Cube
   m_TagString: Untagged
@@ -598,7 +598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e38d20fc2d27747b60e6135e7044cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OutlineEffect
-  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  outlineColor: {r: 0.55175453, g: 0.33490568, b: 1, a: 1}
   outlineWidth: 0.02
 --- !u!114 &171232305
 MonoBehaviour:
@@ -624,6 +624,7 @@ MonoBehaviour:
       - speaker: 0
         textId: test3
         choices: []
+      actionId: 
 --- !u!65 &171232306
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -711,8 +712,8 @@ Transform:
   m_GameObject: {fileID: 171232303}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.232, y: 0.911, z: -5.578}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalPosition: {x: 1.2959, y: 0.817, z: -6.5016}
+  m_LocalScale: {x: 0.2, y: 0.052047998, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1577,7 +1578,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7517599700304440011, guid: a3abc8f423aaf4747a95c36f13779b5b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.86
+      value: 2.222
       objectReference: {fileID: 0}
     - target: {fileID: 7517599700304440011, guid: a3abc8f423aaf4747a95c36f13779b5b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1585,7 +1586,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7517599700304440011, guid: a3abc8f423aaf4747a95c36f13779b5b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.58
+      value: -8.244
       objectReference: {fileID: 0}
     - target: {fileID: 7517599700304440011, guid: a3abc8f423aaf4747a95c36f13779b5b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1674,6 +1675,53 @@ Transform:
   - {fileID: 1155367299}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &545777382 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+  m_PrefabInstance: {fileID: 743659252}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &545777388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545777382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3e38d20fc2d27747b60e6135e7044cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OutlineEffect
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  outlineWidth: 0.04
+--- !u!114 &545777393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545777382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fd1321ebdcef61328a43dbd1d77a8d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DoorInteractable
+  interactionRange: 1.5
+  interactionPrompt: Interact
+  lines:
+  - speaker: 0
+    textId: doorSRInteract
+    choices:
+    - textId: doorSROptn
+      state: 0
+      responseLines: []
+      actionId: leave_scene
+    - textId: doorSROptn2
+      state: 0
+      responseLines: []
+      actionId: 
+  leaveActionId: leave_scene
+  sceneToLoad: maze
 --- !u!1001 &575408494
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1934,7 +1982,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &647028338
 Light:
   m_ObjectHideFlags: 0
@@ -2128,7 +2176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5301128184729803962, guid: f1a0810720b3aa64d82cb302fa1ed886, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.86
+      value: 2.222
       objectReference: {fileID: 0}
     - target: {fileID: 5301128184729803962, guid: f1a0810720b3aa64d82cb302fa1ed886, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2136,7 +2184,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5301128184729803962, guid: f1a0810720b3aa64d82cb302fa1ed886, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.58
+      value: -8.244
       objectReference: {fileID: 0}
     - target: {fileID: 5301128184729803962, guid: f1a0810720b3aa64d82cb302fa1ed886, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2649,6 +2697,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
+    - target: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 5255132487348479969, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.6158457
@@ -2692,7 +2744,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 545777388}
+    - targetCorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 545777393}
   m_SourcePrefab: {fileID: 100100000, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
 --- !u!1001 &758248089
 PrefabInstance:
@@ -6558,7 +6616,7 @@ PrefabInstance:
       objectReference: {fileID: 509605391}
     - target: {fileID: 5117736254700616655, guid: a7a8ccfc11a9af84481dcf23293dfcf7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.86
+      value: 2.222
       objectReference: {fileID: 0}
     - target: {fileID: 5117736254700616655, guid: a7a8ccfc11a9af84481dcf23293dfcf7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6566,7 +6624,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5117736254700616655, guid: a7a8ccfc11a9af84481dcf23293dfcf7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.58
+      value: -8.244
       objectReference: {fileID: 0}
     - target: {fileID: 5117736254700616655, guid: a7a8ccfc11a9af84481dcf23293dfcf7, type: 3}
       propertyPath: m_LocalRotation.w
