@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     [SerializeField] public Transform playerCamera;
 
     private Vector2 playerMoveAmount;
+    private Vector3 InteractOrigin => transform.TransformPoint(playerCharacterController.center);
 
     private float playerWalkSpeed = 5.0f;
     private float playerRotateDampening = 0.1f;
@@ -58,7 +59,8 @@ public class Player : MonoBehaviour
 
     private void CheckForInteractable()
     {
-        Collider[] hits = Physics.OverlapSphere(transform.position, interactRange, interactableLayer);
+        Vector3 origin = InteractOrigin;
+        Collider[] hits = Physics.OverlapSphere(origin, interactRange, interactableLayer);
 
         Interactable best = null;
         float bestDot = -1f;
@@ -69,7 +71,7 @@ public class Player : MonoBehaviour
             if (interactable == null) continue;
 
             // Direccion desde el player hacia el objeto
-            Vector3 dirToObject = (col.transform.position - transform.position).normalized;
+            Vector3 dirToObject = (col.bounds.center - origin).normalized;
             // Cuanto esta alineado con hacia donde mira la camara
             float dot = Vector3.Dot(playerCamera.forward, dirToObject);
 
@@ -134,6 +136,7 @@ public class Player : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
+        Vector3 origin = playerCharacterController != null ? transform.TransformPoint(playerCharacterController.center) : transform.position;
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, interactRange);
     }
