@@ -38,7 +38,6 @@ public class MazePlayerSpawner : MonoBehaviour
             return;
         }
 
-        Player.Instance.transform.position = target.position;
-        Player.Instance.transform.rotation = target.rotation;
+        Player.Instance.TeleportTo(target.position, target.rotation);
     }
 }
