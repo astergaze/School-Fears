@@ -2,3 +2,6 @@ id;es;en
 test;"hola.";"hi"
 test2;"xd.";"idk"
 test3;"aguas w";"waters w"
+doorSROptn;"Salir?";"Leave?"
+doorSROptn2;"Todavia no.";"Not yet."
+doorSRInteract;"Una puerta...";"A door..."

@@ -7,4 +7,6 @@ public class DialogueChoice
     public string textId;
     public ChoiceState state;
     public DialogueLine[] responseLines; // diálogo que se dispara después de elegir
+    [Tooltip("ID interno (ej. 'leave_scene'). No es texto ni localización.")] // es un tipo de id que se va a encargar de acciones
+    public string actionId;
 }

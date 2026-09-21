@@ -8,6 +8,7 @@ public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager Instance { get; private set; }
     private InputAction dialogueAdvanceAction;
+    public event System.Action<DialogueChoice> ChoiceSelected;
 
     [Header("UI References")]
     [SerializeField] private GameObject dialogueSystem;
@@ -96,6 +97,7 @@ public class DialogueManager : MonoBehaviour
     }
     private void OnChoiceSelected(DialogueChoice choice)
     {
+        ChoiceSelected?.Invoke(choice);
         if (choice.responseLines != null && choice.responseLines.Length > 0)
             StartDialogue(choice.responseLines);
         else
