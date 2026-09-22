@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -31,16 +32,23 @@ public class Player : MonoBehaviour
 
     private void OnEnable()
     {
-        if (Instance != this) return; // no soy el singleton real (soy un duplicado camino a ser destruido)
+        if (Instance != this) return;
         InputActions.FindActionMap("Player").Enable();
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     private void OnDisable()
     {
-        if (Instance != this) return; // evita apagar el action map COMPARTIDO cuando se destruye un duplicado
+        if (Instance != this) return;
         InputActions.FindActionMap("Player").Disable();
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        currentInteractable = null;
+    }
+    
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -119,7 +127,14 @@ public class Player : MonoBehaviour
 
     private void PlayerInteract()
     {
-        currentInteractable?.Interact(this);
+        if (currentInteractable != null)
+        {
+            currentInteractable.Interact(this);
+        }
+        else
+        {
+            currentInteractable = null;
+        }
     }
 
     /// <summary>

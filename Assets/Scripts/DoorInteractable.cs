@@ -36,4 +36,11 @@ public class DoorInteractable : Interactable
             SceneManager.LoadScene(sceneToLoad);
         }
     }
+    private void OnDestroy()
+    {
+        if (DialogueManager.Instance != null)
+        {
+            DialogueManager.Instance.ChoiceSelected -= HandleChoiceSelected;
+        }
+    }
 }
