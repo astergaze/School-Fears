@@ -8,6 +8,9 @@ public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager Instance { get; private set; }
     private InputAction dialogueAdvanceAction;
+
+    // Se dispara cada vez que el jugador elige una opción, ANTES de decidir si sigue el diálogo o termina.
+    // Cualquier script (ej. una puerta) se puede suscribir para reaccionar a choice.actionId.
     public event System.Action<DialogueChoice> ChoiceSelected;
 
     [Header("UI References")]
@@ -32,6 +35,8 @@ public class DialogueManager : MonoBehaviour
     private Queue<DialogueLine> dialogueQueue = new Queue<DialogueLine>();
     private bool isTyping = false;
     private bool dialogueActive = false;
+
+    public bool IsDialogueActive => dialogueActive;
     private Coroutine typewriterCoroutine;
 
     private void Awake()
@@ -98,6 +103,7 @@ public class DialogueManager : MonoBehaviour
     private void OnChoiceSelected(DialogueChoice choice)
     {
         ChoiceSelected?.Invoke(choice);
+
         if (choice.responseLines != null && choice.responseLines.Length > 0)
             StartDialogue(choice.responseLines);
         else

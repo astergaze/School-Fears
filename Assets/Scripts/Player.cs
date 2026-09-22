@@ -29,12 +29,29 @@ public class Player : MonoBehaviour
     public Inventory Inventory { get; private set; }
     public static Player Instance { get; private set; }
 
-    private void OnEnable() => InputActions.FindActionMap("Player").Enable();
-    private void OnDisable() => InputActions.FindActionMap("Player").Disable();
+    private void OnEnable()
+    {
+        if (Instance != this) return; // no soy el singleton real (soy un duplicado camino a ser destruido)
+        InputActions.FindActionMap("Player").Enable();
+    }
+
+    private void OnDisable()
+    {
+        if (Instance != this) return; // evita apagar el action map COMPARTIDO cuando se destruye un duplicado
+        InputActions.FindActionMap("Player").Disable();
+    }
 
     private void Awake()
     {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         Instance = this;
+        DontDestroyOnLoad(gameObject);
+
         Inventory = GetComponent<Inventory>();
         var playerMap = InputActions.FindActionMap("Player");
         playerMoveAction     = playerMap.FindAction("Move");
@@ -47,11 +64,21 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        playerMoveAmount = playerMoveAction.ReadValue<Vector2>();
-        PlayerMoveAndRotate();
+        bool dialogueOpen = DialogueManager.Instance != null && DialogueManager.Instance.IsDialogueActive;
+
+        if (!dialogueOpen)
+        {
+            playerMoveAmount = playerMoveAction.ReadValue<Vector2>();
+            PlayerMoveAndRotate();
+        }
+        else
+        {
+            playerMoveAmount = Vector2.zero; // por si quedó input residual del frame en que se abrió el diálogo
+        }
+
         CheckForInteractable();
 
-        if (playerInteractAction.WasPressedThisFrame())
+        if (!dialogueOpen && playerInteractAction.WasPressedThisFrame())
             PlayerInteract();
         if (playerInventoryAction.WasPressedThisFrame())
             InventoryUI.Instance.Toggle();
@@ -93,6 +120,22 @@ public class Player : MonoBehaviour
     private void PlayerInteract()
     {
         currentInteractable?.Interact(this);
+    }
+
+    /// <summary>
+    /// Reposiciona al player de forma segura, desactivando el CharacterController
+    /// un instante para evitar glitches de colisión al mover el transform directo.
+    /// Usar esto en vez de setear transform.position/rotation a mano.
+    /// </summary>
+    public void TeleportTo(Vector3 position, Quaternion rotation)
+    {
+        if (playerCharacterController != null)
+            playerCharacterController.enabled = false;
+
+        transform.SetPositionAndRotation(position, rotation);
+
+        if (playerCharacterController != null)
+            playerCharacterController.enabled = true;
     }
 
     private void PlayerMoveAndRotate()
