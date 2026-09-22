@@ -3558,9 +3558,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d5dd76b7c512874ab0d38ebf69a48da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PauseTabs
-  panelControles: {fileID: 0}
-  panelAudio: {fileID: 0}
-  panelVideo: {fileID: 0}
+  panelControles: {fileID: 182603125}
+  panelAudio: {fileID: 366369866}
+  panelVideo: {fileID: 805976919}
 --- !u!224 &832373197
 RectTransform:
   m_ObjectHideFlags: 0
