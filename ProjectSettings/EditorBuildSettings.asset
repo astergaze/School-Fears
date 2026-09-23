@@ -6,17 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
-    path: Assets/Scenes/Aula1.unity
-    guid: 21726bdf47ac2b94c98f243a8ea9cbbd
+    path: Assets/Scenes/menu.unity
+    guid: 8fa24a16f9766d847be1387f4ac875c9
   - enabled: 1
     path: Assets/Scenes/SafeRoomChp1.unity
     guid: c630afbe7d80875b6b2e5394074e0fc2
   - enabled: 1
     path: Assets/Scenes/maze.unity
     guid: 22a01e58ec1881248b14ef7dd8018dec
+  - enabled: 1
+    path: Assets/Scenes/Aula1.unity
+    guid: 21726bdf47ac2b94c98f243a8ea9cbbd
   - enabled: 1
     path: Assets/Scenes/Aula2.unity
     guid: bc9cc4c4b0ccaecd2b2681820bfc2421
