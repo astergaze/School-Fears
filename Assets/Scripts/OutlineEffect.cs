@@ -43,6 +43,8 @@ public class OutlineEffect : MonoBehaviour
         mat.SetColor("_BaseColor", outlineColor);
         mat.SetFloat("_Surface", 0); // Opaque
         mat.enableInstancing = true;
+        mat.EnableKeyword("_EMISSION");
+        mat.SetColor("_EmissionColor", outlineColor * 2.5f);
         return mat;
     }
 
