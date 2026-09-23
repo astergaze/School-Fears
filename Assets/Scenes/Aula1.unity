@@ -2873,6 +2873,8 @@ MonoBehaviour:
       actionId: 
   leaveActionId: leave_scene
   sceneToLoad: maze
+  openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
+  closeSound: {fileID: 8300000, guid: 535bc812c7a47cf9389a640f84ce4377, type: 3}
 --- !u!1001 &758248089
 PrefabInstance:
   m_ObjectHideFlags: 0

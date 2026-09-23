@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class DoorInteractable : Interactable
 {
@@ -12,6 +11,10 @@ public class DoorInteractable : Interactable
 
     [Tooltip("Nombre exacto de la escena a cargar (tiene que estar agregada en Build Settings)")]
     [SerializeField] private string sceneToLoad;
+
+    [Header("Sonido")]
+    [SerializeField] private AudioClip openSound;
+    [SerializeField] private AudioClip closeSound;
 
     public override void Interact(Player player)
     {
@@ -33,7 +36,7 @@ public class DoorInteractable : Interactable
                 return;
             }
 
-            SceneManager.LoadScene(sceneToLoad);
+            SceneTransitioner.Instance.GoToScene(sceneToLoad, openSound, closeSound);
         }
     }
     private void OnDestroy()

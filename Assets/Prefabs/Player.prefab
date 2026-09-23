@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 5392506586599151921}
   - component: {fileID: 44523549260751812}
   - component: {fileID: 6574816223582765314}
+  - component: {fileID: 2348013393103145579}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -208,6 +209,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8be53e5a70a1f2cf8fa86264bcca401, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2348013393103145579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3450362085179103569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61870fc47e9daeb45a6e9f69df4a7839, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FootstepPlayer
+  footstepClips:
+  - {fileID: 8300000, guid: 5cbc9fc23dc96d548ae10e318f6f6791, type: 3}
+  - {fileID: 8300000, guid: 0f1b33bf14a92fa09a4d0f919902f97b, type: 3}
+  - {fileID: 8300000, guid: babb541d0531bff4a95d730dd2cb2ee9, type: 3}
+  - {fileID: 8300000, guid: 9b4d6826a2a2075fb9ca38b92586b001, type: 3}
+  - {fileID: 8300000, guid: 6f55c744926092033819a46b0e6384df, type: 3}
+  - {fileID: 8300000, guid: a5f1d3b5a524d532bb90971c2c8da3d7, type: 3}
+  - {fileID: 8300000, guid: 0ffde4ec1fb18c702aaf1fe063fc6a5a, type: 3}
+  - {fileID: 8300000, guid: d253fad1af2bffa5da5785bdf8ec4184, type: 3}
+  stepDistance: 2.3
+  volume: 0.4
+  pitchMin: 0.9
+  pitchMax: 1.06
 --- !u!1 &5737843715436817862
 GameObject:
   m_ObjectHideFlags: 0

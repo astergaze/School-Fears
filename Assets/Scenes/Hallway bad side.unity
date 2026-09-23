@@ -308,6 +308,8 @@ MonoBehaviour:
   interactionPrompt: Interact
   roomSceneName: Auladestroyed
   spawnPointId: AulaDestruidaSpawnPoint
+  openSound: {fileID: 8300000, guid: 68ad5533a32e466948b4ba3555bbd238, type: 3}
+  closeSound: {fileID: 8300000, guid: 263c00db3030e6f6ca6216895d2b4398, type: 3}
 --- !u!114 &123273212
 MonoBehaviour:
   m_ObjectHideFlags: 0

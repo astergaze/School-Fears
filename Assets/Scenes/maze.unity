@@ -4372,6 +4372,8 @@ MonoBehaviour:
   interactionPrompt: Interact
   roomSceneName: SafeRoomChp1
   spawnPointId: defaultspawn
+  openSound: {fileID: 0}
+  closeSound: {fileID: 0}
 --- !u!114 &685758259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6758,6 +6760,8 @@ MonoBehaviour:
   interactionPrompt: Interact
   roomSceneName: Aula3
   spawnPointId: Door_aula3_spawnpoint
+  openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
+  closeSound: {fileID: 8300000, guid: 535bc812c7a47cf9389a640f84ce4377, type: 3}
 --- !u!114 &1230466128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10077,6 +10081,8 @@ MonoBehaviour:
   interactionPrompt: Interact
   roomSceneName: Aula1
   spawnPointId: Door_aula1_spawnpoint
+  openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
+  closeSound: {fileID: 8300000, guid: 535bc812c7a47cf9389a640f84ce4377, type: 3}
 --- !u!114 &1728081288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11263,6 +11269,8 @@ MonoBehaviour:
   interactionPrompt: Interact
   roomSceneName: Aula2
   spawnPointId: Door_aula2_spawnpoint
+  openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
+  closeSound: {fileID: 8300000, guid: 535bc812c7a47cf9389a640f84ce4377, type: 3}
 --- !u!1001 &1974518857
 PrefabInstance:
   m_ObjectHideFlags: 0
