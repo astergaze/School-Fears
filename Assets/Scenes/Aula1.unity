@@ -2981,6 +2981,7 @@ MonoBehaviour:
   - speaker: 0
     textId: test
     choices: []
+  fadeOutOnEnd: 0
 --- !u!65 &711535861
 BoxCollider:
   m_ObjectHideFlags: 0

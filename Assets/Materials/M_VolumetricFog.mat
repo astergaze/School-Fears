@@ -25,9 +25,9 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _FogDensity: 0.203
+    - _FogDensity: 0.4
     - _FogHeight: 10
-    - _FogStart: 2
+    - _FogStart: 1
     - _LightAbsorption: 1
     m_Colors:
     - _FogColor: {r: 0.020870408, g: 0.037808143, b: 0.066037714, a: 1}

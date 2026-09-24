@@ -77,4 +77,19 @@ public class SceneTransitioner : MonoBehaviour
         fadeCanvas.alpha = targetAlpha;
         fadeCanvas.blocksRaycasts = targetAlpha > 0f;
     }
+    /// <summary>
+    /// Ejecuta un fade independiente hacia el alpha deseado (1 = negro, 0 = transparente).
+    /// </summary>
+    public void FadeScreen(float targetAlpha)
+    {
+        StartCoroutine(Fade(targetAlpha));
+    }
+
+    /// <summary>
+    /// Por si necesitas esperar a que termine el fade dentro de una corrutina.
+    /// </summary>
+    public IEnumerator FadeRoutine(float targetAlpha)
+    {
+        yield return Fade(targetAlpha);
+    }
 }

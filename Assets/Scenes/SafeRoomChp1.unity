@@ -963,6 +963,7 @@ MonoBehaviour:
         textId: test3
         choices: []
       actionId: 
+  fadeOutOnEnd: 0
 --- !u!65 &171232306
 BoxCollider:
   m_ObjectHideFlags: 0

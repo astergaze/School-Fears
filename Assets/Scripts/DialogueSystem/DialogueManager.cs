@@ -12,6 +12,7 @@ public class DialogueManager : MonoBehaviour
     // Se dispara cada vez que el jugador elige una opción, ANTES de decidir si sigue el diálogo o termina.
     // Cualquier script (ej. una puerta) se puede suscribir para reaccionar a choice.actionId.
     public event System.Action<DialogueChoice> ChoiceSelected;
+    public event System.Action OnDialogueEnded;
 
     [Header("UI References")]
     [SerializeField] private GameObject dialogueSystem;
@@ -168,5 +169,6 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueActive = false;
         dialogueSystem.SetActive(false);
+        OnDialogueEnded?.Invoke();
     }
 }
