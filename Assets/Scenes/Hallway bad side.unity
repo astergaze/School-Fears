@@ -634,6 +634,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::OutlineEffect
   outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   outlineWidth: 0.02
+--- !u!65 &123273213
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123273210}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.01, y: 0.0016880472, z: 0.020999998}
+  m_Center: {x: -0.0034599972, y: 0.00011999998, z: 0}
 --- !u!1 &130672571
 GameObject:
   m_ObjectHideFlags: 0
@@ -7438,6 +7459,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 123273212}
+    - targetCorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 123273213}
   m_SourcePrefab: {fileID: 100100000, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
 --- !u!1 &942255845
 GameObject:

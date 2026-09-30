@@ -770,6 +770,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 5255132487348479969, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.023566497
@@ -813,13 +817,80 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 125273507}
+    - targetCorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 125273506}
+    - targetCorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 125273508}
   m_SourcePrefab: {fileID: 100100000, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
 --- !u!4 &125273504 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5255132487348479969, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
   m_PrefabInstance: {fileID: 125273503}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &125273505 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+  m_PrefabInstance: {fileID: 125273503}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &125273506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125273505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3e38d20fc2d27747b60e6135e7044cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OutlineEffect
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  outlineWidth: 0.02
+--- !u!114 &125273507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125273505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93e50b444418b8ca58f75d99ce330cc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MazeDoorToRoom
+  interactionRange: 1
+  interactionPrompt: Interact
+  roomSceneName: AulaEmptyHallway
+  spawnPointId: Door_aulaEmpty2_spawnpoint_1
+  openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
+  closeSound: {fileID: 8300000, guid: 535bc812c7a47cf9389a640f84ce4377, type: 3}
+--- !u!65 &125273508
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125273505}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.01, y: 0.0016880472, z: 0.020999998}
+  m_Center: {x: -0.0034599823, y: 0.00011999998, z: 0}
 --- !u!1 &125320472
 GameObject:
   m_ObjectHideFlags: 0
@@ -1232,6 +1303,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
+    - target: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 5255132487348479969, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -19.966434
@@ -1275,13 +1350,80 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 180688353}
+    - targetCorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 180688352}
+    - targetCorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 180688354}
   m_SourcePrefab: {fileID: 100100000, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
 --- !u!4 &180688350 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5255132487348479969, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
   m_PrefabInstance: {fileID: 180688349}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &180688351 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+  m_PrefabInstance: {fileID: 180688349}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &180688352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180688351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3e38d20fc2d27747b60e6135e7044cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OutlineEffect
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  outlineWidth: 0.02
+--- !u!114 &180688353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180688351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93e50b444418b8ca58f75d99ce330cc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MazeDoorToRoom
+  interactionRange: 1
+  interactionPrompt: Interact
+  roomSceneName: AulaEmpty2
+  spawnPointId: Door_aulaEmpty2_spawnpoint_6
+  openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
+  closeSound: {fileID: 8300000, guid: 535bc812c7a47cf9389a640f84ce4377, type: 3}
+--- !u!65 &180688354
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180688351}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.01, y: 0.0016880472, z: 0.020999998}
+  m_Center: {x: -0.0034600121, y: 0.00011999998, z: 0}
 --- !u!1001 &184140543
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1357,7 +1499,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 216881356}
-  - component: {fileID: 216881355}
+  - component: {fileID: 216881357}
   m_Layer: 0
   m_Name: SceneController
   m_TagString: Untagged
@@ -1365,19 +1507,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &216881355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 216881354}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0665adc5ced8073e38e52dc9b6317e25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SceneEntrySpawner
-  spawnPoint: {fileID: 1319066244}
 --- !u!4 &216881356
 Transform:
   m_ObjectHideFlags: 0
@@ -1393,6 +1522,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &216881357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216881354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb9b5b7b4acf4b906b55c0e7f4286048, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MazePlayerSpawner
+  defaultSpawnPoint: {fileID: 1319066244}
 --- !u!1001 &221299954
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1520,6 +1662,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 405078391013822526, guid: df3a291193c5fe442885905b3d1828cd, type: 3}
   m_PrefabInstance: {fileID: 222629092}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &234483452
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 234483454}
+  - component: {fileID: 234483453}
+  m_Layer: 0
+  m_Name: Door_aulaEmpty2_spawnpoint_5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &234483453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234483452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb81fe29c439804a6b1e9d357e7f7111, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnPoint
+  id: Door_aulaEmpty2_spawnpoint_5
+--- !u!4 &234483454
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234483452}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -19.283, y: 0.276, z: 20.988}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &237019605
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2359,6 +2546,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
+    - target: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 5255132487348479969, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -19.966433
@@ -2402,13 +2593,125 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 283982525}
+    - targetCorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 283982524}
+    - targetCorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 283982526}
   m_SourcePrefab: {fileID: 100100000, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
 --- !u!4 &283982522 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5255132487348479969, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
   m_PrefabInstance: {fileID: 283982521}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &283982523 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+  m_PrefabInstance: {fileID: 283982521}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &283982524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283982523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3e38d20fc2d27747b60e6135e7044cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OutlineEffect
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  outlineWidth: 0.02
+--- !u!114 &283982525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283982523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93e50b444418b8ca58f75d99ce330cc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MazeDoorToRoom
+  interactionRange: 1
+  interactionPrompt: Interact
+  roomSceneName: AulaEmptyHallway
+  spawnPointId: Door_aulaEmpty2_spawnpoint_7
+  openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
+  closeSound: {fileID: 8300000, guid: 535bc812c7a47cf9389a640f84ce4377, type: 3}
+--- !u!65 &283982526
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283982523}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.01, y: 0.0016880472, z: 0.020999998}
+  m_Center: {x: -0.0034599823, y: 0.00011999998, z: 0}
+--- !u!1 &285212741
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 285212743}
+  - component: {fileID: 285212742}
+  m_Layer: 0
+  m_Name: Door_aulaEmpty2_spawnpoint_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &285212742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285212741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb81fe29c439804a6b1e9d357e7f7111, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnPoint
+  id: Door_aulaEmpty2_spawnpoint_3
+--- !u!4 &285212743
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285212741}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.746, y: 0.276, z: 25.007}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &301575035
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3213,6 +3516,51 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d60b296c20aec1044beb948655f84e03, type: 3}
+--- !u!1 &485847058
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 485847060}
+  - component: {fileID: 485847059}
+  m_Layer: 0
+  m_Name: Door_aulaEmpty2_spawnpoint_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &485847059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485847058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb81fe29c439804a6b1e9d357e7f7111, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnPoint
+  id: Door_aulaEmpty2_spawnpoint_2
+--- !u!4 &485847060
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485847058}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.746, y: 0.276, z: 19.014}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &495214566
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3601,6 +3949,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8281248682800182364, guid: e35ea02e6c3059043aafd3ed0de915f0, type: 3}
   m_PrefabInstance: {fileID: 146184199}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &565918038
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 565918040}
+  - component: {fileID: 565918039}
+  m_Layer: 0
+  m_Name: Door_aulaEmpty2_spawnpoint_4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &565918039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565918038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb81fe29c439804a6b1e9d357e7f7111, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnPoint
+  id: Door_aulaEmpty2_spawnpoint_4
+--- !u!4 &565918040
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565918038}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -19.283, y: 0.276, z: 30.993}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &581902577
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4271,7 +4664,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &621144360
 Light:
   m_ObjectHideFlags: 0
@@ -4793,6 +5186,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
+    - target: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 5255132487348479969, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.0235665
@@ -4836,13 +5233,80 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 682767287}
+    - targetCorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 682767286}
+    - targetCorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 682767288}
   m_SourcePrefab: {fileID: 100100000, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
 --- !u!4 &682767284 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5255132487348479969, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
   m_PrefabInstance: {fileID: 682767283}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &682767285 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+  m_PrefabInstance: {fileID: 682767283}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &682767286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682767285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3e38d20fc2d27747b60e6135e7044cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OutlineEffect
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  outlineWidth: 0.02
+--- !u!114 &682767287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682767285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93e50b444418b8ca58f75d99ce330cc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MazeDoorToRoom
+  interactionRange: 1
+  interactionPrompt: Interact
+  roomSceneName: AulaEmptyHallway
+  spawnPointId: Door_aulaEmpty2_spawnpoint_3
+  openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
+  closeSound: {fileID: 8300000, guid: 535bc812c7a47cf9389a640f84ce4377, type: 3}
+--- !u!65 &682767288
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682767285}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.01, y: 0.0016880472, z: 0.020999998}
+  m_Center: {x: -0.0034599972, y: 0.00012, z: 0}
 --- !u!1001 &686502465
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5031,6 +5495,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 5255132487348479969, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.023566503
@@ -5074,13 +5542,80 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 695970706}
+    - targetCorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 695970705}
+    - targetCorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 695970707}
   m_SourcePrefab: {fileID: 100100000, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
 --- !u!4 &695970703 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5255132487348479969, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
   m_PrefabInstance: {fileID: 695970702}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &695970704 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+  m_PrefabInstance: {fileID: 695970702}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &695970705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695970704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3e38d20fc2d27747b60e6135e7044cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OutlineEffect
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  outlineWidth: 0.02
+--- !u!114 &695970706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695970704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93e50b444418b8ca58f75d99ce330cc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MazeDoorToRoom
+  interactionRange: 1
+  interactionPrompt: Interact
+  roomSceneName: AulaEmptyHallway
+  spawnPointId: Door_aulaEmpty2_spawnpoint_2
+  openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
+  closeSound: {fileID: 8300000, guid: 535bc812c7a47cf9389a640f84ce4377, type: 3}
+--- !u!65 &695970707
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695970704}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.01, y: 0.0016880472, z: 0.020999998}
+  m_Center: {x: -0.0034599823, y: 0.00011999998, z: 0}
 --- !u!1 &704389110
 GameObject:
   m_ObjectHideFlags: 0
@@ -6021,6 +6556,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 5255132487348479969, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -19.951433
@@ -6064,8 +6603,75 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 859100560}
+    - targetCorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 859100559}
+    - targetCorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 859100561}
   m_SourcePrefab: {fileID: 100100000, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+--- !u!1 &859100558 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+  m_PrefabInstance: {fileID: 859100557}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &859100559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859100558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3e38d20fc2d27747b60e6135e7044cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OutlineEffect
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  outlineWidth: 0.02
+--- !u!114 &859100560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859100558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93e50b444418b8ca58f75d99ce330cc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MazeDoorToRoom
+  interactionRange: 1
+  interactionPrompt: Interact
+  roomSceneName: AulaEmptyHallway
+  spawnPointId: Door_aulaEmpty2_spawnpoint_8
+  openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
+  closeSound: {fileID: 8300000, guid: 535bc812c7a47cf9389a640f84ce4377, type: 3}
+--- !u!65 &859100561
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859100558}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.01, y: 0.0016880472, z: 0.020999998}
+  m_Center: {x: -0.0034599972, y: 0.00011999998, z: 0}
 --- !u!1001 &871669023
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6877,6 +7483,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
+    - target: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 5255132487348479969, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -19.951433
@@ -6920,8 +7530,75 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1020072728}
+    - targetCorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1020072727}
+    - targetCorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1020072729}
   m_SourcePrefab: {fileID: 100100000, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+--- !u!1 &1020072726 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+  m_PrefabInstance: {fileID: 1020072725}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1020072727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020072726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3e38d20fc2d27747b60e6135e7044cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OutlineEffect
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  outlineWidth: 0.02
+--- !u!114 &1020072728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020072726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93e50b444418b8ca58f75d99ce330cc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MazeDoorToRoom
+  interactionRange: 1
+  interactionPrompt: Interact
+  roomSceneName: AulaEmptyHallway
+  spawnPointId: Door_aulaEmpty2_spawnpoint_4
+  openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
+  closeSound: {fileID: 8300000, guid: 535bc812c7a47cf9389a640f84ce4377, type: 3}
+--- !u!65 &1020072729
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020072726}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.01, y: 0.0016880472, z: 0.020999998}
+  m_Center: {x: -0.0034599972, y: 0.00011999998, z: 0}
 --- !u!1001 &1031877207
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8763,6 +9440,51 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 526d1a29af1de244a87c3f906b1fe0c3, type: 3}
+--- !u!1 &1296021122
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1296021124}
+  - component: {fileID: 1296021123}
+  m_Layer: 0
+  m_Name: Door_aulaEmpty2_spawnpoint_7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1296021123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296021122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb81fe29c439804a6b1e9d357e7f7111, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnPoint
+  id: Door_aulaEmpty2_spawnpoint_7
+--- !u!4 &1296021124
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296021122}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -19.283, y: 0.276, z: 15.01}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1299400586
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8934,6 +9656,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1319066244}
+  - component: {fileID: 1319066245}
   m_Layer: 0
   m_Name: playerSpawnPoint
   m_TagString: Untagged
@@ -8950,12 +9673,25 @@ Transform:
   m_GameObject: {fileID: 1319066243}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.191, y: 0, z: 0.964}
+  m_LocalPosition: {x: -1.191, y: 0.276, z: 0.964}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1319066245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319066243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb81fe29c439804a6b1e9d357e7f7111, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnPoint
+  id: playerSpawnPoint
 --- !u!1001 &1322763768
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9690,6 +10426,51 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 526d1a29af1de244a87c3f906b1fe0c3, type: 3}
+--- !u!1 &1458270829
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1458270831}
+  - component: {fileID: 1458270830}
+  m_Layer: 0
+  m_Name: Door_aulaEmpty2_spawnpoint_6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1458270830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458270829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb81fe29c439804a6b1e9d357e7f7111, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnPoint
+  id: Door_aulaEmpty2_spawnpoint_6
+--- !u!4 &1458270831
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458270829}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -19.283, y: 0.276, z: 17.998}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1466070559
 GameObject:
   m_ObjectHideFlags: 0
@@ -9768,6 +10549,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 5255132487348479969, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -19.966433
@@ -9811,13 +10596,80 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1481238671}
+    - targetCorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1481238670}
+    - targetCorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1481238672}
   m_SourcePrefab: {fileID: 100100000, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
 --- !u!4 &1481238668 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5255132487348479969, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
   m_PrefabInstance: {fileID: 1481238667}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1481238669 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+  m_PrefabInstance: {fileID: 1481238667}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1481238670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481238669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3e38d20fc2d27747b60e6135e7044cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OutlineEffect
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  outlineWidth: 0.02
+--- !u!114 &1481238671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481238669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93e50b444418b8ca58f75d99ce330cc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MazeDoorToRoom
+  interactionRange: 1
+  interactionPrompt: Interact
+  roomSceneName: AulaEmptyHallway
+  spawnPointId: Door_aulaEmpty2_spawnpoint_5
+  openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
+  closeSound: {fileID: 8300000, guid: 535bc812c7a47cf9389a640f84ce4377, type: 3}
+--- !u!65 &1481238672
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481238669}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.01, y: 0.0016880472, z: 0.020999998}
+  m_Center: {x: -0.0034600121, y: 0.00011999998, z: 0}
 --- !u!1001 &1491971209
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10215,6 +11067,51 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d60b296c20aec1044beb948655f84e03, type: 3}
+--- !u!1 &1580856190
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1580856192}
+  - component: {fileID: 1580856191}
+  m_Layer: 0
+  m_Name: Door_aulaEmpty2_spawnpoint_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1580856191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580856190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb81fe29c439804a6b1e9d357e7f7111, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnPoint
+  id: Door_aulaEmpty2_spawnpoint_1
+--- !u!4 &1580856192
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580856190}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.746, y: 0.276, z: 13.002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1587940637
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10574,8 +11471,37 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1652043302}
   m_SourcePrefab: {fileID: 100100000, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+--- !u!1 &1652043301 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+  m_PrefabInstance: {fileID: 1652043300}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1652043302
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652043301}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.01, y: 0.0016880472, z: 0.020999998}
+  m_Center: {x: -0.0034599972, y: 0.00011999998, z: 0}
 --- !u!1001 &1669765090
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13074,6 +14000,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1984359771}
   m_CullTransparentMesh: 1
+--- !u!1 &1986740413
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1986740415}
+  - component: {fileID: 1986740414}
+  m_Layer: 0
+  m_Name: Door_aulaEmpty2_spawnpoint_8
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1986740414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1986740413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb81fe29c439804a6b1e9d357e7f7111, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnPoint
+  id: Door_aulaEmpty2_spawnpoint_8
+--- !u!4 &1986740415
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1986740413}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -19.283, y: 0.276, z: 4.993}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1991024207 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 405078391013822526, guid: df3a291193c5fe442885905b3d1828cd, type: 3}
@@ -13158,11 +14129,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7992258029901162855, guid: b924dcff059688f46b167f6d0bf591be, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.909065
+      value: -7.008
       objectReference: {fileID: 0}
     - target: {fileID: 7992258029901162855, guid: b924dcff059688f46b167f6d0bf591be, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.33
+      value: 1.969
       objectReference: {fileID: 0}
     - target: {fileID: 7992258029901162855, guid: b924dcff059688f46b167f6d0bf591be, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14729,6 +15700,14 @@ SceneRoots:
   - {fileID: 691579521}
   - {fileID: 216881356}
   - {fileID: 1319066244}
+  - {fileID: 1580856192}
+  - {fileID: 485847060}
+  - {fileID: 285212743}
+  - {fileID: 565918040}
+  - {fileID: 234483454}
+  - {fileID: 1458270831}
+  - {fileID: 1296021124}
+  - {fileID: 1986740415}
   - {fileID: 2044487007}
   - {fileID: 986966165}
   - {fileID: 990142560}
