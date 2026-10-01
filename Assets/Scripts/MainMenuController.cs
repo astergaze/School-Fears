@@ -5,7 +5,7 @@ public class MainMenuController : MonoBehaviour
 {
     [Header("Paneles del Menú")]
     public GameObject mainMenuPanel;
-    public GameObject continuePanel; // <-- Actualizado para tu panel de Continuar
+    public GameObject continuePanel; // < Actualizado para tu panel de Continuar
 
     void Start()
     {
