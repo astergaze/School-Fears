@@ -17,6 +17,8 @@ public class TentacleStepNode : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log($"[TentacleStepNode {StepIndex}] OnTriggerEnter con: '{other.name}' (tag={other.tag}, tiene Player={other.GetComponent<Player>() != null})");
+
         // Detecta si es el Player (por componente o por tag)
         if (other.GetComponent<Player>() != null || other.CompareTag("Player"))
         {

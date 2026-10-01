@@ -8,15 +8,22 @@ public class LimpiadorDeTinta : MonoBehaviour
     public string referenciaRadio = "_RadioLuz";
     public float radioDelCirculo = 5f;
 
-    // AÒadimos esta variable para saber dÛnde est· el piso
+    [Tooltip("Si se asigna, se usa la posici√≥n de este Transform en vez de la propia. " +
+             "Asignar ac√° el mismo 'Spot Light Transform' que mueve TentaclePathManager, " +
+             "para que el c√≠rculo de tinta siga a la luz real cuando se mueve por el camino.")]
+    public Transform fuenteDeLuz;
+
+    // A√±adimos esta variable para saber d√≥nde est√° el piso
     public float alturaDelPiso = 0f;
 
     void Update()
     {
         if (materialDelPiso != null)
         {
-            // PROYECTAMOS la posiciÛn quitando la altura de la luz y usando la del piso
-            Vector3 posicionEnElSuelo = new Vector3(transform.position.x, alturaDelPiso, transform.position.z);
+            Transform origen = fuenteDeLuz != null ? fuenteDeLuz : transform;
+
+            // PROYECTAMOS la posici√≥n quitando la altura de la luz y usando la del piso
+            Vector3 posicionEnElSuelo = new Vector3(origen.position.x, alturaDelPiso, origen.position.z);
 
             materialDelPiso.SetVector(referenciaPosicion, posicionEnElSuelo);
             materialDelPiso.SetFloat(referenciaRadio, radioDelCirculo);
