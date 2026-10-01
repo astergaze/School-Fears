@@ -3,7 +3,22 @@ guid: d2a42891769d1454fab4582555cb2999
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Contorno_Negro
+    second: {fileID: 2100000, guid: 886cab34a9fc79a41aab395be067f846, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MaterialPizarraInterior
+    second: {fileID: 2100000, guid: 9d2f5ac78bdd18343af17996e38f0a41, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MaterialPizarrraExterior
+    second: {fileID: 2100000, guid: f6897fe36b0a677449d3199249ee4d4e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
