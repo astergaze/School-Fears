@@ -5,16 +5,8 @@ public class MainMenuController : MonoBehaviour
 {
     [Header("Paneles del Menú")]
     public GameObject mainMenuPanel;
-    public GameObject continuePanel; // < Actualizado para tu panel de Continuar
+    public GameObject continuePanel;
 
-    void Start()
-    {
-        // Al iniciar, el menú principal está activo y el de continuar oculto
-        mainMenuPanel.SetActive(true);
-        continuePanel.SetActive(false);
-    }
-
-    //FUNCIONES PARA ALTERNAR PANELES 
 
     public void AbrirContinuar()
     {
@@ -35,10 +27,7 @@ public class MainMenuController : MonoBehaviour
 
     public void QuitGame()
     {
-
         Application.Quit();
-
-
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #endif
