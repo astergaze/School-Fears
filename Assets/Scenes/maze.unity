@@ -485,7 +485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MazeDoorToRoom
   interactionRange: 1
-  interactionPrompt: Interact
+  promptKey: promptInteractDefault
   roomSceneName: AulaEmpty
   spawnPointId: Door_aulaEmpty_spawnpoint_5
   openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
@@ -503,7 +503,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OutlineEffect
   outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  outlineWidth: 0.02
+  outlineWidth: 0.00001
+  emissionIntensity: 2.5
 --- !u!65 &20388211
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1871,7 +1872,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MazeDoorToRoom
   interactionRange: 1
-  interactionPrompt: Interact
+  promptKey: promptInteractDefault
   roomSceneName: AulaEmpty
   spawnPointId: Door_aulaEmpty_spawnpoint_3
   openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
@@ -1889,7 +1890,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OutlineEffect
   outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  outlineWidth: 0.02
+  outlineWidth: 0.00001
+  emissionIntensity: 2.5
 --- !u!65 &167195740
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2650,7 +2652,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MazeDoorToRoom
   interactionRange: 1
-  interactionPrompt: Interact
+  promptKey: promptInteractDefault
   roomSceneName: AulaEmpty
   spawnPointId: Door_aulaEmpty_spawnpoint_6
   openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
@@ -2668,7 +2670,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OutlineEffect
   outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  outlineWidth: 0.02
+  outlineWidth: 0.00001
+  emissionIntensity: 2.5
 --- !u!65 &268334237
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3721,7 +3724,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MazeDoorToRoom
   interactionRange: 1
-  interactionPrompt: Interact
+  promptKey: promptInteractDefault
   roomSceneName: AulaEmpty
   spawnPointId: Door_aulaEmpty_spawnpoint_4
   openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
@@ -3739,7 +3742,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OutlineEffect
   outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  outlineWidth: 0.02
+  outlineWidth: 0.00001
+  emissionIntensity: 2.5
 --- !u!65 &410049875
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6429,7 +6433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MazeDoorToRoom
   interactionRange: 1
-  interactionPrompt: Interact
+  promptKey: promptInteractDefault
   roomSceneName: SafeRoomChp1
   spawnPointId: defaultspawn
   openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
@@ -6447,7 +6451,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OutlineEffect
   outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  outlineWidth: 0.02
+  outlineWidth: 0.00001
+  emissionIntensity: 2.5
 --- !u!65 &685758260
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6844,7 +6849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MazeDoorToRoom
   interactionRange: 1
-  interactionPrompt: Interact
+  promptKey: promptInteractDefault
   roomSceneName: AulaEmpty
   spawnPointId: Door_aulaEmpty_spawnpoint_1
   openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
@@ -6862,7 +6867,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OutlineEffect
   outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  outlineWidth: 0.02
+  outlineWidth: 0.00001
+  emissionIntensity: 2.5
 --- !u!65 &785892630
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9929,7 +9935,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MazeDoorToRoom
   interactionRange: 1
-  interactionPrompt: Interact
+  promptKey: promptInteractDefault
   roomSceneName: Aula3
   spawnPointId: Door_aula3_spawnpoint
   openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
@@ -9947,7 +9953,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OutlineEffect
   outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  outlineWidth: 0.02
+  outlineWidth: 0.00001
+  emissionIntensity: 2.5
 --- !u!65 &1230466129
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15042,7 +15049,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MazeDoorToRoom
   interactionRange: 1.2
-  interactionPrompt: Interact
+  promptKey: promptInteractDefault
   roomSceneName: Aula1
   spawnPointId: Door_aula1_spawnpoint
   openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
@@ -15060,7 +15067,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OutlineEffect
   outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  outlineWidth: 0.02
+  outlineWidth: 0.00001
+  emissionIntensity: 2.5
 --- !u!65 &1728081289
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16677,7 +16685,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MazeDoorToRoom
   interactionRange: 1
-  interactionPrompt: Interact
+  promptKey: promptInteractDefault
   roomSceneName: AulaEmpty
   spawnPointId: Door_aulaEmpty_spawnpoint_2
   openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
@@ -16695,7 +16703,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OutlineEffect
   outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  outlineWidth: 0.02
+  outlineWidth: 0.00001
+  emissionIntensity: 2.5
 --- !u!65 &1931590172
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17239,7 +17248,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OutlineEffect
   outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  outlineWidth: 0.02
+  outlineWidth: 0.00001
+  emissionIntensity: 2.5
 --- !u!114 &1962770375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17253,7 +17263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MazeDoorToRoom
   interactionRange: 1
-  interactionPrompt: Interact
+  promptKey: promptInteractDefault
   roomSceneName: Aula2
   spawnPointId: Door_aula2_spawnpoint
   openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}

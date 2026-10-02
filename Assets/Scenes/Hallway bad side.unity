@@ -740,7 +740,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MazeDoorToRoom
   interactionRange: 1.2
-  interactionPrompt: Interact
+  promptKey: promptInteractDefault
   roomSceneName: Auladestroyed
   spawnPointId: AulaDestruidaSpawnPoint
   openSound: {fileID: 8300000, guid: 68ad5533a32e466948b4ba3555bbd238, type: 3}
@@ -758,7 +758,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OutlineEffect
   outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  outlineWidth: 0.02
+  outlineWidth: 0.00001
+  emissionIntensity: 2.5
 --- !u!65 &123273213
 BoxCollider:
   m_ObjectHideFlags: 0
