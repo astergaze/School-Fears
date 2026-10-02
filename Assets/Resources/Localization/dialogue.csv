@@ -23,3 +23,6 @@ mazeNote3_2;"Hoja 3 de 4.";"Page 3 of 4."
 mazeNote4;"Una vez que comprendas dónde estás y lo que debes hacer, todo será más sencillo. Podrás vencer tus mayores miedos, pero solo si te atreves a enfrentarlos.";"Once you understand where you are and what you must do, everything will become simpler. You can overcome your greatest fears, but only if you dare to face them."
 mazeNote4_1;"'A lo único que le debemos temer es al miedo como tal'. — Franklin D. Roosevelt.";"'The only thing we have to fear is fear itself.' — Franklin D. Roosevelt."
 mazeNote4_2;"Hoja 4 de 4.";"Page 4 of 4."
+confirm_quit;¿Estás seguro de que quieres salir?;Are you sure you want to quit?
+quit_yes;Sí, salir;Yes, quit
+quit_no;No, me quedo;No, stay
