@@ -6891,6 +6891,7 @@ GameObject:
   m_Component:
   - component: {fileID: 467483419}
   - component: {fileID: 467483418}
+  - component: {fileID: 467483420}
   m_Layer: 0
   m_Name: SceneController
   m_TagString: Untagged
@@ -6926,6 +6927,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &467483420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467483417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baa8ad613de255645a0cbee01ce98730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EndingController
+  scriptsToDisableOnEnding: []
+  delayBeforeMenu: 4
+  endingText: Gracias Por Jugar la Demo
+  menuSceneName: menu
 --- !u!1 &475097938
 GameObject:
   m_ObjectHideFlags: 0
@@ -11792,6 +11809,21 @@ MonoBehaviour:
     textId: flashlightInt1
     choices: []
   fadeOutOnEnd: 1
+  onMessageEnded:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 467483420}
+        m_TargetAssemblyTypeName: EndingController, Assembly-CSharp
+        m_MethodName: Trigger
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &1486202976
 BoxCollider:
   m_ObjectHideFlags: 0

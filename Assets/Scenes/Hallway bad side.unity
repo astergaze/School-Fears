@@ -4880,7 +4880,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerLightVisibility
   playerCamera: {fileID: 0}
   lightTransform: {fileID: 2074457608}
-  maxSpotDistance: 8
+  maxSpotDistance: 5
   viewAngleThreshold: 70
   obstructionMask:
     serializedVersion: 2
