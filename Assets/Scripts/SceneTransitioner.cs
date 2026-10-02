@@ -18,6 +18,7 @@ public class SceneTransitioner : MonoBehaviour
     [Tooltip("CanvasGroup de una imagen negra full screen (Screen Space - Overlay), alpha 0 al inicio")]
     [SerializeField] private CanvasGroup fadeCanvas;
     [SerializeField] private float fadeDuration = 0.4f;
+    public static bool IsTransitioning { get; private set; } = false;
 
     private void Awake()
     {
@@ -45,18 +46,26 @@ public class SceneTransitioner : MonoBehaviour
 
     private IEnumerator TransitionRoutine(string sceneName, AudioClip openSound, AudioClip closeSound, string pendingSpawnPointId)
     {
-        AudioManager.Instance?.PlaySFX(openSound);
+        IsTransitioning = true;
+        InteractionPromptUI.Instance?.HidePrompt();
+        Player.LockCursor();
 
-        yield return Fade(1f); // a negro, con el sonido de apertura ya sonando/terminando
+        AudioManager.Instance?.PlaySFX(openSound);
+        yield return Fade(1f); // a negro
 
         if (!string.IsNullOrEmpty(pendingSpawnPointId) && GameManager.Instance != null)
             GameManager.Instance.pendingSpawnPointId = pendingSpawnPointId;
 
         SceneManager.LoadScene(sceneName);
 
-        AudioManager.Instance?.PlaySFX(closeSound);
+        // Esperamos un frame para que los objetos de la nueva escena hagan su Start/Awake
+        yield return null;
 
-        yield return Fade(0f); // volvemos a ver la escena nueva
+        Player.LockCursor();
+        AudioManager.Instance?.PlaySFX(closeSound);
+        yield return Fade(0f);
+
+        IsTransitioning = false;
     }
 
     private IEnumerator Fade(float targetAlpha)

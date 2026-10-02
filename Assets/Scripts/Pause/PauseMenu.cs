@@ -32,6 +32,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0f;
         AudioListener.pause = true;
         isPaused = true;
+        Player.UnlockCursor();
     }
 
     public void Resume()
@@ -40,6 +41,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         AudioListener.pause = false;
         isPaused = false;
+        Player.LockCursor();
     }
 
     public void GoToMainMenu()

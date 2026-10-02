@@ -8328,8 +8328,24 @@ PrefabInstance:
       value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 7959753377011723740, guid: 7e6a5d4076ae1594ea0262f21b0f6f84, type: 3}
+      propertyPath: lines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7959753377011723740, guid: 7e6a5d4076ae1594ea0262f21b0f6f84, type: 3}
       propertyPath: lines.Array.data[0].textId
-      value: test
+      value: mazeNote4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7959753377011723740, guid: 7e6a5d4076ae1594ea0262f21b0f6f84, type: 3}
+      propertyPath: lines.Array.data[1].textId
+      value: mazeNote4_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7959753377011723740, guid: 7e6a5d4076ae1594ea0262f21b0f6f84, type: 3}
+      propertyPath: lines.Array.data[2].textId
+      value: mazeNote4_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7959753377011723740, guid: 7e6a5d4076ae1594ea0262f21b0f6f84, type: 3}
+      propertyPath: lines.Array.data[0].choices.Array.size
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

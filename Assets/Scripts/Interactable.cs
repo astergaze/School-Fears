@@ -4,8 +4,8 @@ public abstract class Interactable : MonoBehaviour
 {
     [Header("Interaction Settings")]
     public float interactionRange = 1f;
-    public string interactionPrompt = "Interact";
-
+    [Tooltip("ID de localización para el prompt en pantalla")]
+    public string promptKey = "promptInteractDefault";
     private OutlineEffect outline;
 
     protected virtual void Awake()
@@ -23,5 +23,14 @@ public abstract class Interactable : MonoBehaviour
     public virtual void OnLoseFocus()
     {
         outline?.SetOutlineVisible(false);
+    }
+
+    public virtual string GetPromptText()
+    {
+        if (LocalizationManager.Instance != null && !string.IsNullOrEmpty(promptKey))
+        {
+            return LocalizationManager.Instance.GetText(promptKey);
+        }
+        return "Presiona E para interactuar";
     }
 }
