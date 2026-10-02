@@ -50,7 +50,7 @@ Material:
     - _QueueOffset: 0
     - _RadioLuz: 5
     m_Colors:
-    - _PosicionLuz: {r: 21.130081, g: 0, b: 22.703325, a: 0}
+    - _PosicionLuz: {r: 21.360445, g: 0, b: 22.493969, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &2142730255140756557
