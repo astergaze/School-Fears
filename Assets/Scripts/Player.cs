@@ -58,6 +58,7 @@ public class Player : MonoBehaviour
     {
         currentInteractable = null;
         InteractionPromptUI.Instance?.HidePrompt();
+        Player.LockCursor();
         StartCoroutine(EnsureCursorLockedNextFrame());
     }
 
@@ -87,8 +88,9 @@ public class Player : MonoBehaviour
     private void Update()
     {
         bool dialogueOpen = IsDialogueOpen;
+        bool transitioning = SceneTransitioner.IsTransitioning;
 
-        if (!dialogueOpen)
+        if (!dialogueOpen && !transitioning)
         {
             playerMoveAmount = playerMoveAction.ReadValue<Vector2>();
             PlayerMoveAndRotate();
@@ -96,15 +98,24 @@ public class Player : MonoBehaviour
         else
         {
             playerMoveAmount = Vector2.zero;
-            InteractionPromptUI.Instance?.HidePrompt();
         }
 
         CheckForInteractable();
 
-        if (!dialogueOpen && playerInteractAction.WasPressedThisFrame())
+        // Si hay diálogo o transición, el prompt se mantiene apagado
+        if (dialogueOpen || transitioning)
+        {
+            InteractionPromptUI.Instance?.HidePrompt();
+        }
+        else if (currentInteractable != null)
+        {
+            InteractionPromptUI.Instance?.ShowPrompt(currentInteractable.GetPromptText());
+        }
+
+        if (!dialogueOpen && !transitioning && playerInteractAction.WasPressedThisFrame())
             PlayerInteract();
 
-        if (playerInventoryAction.WasPressedThisFrame())
+        if (!transitioning && playerInventoryAction.WasPressedThisFrame())
             InventoryUI.Instance.Toggle();
     }
 
@@ -129,6 +140,7 @@ public class Player : MonoBehaviour
             }
         }
 
+        // Cambio de foco entre un objeto y otro (o perder el foco por completo)
         if (best != currentInteractable)
         {
             if (currentInteractable != null)
@@ -142,10 +154,6 @@ public class Player : MonoBehaviour
             if (currentInteractable != null)
             {
                 currentInteractable.OnFocus();
-                if (!IsDialogueOpen)
-                {
-                    InteractionPromptUI.Instance?.ShowPrompt(currentInteractable.GetPromptText());
-                }
             }
         }
     }

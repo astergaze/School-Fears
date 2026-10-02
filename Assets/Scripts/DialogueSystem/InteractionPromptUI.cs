@@ -13,7 +13,7 @@ public class InteractionPromptUI : MonoBehaviour
                 instance = FindFirstObjectByType<InteractionPromptUI>();
                 if (instance == null)
                 {
-                    GameObject go = new GameObject("InteractionPromptUI_AutoCreated");
+                    GameObject go = new GameObject("InteractionPromptUI_Persistent");
                     instance = go.AddComponent<InteractionPromptUI>();
                 }
             }
@@ -32,6 +32,7 @@ public class InteractionPromptUI : MonoBehaviour
             return;
         }
         instance = this;
+        DontDestroyOnLoad(gameObject);
 
         if (promptRoot == null || promptText == null)
         {
@@ -58,37 +59,32 @@ public class InteractionPromptUI : MonoBehaviour
 
     private void BuildRuntimeUI()
     {
-        Canvas canvas = FindFirstObjectByType<Canvas>();
-        GameObject parentGO;
+        // Canvas propio persistente para que no dependa de si la escena tiene Canvas o no
+        Canvas runtimeCanvas = gameObject.AddComponent<Canvas>();
+        runtimeCanvas.renderMode = RenderMode.ScreenSpaceOverlay;
+        runtimeCanvas.sortingOrder = 950; // por debajo del fade de SceneTransitioner (que suele ser 1000+)
 
-        if (canvas != null)
-        {
-            parentGO = canvas.gameObject;
-        }
-        else
-        {
-            parentGO = new GameObject("InteractionPromptCanvas");
-            Canvas runtimeCanvas = parentGO.AddComponent<Canvas>();
-            runtimeCanvas.renderMode = RenderMode.ScreenSpaceOverlay;
-            runtimeCanvas.sortingOrder = 900;
-            parentGO.AddComponent<UnityEngine.UI.CanvasScaler>();
-            parentGO.AddComponent<UnityEngine.UI.GraphicRaycaster>();
-        }
+        var scaler = gameObject.AddComponent<UnityEngine.UI.CanvasScaler>();
+        scaler.uiScaleMode = UnityEngine.UI.CanvasScaler.ScaleMode.ScaleWithScreenSize;
+        scaler.referenceResolution = new Vector2(1920, 1080);
+        scaler.matchWidthOrHeight = 0.5f;
+
+        gameObject.AddComponent<UnityEngine.UI.GraphicRaycaster>();
 
         promptRoot = new GameObject("PromptRoot");
-        promptRoot.transform.SetParent(parentGO.transform, false);
+        promptRoot.transform.SetParent(transform, false);
 
         RectTransform rect = promptRoot.AddComponent<RectTransform>();
         rect.anchorMin = new Vector2(0.5f, 0.08f);
         rect.anchorMax = new Vector2(0.5f, 0.08f);
         rect.pivot = new Vector2(0.5f, 0.5f);
-        rect.sizeDelta = new Vector2(600f, 60f);
+        rect.sizeDelta = new Vector2(800f, 60f);
 
         GameObject textGO = new GameObject("PromptText");
         textGO.transform.SetParent(promptRoot.transform, false);
 
         promptText = textGO.AddComponent<TextMeshProUGUI>();
-        promptText.fontSize = 24;
+        promptText.fontSize = 28;
         promptText.alignment = TextAlignmentOptions.Center;
         promptText.color = Color.white;
         promptText.raycastTarget = false;
