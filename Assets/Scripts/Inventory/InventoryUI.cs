@@ -39,15 +39,16 @@ public class InventoryUI : MonoBehaviour
     {
         bool open = !inventoryPanel.activeSelf;
         inventoryPanel.SetActive(open);
-
         if (open)
         {
             Time.timeScale = 0f;
+            Player.UnlockCursor();
             RefreshGrid();
         }
         else
         {
             Time.timeScale = 1f;
+            Player.LockCursor();
         }
     }
 

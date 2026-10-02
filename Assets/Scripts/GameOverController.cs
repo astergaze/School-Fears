@@ -112,6 +112,7 @@ public class GameOverController : MonoBehaviour
 
         // 4. Asegurar que la escala de tiempo esté en 1 antes de cargar el menú
         Time.timeScale = 1f;
+        Player.UnlockCursor();
 
         SceneManager.LoadScene(menuSceneName);
     }

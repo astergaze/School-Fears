@@ -4,13 +4,13 @@ using TMPro;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
+
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager Instance { get; private set; }
+
     private InputAction dialogueAdvanceAction;
 
-    // Se dispara cada vez que el jugador elige una opción, ANTES de decidir si sigue el diálogo o termina.
-    // Cualquier script (ej. una puerta) se puede suscribir para reaccionar a choice.actionId.
     public event System.Action<DialogueChoice> ChoiceSelected;
     public event System.Action OnDialogueEnded;
 
@@ -36,20 +36,23 @@ public class DialogueManager : MonoBehaviour
     private Queue<DialogueLine> dialogueQueue = new Queue<DialogueLine>();
     private bool isTyping = false;
     private bool dialogueActive = false;
+    private bool isWaitingForChoice = false; // <-- BLOQUEA EL AVANCE DE 'E' DURANTE OPCIONES
 
     public bool IsDialogueActive => dialogueActive;
+
     private Coroutine typewriterCoroutine;
 
     private void Awake()
     {
-        
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
             return;
         }
         Instance = this;
-        dialogueAdvanceAction = InputSystem.actions.FindAction("Interact");
+
+        if (InputSystem.actions != null)
+            dialogueAdvanceAction = InputSystem.actions.FindAction("Interact");
     }
 
     private void Start()
@@ -61,11 +64,13 @@ public class DialogueManager : MonoBehaviour
     {
         if (!dialogueActive) return;
 
-        if (dialogueAdvanceAction.WasPressedThisFrame())
+        // Si hay un panel de opciones abierto, DialogueManager NO debe procesar 'E'
+        if (isWaitingForChoice) return;
+
+        if (dialogueAdvanceAction != null && dialogueAdvanceAction.WasPressedThisFrame())
         {
             if (!isTyping)
                 ShowNextLine();
-                
         }
     }
 
@@ -75,6 +80,7 @@ public class DialogueManager : MonoBehaviour
         foreach (var line in lines)
             dialogueQueue.Enqueue(line);
 
+        isWaitingForChoice = false;
         dialogueSystem.SetActive(true);
         dialogueActive = true;
         ShowNextLine();
@@ -98,11 +104,16 @@ public class DialogueManager : MonoBehaviour
         typewriterCoroutine = StartCoroutine(TypewriterEffect(lineText, () =>
         {
             if (line.choices != null && line.choices.Length > 0)
+            {
+                isWaitingForChoice = true;
                 ChoiceManager.Instance.ShowChoices(line.choices, OnChoiceSelected);
+            }
         }));
     }
+
     private void OnChoiceSelected(DialogueChoice choice)
     {
+        isWaitingForChoice = false;
         ChoiceSelected?.Invoke(choice);
 
         if (choice.responseLines != null && choice.responseLines.Length > 0)
@@ -128,12 +139,12 @@ public class DialogueManager : MonoBehaviour
             case DialogueSpeaker.Charlotte:
                 characterNameText.text = "Charlotte";
                 characterNameText.color = charlotteColor;
-                dialogueBox.sprite = alexFemSprite; // placeholder hasta tener el de Charlotte
+                dialogueBox.sprite = alexFemSprite;
                 break;
             case DialogueSpeaker.Narrator:
                 characterNameText.text = "";
                 characterNameText.color = neutralColor;
-                dialogueBox.sprite = alexMascSprite; // placeholder
+                dialogueBox.sprite = alexMascSprite;
                 break;
         }
     }
@@ -142,31 +153,18 @@ public class DialogueManager : MonoBehaviour
     {
         isTyping = true;
         dialogueText.text = "";
-
         foreach (char c in text)
         {
             dialogueText.text += c;
             yield return new WaitForSeconds(typewriterSpeed);
         }
-
         isTyping = false;
         onComplete?.Invoke();
     }
 
-    // private void SkipTypewriter()
-    // {
-    //     if (typewriterCoroutine != null)
-    //         StopCoroutine(typewriterCoroutine);
-
-    //     dialogueText.text = dialogueQueue.Count > 0 
-    //         ? dialogueText.text 
-    //         : dialogueText.text;
-        
-    //     isTyping = false;
-    // }
-
     private void EndDialogue()
     {
+        isWaitingForChoice = false;
         dialogueActive = false;
         dialogueSystem.SetActive(false);
         OnDialogueEnded?.Invoke();

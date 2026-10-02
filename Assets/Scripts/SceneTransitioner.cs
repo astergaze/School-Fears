@@ -53,7 +53,7 @@ public class SceneTransitioner : MonoBehaviour
             GameManager.Instance.pendingSpawnPointId = pendingSpawnPointId;
 
         SceneManager.LoadScene(sceneName);
-
+        Player.LockCursor();
         AudioManager.Instance?.PlaySFX(closeSound);
 
         yield return Fade(0f); // volvemos a ver la escena nueva
