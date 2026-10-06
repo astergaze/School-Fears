@@ -3620,13 +3620,13 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 743659255}
-    - targetCorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 743659254}
     - targetCorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 743659256}
+    - targetCorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 743659257}
   m_SourcePrefab: {fileID: 100100000, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
 --- !u!1 &743659253 stripped
 GameObject:
@@ -3648,36 +3648,6 @@ MonoBehaviour:
   outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   outlineWidth: 0.00001
   emissionIntensity: 2.5
---- !u!114 &743659255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 743659253}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fd1321ebdcef61328a43dbd1d77a8d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DoorInteractable
-  interactionRange: 1
-  promptKey: promptInteractDefault
-  lines:
-  - speaker: 0
-    textId: doorSRInteract
-    choices:
-    - textId: doorSROptn
-      state: 0
-      responseLines: []
-      actionId: leave_scene
-    - textId: doorSROptn2
-      state: 0
-      responseLines: []
-      actionId: 
-  leaveActionId: leave_scene
-  sceneToLoad: Hallway
-  openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
-  closeSound: {fileID: 8300000, guid: 535bc812c7a47cf9389a640f84ce4377, type: 3}
 --- !u!65 &743659256
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3699,6 +3669,48 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.01, y: 0.0016880472, z: 0.020999998}
   m_Center: {x: -0.0034599972, y: 0.00011999998, z: 0}
+--- !u!114 &743659257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743659253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33e4a18415d478545be648c8ab467c57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClassroomExitDoor
+  interactionRange: 1.2
+  promptKey: promptInteractDefault
+  baseLines:
+  - speaker: 0
+    textId: doorSRInteract
+    choices:
+    - textId: doorSROptn
+      state: 0
+      responseLines: []
+      actionId: leave_scene
+    - textId: doorSROptn2
+      state: 0
+      responseLines: []
+      actionId: 
+  normalLeaveActionId: leave_scene
+  normalSceneToLoad: maze
+  returnSpawnPointId: 
+  requiredNotes:
+  - {fileID: 11400000, guid: f02a49d8c3342ab41a27f7e99223904f, type: 2}
+  - {fileID: 11400000, guid: ffc1d53561c541b48bc2be991bee720a, type: 2}
+  - {fileID: 11400000, guid: b8468b207d650c94ca630930af5d3d3f, type: 2}
+  - {fileID: 11400000, guid: ce2dc1b7ee679604fbaab332f49c7306, type: 2}
+  requiredNotesCount: 4
+  specialChoiceTextId: doorSpecialHallwayOptn
+  directSpecialChoiceText: 
+  specialActionId: go_to_hallway
+  hallwaySceneName: Hallway
+  specialResponseLines: []
+  openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
+  closeSound: {fileID: 8300000, guid: 263c00db3030e6f6ca6216895d2b4398, type: 3}
 --- !u!1001 &758248089
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8664,13 +8676,17 @@ PrefabInstance:
       propertyPath: lines.Array.data[0].choices.Array.size
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7959753377011723740, guid: 7e6a5d4076ae1594ea0262f21b0f6f84, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3937486815318472858, guid: 7e6a5d4076ae1594ea0262f21b0f6f84, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1695652461}
+    - targetCorrespondingSourceObject: {fileID: 3937486815318472858, guid: 7e6a5d4076ae1594ea0262f21b0f6f84, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1695652462}
   m_SourcePrefab: {fileID: 100100000, guid: 7e6a5d4076ae1594ea0262f21b0f6f84, type: 3}
 --- !u!1 &1695652460 stripped
 GameObject:
@@ -8698,6 +8714,39 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0029699998, y: 0.0021, z: 0.000010000001}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1695652462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695652460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c75ebc3174a87c0489cb7028184e6d3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NoteItemInteractable
+  interactionRange: 1
+  promptKey: promptInteractDefault
+  noteUniqueId: note_4
+  noteItem: {fileID: 11400000, guid: ce2dc1b7ee679604fbaab332f49c7306, type: 2}
+  lines:
+  - speaker: 0
+    textId: mazeNote4
+    choices: []
+  - speaker: 0
+    textId: mazeNote4_1
+    choices: []
+  - speaker: 0
+    textId: mazeNote4_2
+    choices: []
+  fadeOutOnEnd: 0
+  objectivePopupId: 
+  objectivePopupText: 
+  pickupSound: {fileID: 0}
+  onNotePickedUp:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1700824173
 PrefabInstance:
   m_ObjectHideFlags: 0

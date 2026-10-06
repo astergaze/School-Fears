@@ -78,21 +78,40 @@ public class InventoryUI : MonoBehaviour
         ClearDetail();
     }
 
+    private void OnEnable()
+    {
+        if (LocalizationManager.Instance != null)
+            LocalizationManager.Instance.OnLanguageChanged += OnLanguageChanged;
+    }
+
+    private void OnDisable()
+    {
+        if (LocalizationManager.Instance != null)
+            LocalizationManager.Instance.OnLanguageChanged -= OnLanguageChanged;
+    }
+
+    private void OnLanguageChanged()
+    {
+        if (inventoryPanel != null && inventoryPanel.activeSelf)
+        {
+            RefreshGrid();
+        }
+    }
     private void SelectItem(ItemData item)
     {
         selectedItem = item;
-
         if (detailIcon != null)
         {
             detailIcon.sprite = item.icon;
-            detailIcon.gameObject.SetActive(item.icon != null); // oculto mientras no haya sprites reales
+            detailIcon.gameObject.SetActive(item.icon != null);
         }
 
+        // Usamos los textos localizados
         if (detailName != null)
-            detailName.text = item.itemName;
+            detailName.text = item.GetLocalizedName();
 
         if (detailDescription != null)
-            detailDescription.text = item.description;
+            detailDescription.text = item.GetLocalizedDescription();
 
         if (useButton != null)
         {

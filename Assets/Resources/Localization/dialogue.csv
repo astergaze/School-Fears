@@ -23,6 +23,15 @@ mazeNote3_2;"Hoja 3 de 4.";"Page 3 of 4."
 mazeNote4;"Una vez que comprendas dónde estás y lo que debes hacer, todo será más sencillo. Podrás vencer tus mayores miedos, pero solo si te atreves a enfrentarlos.";"Once you understand where you are and what you must do, everything will become simpler. You can overcome your greatest fears, but only if you dare to face them."
 mazeNote4_1;"'A lo único que le debemos temer es al miedo como tal'. — Franklin D. Roosevelt.";"'The only thing we have to fear is fear itself.' — Franklin D. Roosevelt."
 mazeNote4_2;"Hoja 4 de 4.";"Page 4 of 4."
+inventoryNote_1_Title;"Hoja 1 de 4.";"Page 1 of 4."
+inventoryNote_1_Description;"Este lugar puede resultarte familiar. Es el aula en la que estabas, aunque un poco diferente. No temas... será peor. 'El valor es resistencia al miedo, dominio del miedo, no ausencia del miedo.' — Mark Twain.";"This place might feel familiar. It's the classroom you were in, though slightly different. Do not fear... it will get worse. 'Courage is resistance to fear, mastery of fear, not absence of fear.' — Mark Twain."
+inventoryNote_2_Title;"Hoja 2 de 4.";"Page 2 of 4."
+inventoryNote_2_Description;"Ya te habrás dado cuenta de que el pasillo está un poco... distinto. Los caminos fáciles no son divertidos. Si quieres salir de aquí, tendrás que ganártelo. 'A nada en la vida se le debe temer. Solo se le debe comprender.' – Marie Curie.";"You've probably noticed by now that the hallway is a bit... different. Easy paths aren't fun. If you want to get out of here, you'll have to earn it. 'Nothing in life is to be feared, it is only to be understood.' — Marie Curie."
+inventoryNote_3_Title;"Hoja 3 de 4.";"Page 3 of 4."
+inventoryNote_3_Description;"La oscuridad es tranquila... No ves nada, ni a nadie. No debes temerle a lo que no puedes ver. Solo debes aceptarlo. 'A veces es necesario perderse en la oscuridad para poder encontrar la luz' — Desconocido.";"The dark is quiet... You see nothing, and no one. You shouldn't fear what you can't see. You just have to accept it. 'Sometimes you have to get lost in the darkness to find the light.' — Unknown."
+inventoryNote_4_Title;"Hoja 4 de 4.";"Page 4 of 4."
+inventoryNote_4_Description;"Una vez que comprendas dónde estás y lo que debes hacer, todo será más sencillo. Podrás vencer tus mayores miedos, pero solo si te atreves a enfrentarlos. 'A lo único que le debemos temer es al miedo como tal'. — Franklin D. Roosevelt.";"Once you understand where you are and what you must do, everything will become simpler. You can overcome your greatest fears, but only if you dare to face them. 'The only thing we have to fear is fear itself.' — Franklin D. Roosevelt."
+doorSpecialHallwayOptn;"El pomo esta... raro?";"The handle is... strange?"
 confirm_quit;¿Estás seguro de que quieres salir?;Are you sure you want to quit?
 quit_yes;Sí, salir;Yes, quit
 quit_no;No, me quedo;No, stay
