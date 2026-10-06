@@ -26,3 +26,4 @@ mazeNote4_2;"Hoja 4 de 4.";"Page 4 of 4."
 confirm_quit;¿Estás seguro de que quieres salir?;Are you sure you want to quit?
 quit_yes;Sí, salir;Yes, quit
 quit_no;No, me quedo;No, stay
+lightMinigameTriggerText;"Sigue la luz.";"Follow the light."
