@@ -20,7 +20,7 @@ public class RebindButton : MonoBehaviour
 
     public void IniciarRebind()
     {
-        teclaActualText.text = "Presiona una tecla...";
+        teclaActualText.text = "...";
 
         actionReference.action.Disable();
 
