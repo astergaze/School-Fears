@@ -171,6 +171,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Locker (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: adba11b812052ff47955aa49aa27659a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -682,7 +686,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &35548128
 MeshCollider:
@@ -795,7 +799,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &48941204
 MeshCollider:
@@ -1314,7 +1318,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &109898717
 MeshCollider:
@@ -2235,7 +2239,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!114 &180218972
 MonoBehaviour:
@@ -3077,7 +3081,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &303657269
 MeshCollider:
@@ -3480,6 +3484,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2a462460f799e5f4180be142ed0e883e, type: 3}
       propertyPath: m_Name
       value: Basura (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2a462460f799e5f4180be142ed0e883e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4005,6 +4013,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: adba11b812052ff47955aa49aa27659a, type: 3}
       propertyPath: m_Name
       value: Locker (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: adba11b812052ff47955aa49aa27659a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5060,6 +5072,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Extintor
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3ac64c1e8ad12b24183243753fbac96b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5425,7 +5441,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!114 &521569556
 MonoBehaviour:
@@ -6029,6 +6045,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 3ac64c1e8ad12b24183243753fbac96b, type: 3}
       propertyPath: m_Name
       value: Extintor (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3ac64c1e8ad12b24183243753fbac96b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7240,6 +7260,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Locker (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: adba11b812052ff47955aa49aa27659a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8041,7 +8065,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!114 &811579971
 MonoBehaviour:
@@ -8846,6 +8870,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Extintor (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3ac64c1e8ad12b24183243753fbac96b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8931,7 +8959,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!114 &930258754
 MonoBehaviour:
@@ -9030,6 +9058,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Basura
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2a462460f799e5f4180be142ed0e883e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9113,7 +9145,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &945576374
 MeshCollider:
@@ -9523,7 +9555,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &988086236
 MeshCollider:
@@ -9741,6 +9773,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Extintor (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3ac64c1e8ad12b24183243753fbac96b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9822,7 +9858,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!114 &1003384327
 MonoBehaviour:
@@ -11218,7 +11254,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!114 &1109299743
 MonoBehaviour:
@@ -11469,6 +11505,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Basura (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2a462460f799e5f4180be142ed0e883e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11491,7 +11531,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &1124000773
 MeshCollider:
@@ -12412,7 +12452,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &1231913941
 MeshCollider:
@@ -12920,6 +12960,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 3ac64c1e8ad12b24183243753fbac96b, type: 3}
       propertyPath: m_Name
       value: Extintor (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3ac64c1e8ad12b24183243753fbac96b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14722,7 +14766,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &1400115667
 MeshCollider:
@@ -15061,7 +15105,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!114 &1441090450
 MonoBehaviour:
@@ -16747,6 +16791,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Basura (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2a462460f799e5f4180be142ed0e883e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17154,6 +17202,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: adba11b812052ff47955aa49aa27659a, type: 3}
       propertyPath: m_Name
       value: Locker
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: adba11b812052ff47955aa49aa27659a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17616,6 +17668,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Locker (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: adba11b812052ff47955aa49aa27659a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17703,7 +17759,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &1672323660
 MeshCollider:
@@ -18133,6 +18189,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2a462460f799e5f4180be142ed0e883e, type: 3}
       propertyPath: m_Name
       value: Basura (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2a462460f799e5f4180be142ed0e883e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19153,6 +19213,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Locker (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: adba11b812052ff47955aa49aa27659a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19441,6 +19505,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 3ac64c1e8ad12b24183243753fbac96b, type: 3}
       propertyPath: m_Name
       value: Extintor (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3ac64c1e8ad12b24183243753fbac96b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20914,6 +20982,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Basura (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2a462460f799e5f4180be142ed0e883e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21027,6 +21099,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2a462460f799e5f4180be142ed0e883e, type: 3}
       propertyPath: m_Name
       value: Basura (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2a462460f799e5f4180be142ed0e883e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21638,7 +21714,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!114 &2015972370
 MonoBehaviour:
@@ -22208,7 +22284,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!114 &2067101286
 MonoBehaviour:

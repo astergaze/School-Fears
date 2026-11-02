@@ -995,6 +995,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Basura
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2a462460f799e5f4180be142ed0e883e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3167,7 +3171,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &443330596
 MeshCollider:
@@ -3523,6 +3527,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f3274a56c2d752e4a8569bba3422aa6f, type: 3}
       propertyPath: m_Name
       value: Armario
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f3274a56c2d752e4a8569bba3422aa6f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11646,6 +11654,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pizarron
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d2a42891769d1454fab4582555cb2999, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11979,6 +11991,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 32c4926027969394893aeada90d3b045, type: 3}
       propertyPath: m_Name
       value: Escritorio
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 32c4926027969394893aeada90d3b045, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

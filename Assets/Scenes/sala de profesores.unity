@@ -228,6 +228,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: School chair (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: baf91af690bcc584bac435864be9d855, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -319,6 +323,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: School chair (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: baf91af690bcc584bac435864be9d855, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -409,6 +417,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: baf91af690bcc584bac435864be9d855, type: 3}
       propertyPath: m_Name
       value: School chair (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: baf91af690bcc584bac435864be9d855, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -638,6 +650,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Armario
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f3274a56c2d752e4a8569bba3422aa6f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -694,6 +710,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: baf91af690bcc584bac435864be9d855, type: 3}
       propertyPath: m_Name
       value: School chair (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: baf91af690bcc584bac435864be9d855, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -786,6 +806,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: School chair
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: baf91af690bcc584bac435864be9d855, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -876,6 +900,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: baf91af690bcc584bac435864be9d855, type: 3}
       propertyPath: m_Name
       value: School chair (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: baf91af690bcc584bac435864be9d855, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -968,6 +996,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: School chair (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: baf91af690bcc584bac435864be9d855, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1024,7 +1056,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &652340131
 MeshCollider:
@@ -1172,6 +1204,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: School chair (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: baf91af690bcc584bac435864be9d855, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1278,7 +1314,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2683331917385227500, guid: 90dc495c82521c84cb6e404f839b6b99, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.2232872
+      value: -0.462
       objectReference: {fileID: 0}
     - target: {fileID: 2683331917385227500, guid: 90dc495c82521c84cb6e404f839b6b99, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1286,7 +1322,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2683331917385227500, guid: 90dc495c82521c84cb6e404f839b6b99, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.9625324
+      value: 1.705
       objectReference: {fileID: 0}
     - target: {fileID: 2683331917385227500, guid: 90dc495c82521c84cb6e404f839b6b99, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1406,6 +1442,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: School chair (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: baf91af690bcc584bac435864be9d855, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1497,6 +1537,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: School chair (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: baf91af690bcc584bac435864be9d855, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1587,6 +1631,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: baf91af690bcc584bac435864be9d855, type: 3}
       propertyPath: m_Name
       value: School chair (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: baf91af690bcc584bac435864be9d855, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1765,6 +1813,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: School chair (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: baf91af690bcc584bac435864be9d855, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1855,6 +1907,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: baf91af690bcc584bac435864be9d855, type: 3}
       propertyPath: m_Name
       value: School chair (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: baf91af690bcc584bac435864be9d855, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1947,6 +2003,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: School chair (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: baf91af690bcc584bac435864be9d855, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2037,6 +2097,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: baf91af690bcc584bac435864be9d855, type: 3}
       propertyPath: m_Name
       value: School chair (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: baf91af690bcc584bac435864be9d855, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2180,6 +2244,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: School chair (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: baf91af690bcc584bac435864be9d855, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2271,6 +2339,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: School chair (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: baf91af690bcc584bac435864be9d855, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2361,6 +2433,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: baf91af690bcc584bac435864be9d855, type: 3}
       propertyPath: m_Name
       value: School chair (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: baf91af690bcc584bac435864be9d855, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2596,6 +2672,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: School chair (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: baf91af690bcc584bac435864be9d855, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2813,6 +2893,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: baf91af690bcc584bac435864be9d855, type: 3}
       propertyPath: m_Name
       value: School chair (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: baf91af690bcc584bac435864be9d855, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
