@@ -38,5 +38,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AulaEmptyHallway.unity
     guid: 978223069481b214f9266642ca634ac0
+  - enabled: 1
+    path: Assets/Scenes/detencion.unity
+    guid: 8f96e3b99249ac3408107c37bd5d8d27
+  - enabled: 1
+    path: Assets/Scenes/backroom.unity
+    guid: a8aa5aa72ac2f3f43ad9c22936f1f37f
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

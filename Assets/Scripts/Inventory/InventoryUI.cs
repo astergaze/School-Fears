@@ -124,6 +124,14 @@ public class InventoryUI : MonoBehaviour
     private void UseItem(ItemData item)
     {
         Debug.Log($"Usando: {item.itemName}");
+
+        // Linterna: prende/apaga y no se consume
+        if (FlashlightController.Instance != null && FlashlightController.Instance.TryUse(item))
+        {
+            Toggle(); // cierra el inventario para ver el efecto enseguida (sacalo si preferís que quede abierto)
+            return;
+        }
+
         // Acá se conectará con el sistema de interacción
     }
 

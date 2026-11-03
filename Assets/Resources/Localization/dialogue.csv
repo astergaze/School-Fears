@@ -36,3 +36,9 @@ confirm_quit;¿Estás seguro de que quieres salir?;Are you sure you want to quit
 quit_yes;Sí, salir;Yes, quit
 quit_no;No, me quedo;No, stay
 lightMinigameTriggerText;"Sigue la luz.";"Follow the light."
+detentionSpawn;"Ugh...";"Ugh..."
+detentionSpawn2;"¿Que paso...?";"What happened...?"
+detentionSpawn3;"Claro, si. Otra vez aparezco en un aula sin saber que paso, tengo muuucha suerte.";"Huh, of course. I'm once again in a classroom, with no idea of what happened, must be my lucky day."
+detentionDoorInteract;"Bueno, volviendo a empezar, supongo, hagamos esto rapido.";"Well, gotta retry I guess, let's do it quick."
+detentionDoorInteract2;"(Cerrado)";"(Closed)"
+detentionDoorInteract3;"... Que?";"... What?"

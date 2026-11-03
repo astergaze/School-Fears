@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: 44523549260751812}
   - component: {fileID: 6574816223582765314}
   - component: {fileID: 2348013393103145579}
+  - component: {fileID: 2728410416007238136}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -234,6 +235,41 @@ MonoBehaviour:
   volume: 0.4
   pitchMin: 0.9
   pitchMax: 1.06
+--- !u!114 &2728410416007238136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3450362085179103569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f10d254a104ae6b4d8ce1e74741df287, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlashlightController
+  flashlightItem: {fileID: 11400000, guid: f19328c6a2b7b984fba3032a55bdd004, type: 2}
+  allowHotkey: 1
+  hotkey: 20
+  intensity: 30
+  range: 28
+  spotAngle: 55
+  innerSpotAngle: 25
+  color: {r: 1, g: 0.96, b: 0.85, a: 1}
+  shadows: 2
+  localOffset: {x: 0.18, y: -0.14, z: 0.25}
+  followSpeed: 14
+  viewModelPrefab: {fileID: 0}
+  fogMaterial: {fileID: 2100000, guid: 27f1cdec685dad770b7c694b374b31b1, type: 2}
+  baseDensity: 0.4
+  baseStart: 1
+  flashlightDensity: 0.16
+  flashlightStart: 3.5
+  fadeTime: 0.35
+  toggleClip: {fileID: 0}
+  toggleVolume: 0.8
+  onToggled:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5737843715436817862
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,8 +360,42 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 798705127813425431, guid: a7a8ccfc11a9af84481dcf23293dfcf7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 129427523276506872}
   m_SourcePrefab: {fileID: 100100000, guid: a7a8ccfc11a9af84481dcf23293dfcf7, type: 3}
+--- !u!114 &1378097037379281259 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 979259070918075193, guid: a7a8ccfc11a9af84481dcf23293dfcf7, type: 3}
+  m_PrefabInstance: {fileID: 2200286714438877778}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557523156585818949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89875cdc57c54474a8a74efd9b2a3b5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1557523156585818949 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 798705127813425431, guid: a7a8ccfc11a9af84481dcf23293dfcf7, type: 3}
+  m_PrefabInstance: {fileID: 2200286714438877778}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &129427523276506872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557523156585818949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3574d500379ca724f8ce64595d01402d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraSensitivityApplier
+  inputAxisController: {fileID: 1378097037379281259}
+  gainBasePanX: 100
+  gainBaseTiltY: -100
 --- !u!4 &6452856832803568029 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5117736254700616655, guid: a7a8ccfc11a9af84481dcf23293dfcf7, type: 3}
