@@ -29,7 +29,11 @@ Material:
     - _FogHeight: 10
     - _FogStart: 1
     - _LightAbsorption: 1
+    - _LightScatterG: 0.6
+    - _LightScatterIntensity: 6
+    - _LightSteps: 24
     m_Colors:
     - _FogColor: {r: 0.020870408, g: 0.037808143, b: 0.066037714, a: 1}
+    - _LightScatterColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

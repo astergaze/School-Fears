@@ -63,6 +63,17 @@ Shader "Custom/VolumetricFog"
             float3 _VLightColor;
             float _VLightIntensity;
 
+            // Linterna del jugador (FlashlightController.cs, también globales).
+            // _FlashStrength = 0 -> efecto desactivado, el resto de valores se ignora.
+            float3 _FlashPositionWS;
+            float3 _FlashDirectionWS;
+            float _FlashRange;
+            float _FlashCosHalfAngle;
+            float _FlashCosInnerAngle;
+            float _FlashStrength;
+            float _FlashFogDensity;
+            float _FlashFogStart;
+
             Varyings Vert(Attributes input)
             {
                 Varyings output;
@@ -142,11 +153,28 @@ Shader "Custom/VolumetricFog"
 
                 float dist = length(worldPos - camPos);
 
+                // Máscara de la linterna: 1 dentro del cono (con borde suave y fade por rango), 0 fuera.
+                float flash = 0.0;
+                if (_FlashStrength > 0.0001)
+                {
+                    float3 toPix = worldPos - _FlashPositionWS;
+                    float flashDist = length(toPix);
+                    float3 fdir = _FlashDirectionWS / max(length(_FlashDirectionWS), 1e-5);
+                    float cosA = dot(toPix / max(flashDist, 1e-5), fdir);
+
+                    float cone = smoothstep(_FlashCosHalfAngle, _FlashCosInnerAngle, cosA);
+                    float rangeFade = 1.0 - smoothstep(_FlashRange * 0.6, _FlashRange, flashDist);
+                    flash = cone * rangeFade * _FlashStrength;
+                }
+
+                float fogDensity = lerp(_FogDensity, _FlashFogDensity, flash);
+                float fogStart = lerp(_FogStart, _FlashFogStart, flash);
+
                 // Distancia efectiva a partir del umbral del jugador
-                float d = max(0.0, dist - _FogStart);
+                float d = max(0.0, dist - fogStart);
 
                 // Curva Exponential Squared nativa de Unity: e^(-(d * density)^2)
-                float factor = d * _FogDensity;
+                float factor = d * fogDensity;
                 float transmittance = exp(-factor * factor);
                 float fogFactor = 1.0 - saturate(transmittance);
 
