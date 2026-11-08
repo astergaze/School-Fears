@@ -3646,6 +3646,51 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 526d1a29af1de244a87c3f906b1fe0c3, type: 3}
+--- !u!1 &682002834
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 682002836}
+  - component: {fileID: 682002835}
+  m_Layer: 0
+  m_Name: playerDoorSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &682002835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682002834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb81fe29c439804a6b1e9d357e7f7111, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnPoint
+  id: backroomSP
+--- !u!4 &682002836
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682002834}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.012, y: 0.3, z: 3.293}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &694779434
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5374,6 +5419,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
+    - target: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 5255132487348479969, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
       propertyPath: m_LocalScale.x
       value: 220
@@ -5429,8 +5478,74 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 967827780}
+    - targetCorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 967827781}
   m_SourcePrefab: {fileID: 100100000, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+--- !u!1 &967827779 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+  m_PrefabInstance: {fileID: 967827778}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &967827780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967827779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33e4a18415d478545be648c8ab467c57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClassroomExitDoor
+  interactionRange: 1
+  promptKey: promptInteractDefault
+  baseLines:
+  - speaker: 0
+    textId: test
+    choices:
+    - textId: test
+      state: 0
+      responseLines: []
+      actionId: leave_scene
+  normalLeaveActionId: leave_scene
+  normalSceneToLoad: rector room
+  returnSpawnPointId: backroomSP
+  requiredNotes: []
+  requiredNotesCount: 0
+  specialChoiceTextId: 
+  directSpecialChoiceText: 
+  specialActionId: 
+  hallwaySceneName: 
+  specialResponseLines: []
+  openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
+  closeSound: {fileID: 8300000, guid: 263c00db3030e6f6ca6216895d2b4398, type: 3}
+--- !u!65 &967827781
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967827779}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0100000035, y: 0.0016880526, z: 0.021000003}
+  m_Center: {x: -0.0034599984, y: 0.00012000001, z: 2.8610229e-11}
 --- !u!1 &984595152
 GameObject:
   m_ObjectHideFlags: 0
@@ -10886,6 +11001,7 @@ SceneRoots:
   - {fileID: 426850385}
   - {fileID: 1189114031}
   - {fileID: 1074234899}
+  - {fileID: 682002836}
   - {fileID: 954859929}
   - {fileID: 1327995362}
   - {fileID: 519854528}
