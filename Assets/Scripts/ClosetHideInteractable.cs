@@ -1,13 +1,26 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Serialization;
 
+/// <summary>
+/// Armario donde el jugador se esconde del Rector (Aula 1 y Aula 2).
+/// - Si el evento del Rector NO está activo (o ya se escondió una vez): dice que está vacío.
+/// - Si está activo: fade a negro, pasos del Rector, flags de patrulla, fade in y monólogo.
+/// Durante toda la secuencia SceneTransitioner.IsTransitioning = true, así que el Player
+/// no se mueve, no interactúa y el prompt de "Presiona E" queda oculto.
+/// </summary>
 public class ClosetHideInteractable : Interactable
 {
     [Header("Condición de Activación")]
     [Tooltip("Flag que dispara la puerta del Aula 1 al ser golpeada.")]
     [SerializeField] private string rectorEventFlag = "rector_chase_triggered";
-    [Tooltip("Diálogo si interactúa ANTES de que el Rector empiece a buscarlo.")]
-    [SerializeField] private DialogueLine[] normalLines;
+
+    [Tooltip("Diálogo si interactúa y NO hay peligro (ej: 'Está abierto... no hay nada dentro').")]
+    [FormerlySerializedAs("normalLines")]
+    [SerializeField] private DialogueLine[] emptyClosetLines;
+
+    [Tooltip("Si está activo, solo se puede esconder una vez (después dice que está vacío).")]
+    [SerializeField] private bool onlyHideOnce = true;
 
     [Header("Flags de Progreso")]
     [Tooltip("Flag que activa la patrulla global del Rector al salir del armario.")]
@@ -39,35 +52,39 @@ public class ClosetHideInteractable : Interactable
     {
         if (isHiding) return;
 
-        // Validar si el evento del Rector ya fue disparado
-        bool isChasing = GameManager.Instance != null && GameManager.Instance.HasFlag(rectorEventFlag);
+        GameManager gm = GameManager.Instance;
+        bool isChasing = gm != null && gm.HasFlag(rectorEventFlag);
+        bool alreadyHidden = onlyHideOnce && gm != null && gm.HasFlag(hiddenOnceFlag);
 
-        if (!isChasing)
+        if (!isChasing || alreadyHidden)
         {
-            // Diálogo por defecto cuando no hay peligro
-            if (normalLines != null && normalLines.Length > 0 && DialogueManager.Instance != null)
-                DialogueManager.Instance.StartDialogue(normalLines);
+            // Sin peligro: "Está abierto... no hay nada dentro"
+            if (emptyClosetLines != null && emptyClosetLines.Length > 0 && DialogueManager.Instance != null)
+                DialogueManager.Instance.StartDialogue(emptyClosetLines);
             return;
         }
 
-        // Si el peligro está activo, inicia la secuencia de escondite
-        StartCoroutine(HideSequence(player));
+        StartCoroutine(HideSequence());
     }
 
-    private IEnumerator HideSequence(Player player)
+    private IEnumerator HideSequence()
     {
         isHiding = true;
 
-        // 1. Entrar al armario y Fade out a negro
+        // Bloquea movimiento/interacción y mantiene el prompt apagado durante todo el fade
+        SceneTransitioner.IsTransitioning = true;
+        InteractionPromptUI.Instance?.HidePrompt();
+
+        // 1. Entrar al armario y fade out a negro
         if (enterClosetSound != null && AudioManager.Instance != null)
             AudioManager.Instance.PlaySFX(enterClosetSound);
 
-        yield return SceneTransitioner.Instance.FadeRoutine(1f);
-        InteractionPromptUI.Instance?.HidePrompt();
+        if (SceneTransitioner.Instance != null)
+            yield return SceneTransitioner.Instance.FadeRoutine(1f);
 
         yield return new WaitForSeconds(1.0f);
 
-        // 2. Simular ráfaga de pasos del Rector pasando por la puerta del aula
+        // 2. Ráfaga de pasos del Rector pasando por la puerta del aula
         if (footstepClips != null && footstepClips.Length > 0 && AudioManager.Instance != null)
         {
             for (int i = 0; i < stepsToPlay; i++)
@@ -80,7 +97,7 @@ public class ClosetHideInteractable : Interactable
 
         yield return new WaitForSeconds(0.8f);
 
-        // 3. Sonido de puerta cerrándose (simula que se aleja o cierra la puerta del aula)
+        // 3. Sonido de puerta cerrándose
         if (doorCloseSound != null && AudioManager.Instance != null)
             AudioManager.Instance.PlaySFX(doorCloseSound);
 
@@ -90,14 +107,25 @@ public class ClosetHideInteractable : Interactable
         GameManager.Instance?.SetFlag(rectorActiveFlag);
         GameManager.Instance?.SetFlag(hiddenOnceFlag);
 
-        // 5. Fade In y monólogo interno de Alex
-        yield return SceneTransitioner.Instance.FadeRoutine(0f);
+        // 5. Fade in
+        if (SceneTransitioner.Instance != null)
+            yield return SceneTransitioner.Instance.FadeRoutine(0f);
+
+        // Devolvemos el control antes del monólogo (el diálogo mantiene el prompt oculto por sí solo)
+        SceneTransitioner.IsTransitioning = false;
+        isHiding = false;
 
         if (postHideLines != null && postHideLines.Length > 0 && DialogueManager.Instance != null)
-        {
             DialogueManager.Instance.StartDialogue(postHideLines);
-        }
+    }
+
+    private void OnDisable()
+    {
+        // Si el objeto se desactiva a mitad de secuencia, no dejamos al jugador trabado ni a oscuras
+        if (!isHiding) return;
 
         isHiding = false;
+        SceneTransitioner.IsTransitioning = false;
+        SceneTransitioner.Instance?.FadeScreen(0f);
     }
 }
