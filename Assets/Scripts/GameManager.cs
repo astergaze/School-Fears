@@ -13,6 +13,9 @@ public class GameManager : MonoBehaviour
     // IDs de las notas que el jugador ya recogió (evita que reaparezcan al volver al aula)
     private HashSet<string> collectedNoteIds = new HashSet<string>();
 
+    private HashSet<string> flags = new HashSet<string>();
+    public void SetFlag(string id) { if (!string.IsNullOrEmpty(id)) flags.Add(id); }
+    public bool HasFlag(string id) => !string.IsNullOrEmpty(id) && flags.Contains(id);
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -41,5 +44,6 @@ public class GameManager : MonoBehaviour
     {
         collectedNoteIds.Clear();
         pendingSpawnPointId = null;
+        flags.Clear();
     }
 }

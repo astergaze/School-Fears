@@ -9402,6 +9402,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 5255132487348479969, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -37.354565
@@ -9445,13 +9449,88 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 746321342}
+    - targetCorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 746321343}
+    - targetCorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 746321344}
   m_SourcePrefab: {fileID: 100100000, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
 --- !u!4 &746321340 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5255132487348479969, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
   m_PrefabInstance: {fileID: 746321339}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &746321341 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+  m_PrefabInstance: {fileID: 746321339}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &746321342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746321341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93e50b444418b8ca58f75d99ce330cc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MazeDoorToRoom
+  interactionRange: 1
+  promptKey: promptInteractDefault
+  roomSceneName: Aula2_ch2
+  spawnPointId: Door_aula2_spawnpointch2
+  requiredKey: {fileID: 11400000, guid: 883f7e5909ad5044bafef001bf3bc480, type: 2}
+  lockedLines:
+  - speaker: 0
+    textId: door_locked
+    choices: []
+  openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
+  closeSound: {fileID: 8300000, guid: 263c00db3030e6f6ca6216895d2b4398, type: 3}
+  lockedSound: {fileID: 0}
+  unlockSound: {fileID: 0}
+--- !u!114 &746321343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746321341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3e38d20fc2d27747b60e6135e7044cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OutlineEffect
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  outlineWidth: 0.00001
+  emissionIntensity: 2.5
+--- !u!65 &746321344
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746321341}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.010000004, y: 0.0016880526, z: 0.021000003}
+  m_Center: {x: -0.0034599989, y: 0.00012000001, z: 2.8610229e-11}
 --- !u!1001 &748256292
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11506,8 +11585,12 @@ MonoBehaviour:
   promptKey: promptInteractDefault
   roomSceneName: Aula3_ch2
   spawnPointId: Door_aula3_spawnpointch2
+  requiredKey: {fileID: 0}
+  lockedLines: []
   openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
   closeSound: {fileID: 8300000, guid: 263c00db3030e6f6ca6216895d2b4398, type: 3}
+  lockedSound: {fileID: 0}
+  unlockSound: {fileID: 0}
 --- !u!114 &880568260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21123,6 +21206,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7501932837591191792, guid: d60b296c20aec1044beb948655f84e03, type: 3}
   m_PrefabInstance: {fileID: 836052418}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1792499619
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1792499621}
+  - component: {fileID: 1792499620}
+  m_Layer: 0
+  m_Name: Door_aula2_spawnpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!114 &1792499620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792499619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb81fe29c439804a6b1e9d357e7f7111, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnPoint
+  id: Door_aula2_spawnpointch2
+--- !u!4 &1792499621
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792499619}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -37.005, y: 0.307, z: 63.229}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1794039641
 GameObject:
   m_ObjectHideFlags: 0
@@ -21269,8 +21397,12 @@ MonoBehaviour:
   promptKey: promptInteractDefault
   roomSceneName: rector room
   spawnPointId: defaultspawn
+  requiredKey: {fileID: 0}
+  lockedLines: []
   openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
   closeSound: {fileID: 8300000, guid: 263c00db3030e6f6ca6216895d2b4398, type: 3}
+  lockedSound: {fileID: 0}
+  unlockSound: {fileID: 0}
 --- !u!114 &1803325430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25857,4 +25989,5 @@ SceneRoots:
   - {fileID: 622515128}
   - {fileID: 1794039643}
   - {fileID: 1711935979}
+  - {fileID: 1792499621}
   - {fileID: 2081660127}

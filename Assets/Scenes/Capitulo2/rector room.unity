@@ -1941,8 +1941,8 @@ GameObject:
   - component: {fileID: 408757713}
   - component: {fileID: 408757712}
   - component: {fileID: 408757711}
-  - component: {fileID: 408757710}
   - component: {fileID: 408757715}
+  - component: {fileID: 408757716}
   m_Layer: 12
   m_Name: Plane
   m_TagString: Untagged
@@ -1950,33 +1950,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &408757710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 408757709}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c75ebc3174a87c0489cb7028184e6d3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NoteItemInteractable
-  interactionRange: 1
-  promptKey: promptInteractDefault
-  noteUniqueId: aula2key
-  noteItem: {fileID: 11400000, guid: 883f7e5909ad5044bafef001bf3bc480, type: 2}
-  lines:
-  - speaker: 0
-    textId: test
-    choices: []
-  fadeOutOnEnd: 0
-  objectivePopupId: Entra al aula 2
-  objectivePopupText: Llave del aula 2 recogida
-  pickupSound: {fileID: 0}
-  onNotePickedUp:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!64 &408757711
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2064,13 +2037,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 408757709}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.497, y: 2.28196, z: 18.386}
+  m_LocalRotation: {x: 0, y: -0, z: 0.7071068, w: -0.7071068}
+  m_LocalPosition: {x: -10.319, y: 1.874, z: 18.302}
   m_LocalScale: {x: 0.06464865, y: 1, z: 0.030336764}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
 --- !u!114 &408757715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2086,6 +2059,31 @@ MonoBehaviour:
   outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   outlineWidth: 0.00001
   emissionIntensity: 2.5
+--- !u!114 &408757716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408757709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c272907de70ac4941a0869ab0c8d56f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KeyGiverInteractable
+  interactionRange: 1
+  promptKey: promptInteractDefault
+  keyItem: {fileID: 11400000, guid: 883f7e5909ad5044bafef001bf3bc480, type: 2}
+  flagId: 
+  deactivateAfterTaking: 1
+  foundLines: []
+  alreadyTakenLines: []
+  popupTextId: 
+  popupText: 
+  pickupSound: {fileID: 0}
+  onKeyTaken:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &425655128
 GameObject:
   m_ObjectHideFlags: 0
@@ -5188,6 +5186,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1216434108}
+    - targetCorrespondingSourceObject: {fileID: 4874631523190783323, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1216434109}
   m_SourcePrefab: {fileID: 100100000, guid: 2c5733dc61cb93f4fb10b11d8dd044e3, type: 3}
 --- !u!1 &1216434106 stripped
 GameObject:
@@ -5243,6 +5244,27 @@ MonoBehaviour:
   outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   outlineWidth: 0.00001
   emissionIntensity: 2.5
+--- !u!65 &1216434109
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216434106}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0100000035, y: 0.0016880526, z: 0.021000003}
+  m_Center: {x: -0.0034599984, y: 0.00012000001, z: 2.8610229e-11}
 --- !u!4 &1269925506 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bfd08a599c5d4ea4eb0621ca430a136c, type: 3}

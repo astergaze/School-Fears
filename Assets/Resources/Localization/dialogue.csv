@@ -42,3 +42,10 @@ detentionSpawn3;"Claro, si. Otra vez aparezco en un aula sin saber que paso, ten
 detentionDoorInteract;"Bueno, volviendo a empezar, supongo, hagamos esto rapido.";"Well, gotta retry I guess, let's do it quick."
 detentionDoorInteract2;"(Cerrado)";"(Closed)"
 detentionDoorInteract3;"... Que?";"... What?"
+promptGrabTable;Mantén E para mover la mesa;Hold E to move the table
+aula_pizarron_01;Hay algo escrito en esta pared.;There's something written on this wall.
+aula_pizarron_02;“Libera tu camino hasta poder llegar al centro, si no hay camino, créalo”;“Clear your path until you reach the center. If there's no path, make one.”
+aula_pizarron_03;Todo lo demás está rayado.;Everything else is scratched out.
+aula_llave_01;¿Para qué será…?;What could this be for…?
+aula_llave_popup;Encontraste una llave;You found a key
+door_locked;Está cerrada con llave.;It's locked.

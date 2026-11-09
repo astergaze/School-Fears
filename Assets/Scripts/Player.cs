@@ -18,6 +18,8 @@ public class Player : MonoBehaviour
     private float turnSmoothingVelocity;
     private float verticalVelocity = 0f;
     private float gravity = -9.81f;
+    public float SpeedMultiplier { get; set; } = 1f;
+    public float CurrentMoveSpeed => playerWalkSpeed * SpeedMultiplier;
 
     [Header("Interaction")]
     [SerializeField] private float interactRange = 3f;
@@ -80,7 +82,7 @@ public class Player : MonoBehaviour
         Inventory = GetComponent<Inventory>();
 
         var playerMap = InputActions.FindActionMap("Player");
-        playerMoveAction     = playerMap.FindAction("Move");
+        playerMoveAction = playerMap.FindAction("Move");
         playerInteractAction = playerMap.FindAction("Interact");
         playerInventoryAction = playerMap.FindAction("Inventory");
     }
@@ -200,8 +202,7 @@ public class Player : MonoBehaviour
 
         Vector3 moveDirection = (camRight * playerMoveAmount.x + camForward * playerMoveAmount.y);
         Vector3 verticalMove = new Vector3(0f, verticalVelocity, 0f) * Time.deltaTime;
-
-        playerCharacterController.Move(moveDirection * playerWalkSpeed * Time.deltaTime + verticalMove);
+        playerCharacterController.Move(moveDirection * CurrentMoveSpeed * Time.deltaTime + verticalMove);
 
         if (camForward != Vector3.zero)
         {
