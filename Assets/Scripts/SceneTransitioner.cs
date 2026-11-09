@@ -18,7 +18,7 @@ public class SceneTransitioner : MonoBehaviour
     [Tooltip("CanvasGroup de una imagen negra full screen (Screen Space - Overlay), alpha 0 al inicio")]
     [SerializeField] private CanvasGroup fadeCanvas;
     [SerializeField] private float fadeDuration = 0.4f;
-    public static bool IsTransitioning { get; private set; } = false;
+    public static bool IsTransitioning { get; set; } = false;
 
     private void Awake()
     {

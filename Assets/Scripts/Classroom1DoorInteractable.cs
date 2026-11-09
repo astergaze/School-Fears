@@ -1,6 +1,14 @@
 using System.Collections;
 using UnityEngine;
 
+/// <summary>
+/// Puerta del Aula 1 (capítulo 2).
+/// La PRIMERA vez que el jugador interactúa, tenga llave o no, se dispara el evento del Rector:
+/// golpe de puerta + pasos + diálogo de pánico + objetivo "Escóndete en un aula".
+/// Después del evento:
+///   - Con llave: se abre el diálogo de desbloqueo y puede entrar al Aula 1 (que tiene su propio armario).
+///   - Sin llave: dice que está cerrada.
+/// </summary>
 public class Classroom1DoorInteractable : Interactable
 {
     [Header("Claves e Ítems")]
@@ -9,11 +17,21 @@ public class Classroom1DoorInteractable : Interactable
     [SerializeField] private string leaveActionId = "leave_scene";
     [SerializeField] private string targetSceneName = "Aula1";
 
-    [Header("Diálogos - Primer Intento (Sin Llave)")]
+    [Header("Primer intento - SIN llave")]
     [SerializeField] private DialogueLine[] introLines;
+
+    [Header("Primer intento - CON llave (opcional)")]
+    [Tooltip("Si queda vacío, con llave se salta directo al golpe de puerta del Rector.")]
+    [SerializeField] private DialogueLine[] introLinesWithKey;
+
+    [Header("Después del golpe (con y sin llave)")]
     [SerializeField] private DialogueLine[] afterBangLines;
 
-    [Header("Diálogos - Desbloqueo (Con Llave)")]
+    [Header("Intentos posteriores - SIN llave")]
+    [Tooltip("Si queda vacío, se repiten las Intro Lines (comportamiento anterior).")]
+    [SerializeField] private DialogueLine[] lockedLines;
+
+    [Header("Desbloqueo (con llave, después del evento)")]
     [SerializeField] private DialogueLine[] unlockLines;
 
     [Header("Audio - Golpe de Puerta")]
@@ -36,35 +54,56 @@ public class Classroom1DoorInteractable : Interactable
     [SerializeField] private string hideObjectiveText = "¡Escóndete en un aula!";
 
     private int lastClipIndex = -1;
+    private bool sequenceRunning = false; // evita reentrar mientras corre golpe + pasos + diálogos
 
     public override void Interact(Player player)
     {
+        if (sequenceRunning) return;
+
         bool hasKey = aula1Key != null && player.Inventory != null && player.Inventory.HasItem(aula1Key);
         bool eventTriggered = GameManager.Instance != null && GameManager.Instance.HasFlag(rectorEventFlag);
 
+        // Primera interacción: el Rector aparece sí o sí, tenga llave o no.
+        if (!eventTriggered)
+        {
+            StartAlertSequence(hasKey);
+            return;
+        }
+
+        // Evento ya disparado
         if (hasKey)
         {
+            if (DialogueManager.Instance == null) return;
             DialogueManager.Instance.ChoiceSelected -= HandleUnlockChoice;
             DialogueManager.Instance.ChoiceSelected += HandleUnlockChoice;
             DialogueManager.Instance.StartDialogue(unlockLines);
         }
-        else if (!eventTriggered)
-        {
-            GameManager.Instance?.SetFlag(rectorEventFlag);
-            TriggerRectorAlertSequence();
-        }
         else
         {
-            if (introLines != null && introLines.Length > 0)
-                DialogueManager.Instance.StartDialogue(introLines);
+            DialogueLine[] lines = (lockedLines != null && lockedLines.Length > 0) ? lockedLines : introLines;
+            if (lines != null && lines.Length > 0 && DialogueManager.Instance != null)
+                DialogueManager.Instance.StartDialogue(lines);
         }
     }
 
-    private void TriggerRectorAlertSequence()
+    private void StartAlertSequence(bool hasKey)
     {
-        DialogueManager.Instance.OnDialogueEnded -= OnIntroDialogueEnded;
-        DialogueManager.Instance.OnDialogueEnded += OnIntroDialogueEnded;
-        DialogueManager.Instance.StartDialogue(introLines);
+        sequenceRunning = true;
+        GameManager.Instance?.SetFlag(rectorEventFlag);
+
+        DialogueLine[] lines = hasKey ? introLinesWithKey : introLines;
+
+        if (lines != null && lines.Length > 0 && DialogueManager.Instance != null)
+        {
+            DialogueManager.Instance.OnDialogueEnded -= OnIntroDialogueEnded;
+            DialogueManager.Instance.OnDialogueEnded += OnIntroDialogueEnded;
+            DialogueManager.Instance.StartDialogue(lines);
+        }
+        else
+        {
+            // Sin diálogo de intro: directo al golpe
+            StartCoroutine(RectorAlertRoutine());
+        }
     }
 
     private void OnIntroDialogueEnded()
@@ -92,15 +131,25 @@ public class Classroom1DoorInteractable : Interactable
             }
         }
 
-        // 3. Continuar con el diálogo de pánico de Alex
-        DialogueManager.Instance.OnDialogueEnded -= OnAlertFinished;
-        DialogueManager.Instance.OnDialogueEnded += OnAlertFinished;
-        DialogueManager.Instance.StartDialogue(afterBangLines);
+        // 3. Diálogo de pánico de Alex (si no hay líneas, cerramos la secuencia directo)
+        if (afterBangLines != null && afterBangLines.Length > 0 && DialogueManager.Instance != null)
+        {
+            DialogueManager.Instance.OnDialogueEnded -= OnAlertFinished;
+            DialogueManager.Instance.OnDialogueEnded += OnAlertFinished;
+            DialogueManager.Instance.StartDialogue(afterBangLines);
+        }
+        else
+        {
+            OnAlertFinished();
+        }
     }
 
     private void OnAlertFinished()
     {
-        DialogueManager.Instance.OnDialogueEnded -= OnAlertFinished;
+        if (DialogueManager.Instance != null)
+            DialogueManager.Instance.OnDialogueEnded -= OnAlertFinished;
+
+        sequenceRunning = false;
 
         if (ObjectivePopupUI.Instance != null)
             ObjectivePopupUI.Instance.ShowMessage(hideObjectiveText, 4.5f);
@@ -117,6 +166,8 @@ public class Classroom1DoorInteractable : Interactable
 
     private void OnDisable()
     {
+        sequenceRunning = false;
+
         if (DialogueManager.Instance != null)
         {
             DialogueManager.Instance.OnDialogueEnded -= OnIntroDialogueEnded;

@@ -1990,6 +1990,81 @@ PrefabInstance:
       addedObject: {fileID: 568721137}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22dfa27632f123646a0234427b8b6948, type: 3}
+--- !u!1 &331683414 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 824083228830746210, guid: e2fde8a406a332e4681e91fefffb7364, type: 3}
+  m_PrefabInstance: {fileID: 385117338}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &331683415
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331683414}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.005521073, y: 0.00056728855, z: 0.00419997}
+  m_Center: {x: 0.0000000012805685, y: -0.00028206644, z: 0}
+--- !u!114 &331683416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331683414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3e38d20fc2d27747b60e6135e7044cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OutlineEffect
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  outlineWidth: 0.00001
+  emissionIntensity: 2.5
+--- !u!114 &331683417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331683414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33e4a18415d478545be648c8ab467c57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClassroomExitDoor
+  interactionRange: 1
+  promptKey: promptInteractDefault
+  baseLines:
+  - speaker: 0
+    textId: test
+    choices:
+    - textId: test
+      state: 0
+      responseLines: []
+      actionId: leave_scene
+  normalLeaveActionId: leave_scene
+  normalSceneToLoad: kitchen
+  returnSpawnPointId: 
+  requiredNotes: []
+  requiredNotesCount: 0
+  specialChoiceTextId: 
+  directSpecialChoiceText: 
+  specialActionId: 
+  hallwaySceneName: 
+  specialResponseLines: []
+  openSound: {fileID: 0}
+  closeSound: {fileID: 0}
 --- !u!1001 &335906077
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2253,6 +2328,84 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1001 &385117338
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 10251812282047704, guid: e2fde8a406a332e4681e91fefffb7364, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 160.56627
+      objectReference: {fileID: 0}
+    - target: {fileID: 10251812282047704, guid: e2fde8a406a332e4681e91fefffb7364, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 150.05414
+      objectReference: {fileID: 0}
+    - target: {fileID: 10251812282047704, guid: e2fde8a406a332e4681e91fefffb7364, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.707
+      objectReference: {fileID: 0}
+    - target: {fileID: 10251812282047704, guid: e2fde8a406a332e4681e91fefffb7364, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 10251812282047704, guid: e2fde8a406a332e4681e91fefffb7364, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -8.256
+      objectReference: {fileID: 0}
+    - target: {fileID: 10251812282047704, guid: e2fde8a406a332e4681e91fefffb7364, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 10251812282047704, guid: e2fde8a406a332e4681e91fefffb7364, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 10251812282047704, guid: e2fde8a406a332e4681e91fefffb7364, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 10251812282047704, guid: e2fde8a406a332e4681e91fefffb7364, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 10251812282047704, guid: e2fde8a406a332e4681e91fefffb7364, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 10251812282047704, guid: e2fde8a406a332e4681e91fefffb7364, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 10251812282047704, guid: e2fde8a406a332e4681e91fefffb7364, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 824083228830746210, guid: e2fde8a406a332e4681e91fefffb7364, type: 3}
+      propertyPath: m_Name
+      value: ventilacion
+      objectReference: {fileID: 0}
+    - target: {fileID: 824083228830746210, guid: e2fde8a406a332e4681e91fefffb7364, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 824083228830746210, guid: e2fde8a406a332e4681e91fefffb7364, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 331683417}
+    - targetCorrespondingSourceObject: {fileID: 824083228830746210, guid: e2fde8a406a332e4681e91fefffb7364, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 331683416}
+    - targetCorrespondingSourceObject: {fileID: 824083228830746210, guid: e2fde8a406a332e4681e91fefffb7364, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 331683415}
+  m_SourcePrefab: {fileID: 100100000, guid: e2fde8a406a332e4681e91fefffb7364, type: 3}
 --- !u!1001 &396519751
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5198,7 +5351,7 @@ MonoBehaviour:
       actionId: 
   normalLeaveActionId: leave_scene
   normalSceneToLoad: chapter 2 hallwat
-  returnSpawnPointId: aula3cap2spawn
+  returnSpawnPointId: Door_aula3_spawnpointch2
   requiredNotes: []
   requiredNotesCount: 0
   specialChoiceTextId: 
@@ -12986,3 +13139,4 @@ SceneRoots:
   - {fileID: 685200357}
   - {fileID: 1215514164}
   - {fileID: 428855615}
+  - {fileID: 385117338}

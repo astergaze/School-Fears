@@ -135,7 +135,7 @@ public class ClassroomExitDoor : Interactable
         return directSpecialChoiceText;
     }
 
-    private void HandleChoiceSelected(DialogueChoice choice)
+    protected virtual void HandleChoiceSelected(DialogueChoice choice)
     {
         // 1. Opción normal de volver al laberinto
         if (choice.actionId == normalLeaveActionId)

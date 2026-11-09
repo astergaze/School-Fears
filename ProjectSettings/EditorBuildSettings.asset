@@ -68,5 +68,59 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Capitulo2/Aula1_ch2.unity
     guid: 3143a72f01102e4418f4b4b441b1eee5
+  - enabled: 1
+    path: Assets/Scenes/Capitulo2/Bucle 1/detencionloop1.unity
+    guid: c4fb72afd3529f24eb2df4162f34865c
+  - enabled: 1
+    path: Assets/Scenes/Capitulo2/Bucle 1/chapter 2 hallwatloop1.unity
+    guid: 51bd460b220ba4d4dbbec2c0f980f36f
+  - enabled: 1
+    path: Assets/Scenes/Capitulo2/Bucle 1/Aula1_ch2loop1.unity
+    guid: b7bf1ac10126bbb47a1d229bcf659073
+  - enabled: 1
+    path: Assets/Scenes/Capitulo2/Bucle 1/Aula2_ch2loop1.unity
+    guid: a3dcf99d01a3f9942a5be43d68032eec
+  - enabled: 1
+    path: Assets/Scenes/Capitulo2/Bucle 1/Aula3_ch2loop1.unity
+    guid: 58bcd733dc1eac744994f55c8fca86af
+  - enabled: 1
+    path: Assets/Scenes/Capitulo2/Bucle 1/Aula4_ch2loop1.unity
+    guid: 05e2eef5f1146a74b994fa7c18c99149
+  - enabled: 1
+    path: Assets/Scenes/Capitulo2/Bucle 2/Aula1_ch2loop2.unity
+    guid: e85b02b3a40f99c418dba10dc241806e
+  - enabled: 1
+    path: Assets/Scenes/Capitulo2/Bucle 2/Aula2_ch2loop2.unity
+    guid: 5dc8e52b214c0214c9212c9bc946779e
+  - enabled: 1
+    path: Assets/Scenes/Capitulo2/Bucle 2/Aula3_ch2loop2.unity
+    guid: 2a283bf52e5bb8245a6a4477009d4762
+  - enabled: 1
+    path: Assets/Scenes/Capitulo2/Bucle 2/Aula4_ch2loop2.unity
+    guid: 2ad3b18c1a90b04459e87b85bfc880cf
+  - enabled: 1
+    path: Assets/Scenes/Capitulo2/Bucle 2/chapter 2 hallwatloop2.unity
+    guid: 1b0ec97a5b6b9fc4788d5c98f911fb78
+  - enabled: 1
+    path: Assets/Scenes/Capitulo2/Bucle 2/detencionloop2.unity
+    guid: f7ea614ea6db84c469d5636bf6cd310b
+  - enabled: 1
+    path: Assets/Scenes/Capitulo2/Bucle 3/detencionloop3.unity
+    guid: 81f40412a4d0bb5428f5a2ff9d95dbda
+  - enabled: 1
+    path: Assets/Scenes/Capitulo2/Bucle 3/chapter 2 hallwatloop3.unity
+    guid: aa10b8f435a1fc74981b4a6d118b53b9
+  - enabled: 1
+    path: Assets/Scenes/Capitulo2/Bucle 3/Aula4_ch2loop3.unity
+    guid: c5ce94f584f58cd43aa34eeceb77d6c8
+  - enabled: 1
+    path: Assets/Scenes/Capitulo2/Bucle 3/Aula3_ch2loop3.unity
+    guid: 2090702cbe50e4e4baeecbace0cd6b19
+  - enabled: 1
+    path: Assets/Scenes/Capitulo2/Bucle 3/Aula2_ch2loop3.unity
+    guid: c6aec9a589df7d741ac3c180d85900db
+  - enabled: 1
+    path: Assets/Scenes/Capitulo2/Bucle 3/Aula1_ch2loop3.unity
+    guid: 0b639c24ed1c7f847aa1324345f93a77
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

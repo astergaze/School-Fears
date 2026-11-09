@@ -4166,7 +4166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d994f49aa0fa543b899854cb5bdb78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RectorPatrolAI
-  speedMultiplier: 1.5
+  speedMultiplier: 1.15
   patrolWaypoints:
   - {fileID: 1338986952}
   - {fileID: 359894049}
@@ -4235,7 +4235,7 @@ Transform:
   m_GameObject: {fileID: 320912457}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.37604, y: 0, z: 3.65}
+  m_LocalPosition: {x: -7.467, y: 0, z: 3.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11766,7 +11766,9 @@ MonoBehaviour:
   leaveActionId: leave_scene
   targetSceneName: Aula1_ch2
   introLines: []
+  introLinesWithKey: []
   afterBangLines: []
+  lockedLines: []
   unlockLines: []
   doorBangSound: {fileID: 0}
   openSound: {fileID: 0}

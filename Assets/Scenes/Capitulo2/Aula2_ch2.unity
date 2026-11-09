@@ -5160,7 +5160,7 @@ MonoBehaviour:
       actionId: 
   normalLeaveActionId: leave_scene
   normalSceneToLoad: chapter 2 hallwat
-  returnSpawnPointId: aula3cap2spawn
+  returnSpawnPointId: Door_aula2_spawnpointch2
   requiredNotes: []
   requiredNotesCount: 0
   specialChoiceTextId: 
@@ -8020,7 +8020,8 @@ MonoBehaviour:
   interactionRange: 1
   promptKey: promptInteractDefault
   rectorEventFlag: rector_chase_triggered
-  normalLines: []
+  emptyClosetLines: []
+  onlyHideOnce: 1
   rectorActiveFlag: rector_patrol_active
   hiddenOnceFlag: has_hidden_in_closet
   enterClosetSound: {fileID: 8300000, guid: 5bcb1a1f66cd3a60dbfafc12d7fddd43, type: 3}

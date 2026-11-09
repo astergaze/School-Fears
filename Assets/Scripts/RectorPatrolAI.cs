@@ -16,7 +16,7 @@ public class RectorPatrolAI : MonoBehaviour
     [SerializeField] private string rectorActiveFlag = "rector_patrol_active";
 
     [Header("Detención (Muerte/Captura)")]
-    [SerializeField] private string detentionSceneName = "Detention";
+    [SerializeField] private string detentionSceneName = "Detencion";
     [SerializeField] private float catchDistance = 1.6f;
     [SerializeField] private AudioClip catchSound;
 
@@ -146,9 +146,16 @@ public class RectorPatrolAI : MonoBehaviour
         isCatching = true;
         agent.isStopped = true;
 
+        // 1. Marcar que Alex fue capturado por el Rector
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.SetFlag("sent_to_detention");
+        }
+
         if (catchSound != null && AudioManager.Instance != null)
             AudioManager.Instance.PlaySFX(catchSound);
 
+        // 2. Cargar escena de detención (asegurar string exacto "detencion")
         SceneTransitioner.Instance.GoToScene(detentionSceneName, null, null);
     }
 
