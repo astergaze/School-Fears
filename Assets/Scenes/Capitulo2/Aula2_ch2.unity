@@ -7958,6 +7958,10 @@ PrefabInstance:
       value: Armario
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f3274a56c2d752e4a8569bba3422aa6f, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f3274a56c2d752e4a8569bba3422aa6f, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -7968,6 +7972,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f3274a56c2d752e4a8569bba3422aa6f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1215514166}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f3274a56c2d752e4a8569bba3422aa6f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1215514167}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f3274a56c2d752e4a8569bba3422aa6f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1215514168}
   m_SourcePrefab: {fileID: 100100000, guid: f3274a56c2d752e4a8569bba3422aa6f, type: 3}
 --- !u!1 &1215514165 stripped
 GameObject:
@@ -7995,6 +8005,54 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.010000004, y: 0.0050834226, z: 0.018000005}
   m_Center: {x: -4.220735e-16, y: -0.0004887244, z: 0.0090000015}
+--- !u!114 &1215514167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215514165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 606289f26d9740f4dbeadce434ddb790, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClosetHideInteractable
+  interactionRange: 1
+  promptKey: promptInteractDefault
+  rectorEventFlag: rector_chase_triggered
+  normalLines: []
+  rectorActiveFlag: rector_patrol_active
+  hiddenOnceFlag: has_hidden_in_closet
+  enterClosetSound: {fileID: 8300000, guid: 5bcb1a1f66cd3a60dbfafc12d7fddd43, type: 3}
+  doorCloseSound: {fileID: 8300000, guid: db9eaca6c6beea087b08a437a832b1cc, type: 3}
+  footstepClips:
+  - {fileID: 8300000, guid: 5cbc9fc23dc96d548ae10e318f6f6791, type: 3}
+  - {fileID: 8300000, guid: 0f1b33bf14a92fa09a4d0f919902f97b, type: 3}
+  - {fileID: 8300000, guid: babb541d0531bff4a95d730dd2cb2ee9, type: 3}
+  - {fileID: 8300000, guid: 9b4d6826a2a2075fb9ca38b92586b001, type: 3}
+  - {fileID: 8300000, guid: 6f55c744926092033819a46b0e6384df, type: 3}
+  - {fileID: 8300000, guid: a5f1d3b5a524d532bb90971c2c8da3d7, type: 3}
+  stepsToPlay: 6
+  stepInterval: 0.5
+  footstepVolume: 0.8
+  footstepPitchMin: 0.65
+  footstepPitchMax: 0.75
+  postHideLines: []
+--- !u!114 &1215514168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215514165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3e38d20fc2d27747b60e6135e7044cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OutlineEffect
+  outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  outlineWidth: 0.00001
+  emissionIntensity: 2.5
 --- !u!1001 &1220346629
 PrefabInstance:
   m_ObjectHideFlags: 0

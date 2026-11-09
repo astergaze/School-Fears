@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2a5313de162c64fd9ea1203b5c78ad3, type: 3}
   m_Name: aula1key
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
-  nameKey: aula1keyname
-  descriptionKey: aula1keydesc
+  nameKey: aula1KeyName
+  descriptionKey: aula1keyDesc
   itemName: 
   description: 
   icon: {fileID: 0}

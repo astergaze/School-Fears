@@ -1,10 +1,8 @@
 using UnityEngine;
 
 /// <summary>
-/// Empuja los datos de esta Spot Light como propiedades GLOBALES de shader,
-/// para que el pase fullscreen VolumetricFog pueda calcular el haz volumétrico
-/// sin depender de índices de luces de URP (funciona igual con Forward o Forward+).
-/// Colocar este componente en el mismo GameObject que la Spot Light (spotLightTransform).
+/// Empuja los datos de esta Spot Light como propiedades GLOBALES de shader.
+/// Limpia automáticamente la intensidad al desactivarse o cambiar de escena para evitar luces fantasma.
 /// </summary>
 [RequireComponent(typeof(Light))]
 public class VolumetricLightFeed : MonoBehaviour
@@ -25,15 +23,32 @@ public class VolumetricLightFeed : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (lightComponent == null) return;
+        if (lightComponent == null || !lightComponent.enabled)
+        {
+            DisableGlobalLight();
+            return;
+        }
 
         Shader.SetGlobalVector(PosID, transform.position);
         Shader.SetGlobalVector(DirID, transform.forward);
         Shader.SetGlobalFloat(RangeID, lightComponent.range);
         Shader.SetGlobalFloat(CosHalfAngleID, Mathf.Cos(lightComponent.spotAngle * 0.5f * Mathf.Deg2Rad));
         Shader.SetGlobalColor(ColorID, lightComponent.color);
-        // OJO: si el proyecto usa "Use Physical Light Units", este valor puede ser grande
-        // (lúmenes) y hay que compensar bajando _LightScatterIntensity en el material.
         Shader.SetGlobalFloat(IntensityID, lightComponent.intensity);
+    }
+
+    private void DisableGlobalLight()
+    {
+        Shader.SetGlobalFloat(IntensityID, 0f);
+    }
+
+    private void OnDisable()
+    {
+        DisableGlobalLight();
+    }
+
+    private void OnDestroy()
+    {
+        DisableGlobalLight();
     }
 }
