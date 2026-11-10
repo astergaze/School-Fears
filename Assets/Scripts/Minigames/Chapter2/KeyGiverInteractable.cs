@@ -2,13 +2,9 @@ using UnityEngine;
 using UnityEngine.Events;
 
 /// <summary>
-/// Da una llave (ItemData) al jugador. Sirve para:
-///  - una llave tirada en el mapa (Deactivate After Taking = ON): desaparece y no reaparece si volvés a la escena.
-///  - un objeto fijo, como la mesa central del aula (Deactivate After Taking = OFF): se queda en su lugar.
-/// Si hay "Found Lines", el diálogo va primero y la llave se entrega cuando termina.
-/// A diferencia de NoteItemInteractable, NO suma al conteo de notas de GameManager
-/// (usa flags aparte), así que no interfiere con ClassroomExitDoor.
-/// Requiere SetFlag/HasFlag en GameManager.
+/// Da una llave (ItemData) al jugador.
+/// Verifica la presencia real en el inventario antes de denegar la entrega,
+/// permitiendo reobtenerla si fue eliminada (ej. purga de detención).
 /// </summary>
 public class KeyGiverInteractable : Interactable
 {
@@ -24,7 +20,7 @@ public class KeyGiverInteractable : Interactable
     [Header("Diálogo")]
     [Tooltip("Se reproduce antes de entregar la llave (ej: '¿Para qué será…?').")]
     [SerializeField] private DialogueLine[] foundLines;
-    [Tooltip("Opcional: se reproduce si el jugador ya la tomó (solo útil si el objeto no se desactiva).")]
+    [Tooltip("Opcional: se reproduce si el jugador ya la tomó y aún la conserva en el inventario.")]
     [SerializeField] private DialogueLine[] alreadyTakenLines;
 
     [Header("Popup de objetivo (opcional)")]
@@ -45,22 +41,26 @@ public class KeyGiverInteractable : Interactable
 
     private void Start()
     {
-        // Si ya la tomó y volvió a entrar a la escena, la llave no reaparece
-        if (deactivateAfterTaking && GameManager.Instance != null && GameManager.Instance.HasFlag(FlagKey))
+        // Solo se desactiva al iniciar si el objeto debe desaparecer Y el jugador realmente posee el ítem en el inventario
+        if (deactivateAfterTaking && Player.Instance != null && HasItemInInventory(Player.Instance))
+        {
             gameObject.SetActive(false);
+        }
     }
 
     public override void Interact(Player player)
     {
         interactingPlayer = player;
 
-        if (IsAlreadyTaken(player))
+        // Si el jugador ya posee físicamente el ítem en el inventario, reproduce el diálogo de 'ya obtenido'
+        if (HasItemInInventory(player))
         {
             if (alreadyTakenLines != null && alreadyTakenLines.Length > 0 && DialogueManager.Instance != null)
                 DialogueManager.Instance.StartDialogue(alreadyTakenLines);
             return;
         }
 
+        // Si NO lo tiene (sea la primera vez o porque fue removido en la detención), inicia el flujo de entrega
         if (DialogueManager.Instance != null && foundLines != null && foundLines.Length > 0)
         {
             DialogueManager.Instance.OnDialogueEnded -= HandleDialogueEnded;
@@ -73,10 +73,13 @@ public class KeyGiverInteractable : Interactable
         }
     }
 
-    private bool IsAlreadyTaken(Player player)
+    /// <summary>
+    /// Comprueba si el jugador conserva actualmente el ItemData en su inventario.
+    /// </summary>
+    public bool HasItemInInventory(Player player)
     {
-        if (GameManager.Instance != null && GameManager.Instance.HasFlag(FlagKey)) return true;
-        return keyItem != null && player.Inventory != null && player.Inventory.HasItem(keyItem);
+        if (keyItem == null || player == null || player.Inventory == null) return false;
+        return player.Inventory.HasItem(keyItem);
     }
 
     private void HandleDialogueEnded()
@@ -87,6 +90,9 @@ public class KeyGiverInteractable : Interactable
         TakeKey();
     }
 
+    /// <summary>
+    /// Otorga el ítem al inventario del jugador y ejecuta las respuestas visuales/sonoras.
+    /// </summary>
     private void TakeKey()
     {
         if (keyItem == null)
@@ -95,8 +101,15 @@ public class KeyGiverInteractable : Interactable
             return;
         }
 
+        // Otorga el ítem si el inventario no lo registra
         if (interactingPlayer != null && interactingPlayer.Inventory != null)
-            interactingPlayer.Inventory.AddItem(keyItem);
+        {
+            if (!interactingPlayer.Inventory.HasItem(keyItem))
+            {
+                interactingPlayer.Inventory.AddItem(keyItem);
+                Debug.Log($"[KeyGiverInteractable] Ítem '{keyItem.name}' entregado al jugador.");
+            }
+        }
 
         GameManager.Instance?.SetFlag(FlagKey);
 

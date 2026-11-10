@@ -3,8 +3,8 @@ using UnityEngine.Events;
 
 /// <summary>
 /// Permite obtener un objeto (rewardItem) solo si el jugador posee otro objeto previo en su inventario (requiredItem).
-/// Ideal para cajones, escritorios o candados (ej: usar 'drawerkey' para obtener 'aula1key').
-/// Integra persistencia de estado mediante banderas en GameManager, soporte de diálogos (bloqueado/éxito) y SFX.
+/// Revisa la presencia real del ítem en el inventario para permitir reobtenerlo si fue removido (ej: detención),
+/// manteniendo el cerrojo abierto si el flag de GameManager ya había sido registrado.
 /// </summary>
 public class ConditionalKeyGiverInteractable : Interactable
 {
@@ -47,8 +47,8 @@ public class ConditionalKeyGiverInteractable : Interactable
 
     private void Start()
     {
-        // Si ya fue reclamado previamente y el objeto debía desactivarse, se apaga al cargar la escena
-        if (deactivateAfterTaking && GameManager.Instance != null && GameManager.Instance.HasFlag(FlagKey))
+        // Solo se oculta al cargar si debía desactivarse Y el jugador conserva físicamente la recompensa
+        if (deactivateAfterTaking && Player.Instance != null && HasRewardInInventory(Player.Instance))
         {
             gameObject.SetActive(false);
         }
@@ -58,8 +58,8 @@ public class ConditionalKeyGiverInteractable : Interactable
     {
         interactingPlayer = player;
 
-        // 1. Verificar si ya se obtuvo la recompensa anteriormente
-        if (IsAlreadyUnlocked())
+        // 1. Verificar si el jugador YA POSEE la recompensa en su inventario
+        if (HasRewardInInventory(player))
         {
             if (alreadyTakenLines != null && alreadyTakenLines.Length > 0 && DialogueManager.Instance != null)
             {
@@ -68,12 +68,13 @@ public class ConditionalKeyGiverInteractable : Interactable
             return;
         }
 
-        // 2. Validar si el jugador posee el ítem requerido en el inventario
-        bool hasRequired = requiredItem == null || (player.Inventory != null && player.Inventory.HasItem(requiredItem));
+        // 2. Validar acceso: si ya fue desbloqueado previamente (flag en GameManager), no exige la llave requerida de nuevo
+        bool isAlreadyUnlockedByFlag = GameManager.Instance != null && GameManager.Instance.HasFlag(FlagKey);
+        bool hasRequired = isAlreadyUnlockedByFlag || requiredItem == null || (player.Inventory != null && player.Inventory.HasItem(requiredItem));
 
         if (!hasRequired)
         {
-            // Fallback: No tiene la llave/herramienta requerida
+            // Bloqueado: No tiene el ítem requerido ni el lugar había sido desbloqueado antes
             if (lockedSound != null && AudioManager.Instance != null)
             {
                 AudioManager.Instance.PlaySFX(lockedSound);
@@ -86,7 +87,7 @@ public class ConditionalKeyGiverInteractable : Interactable
             return;
         }
 
-        // 3. Posee el ítem: Disparar diálogo de éxito o entregar recompensa directamente
+        // 3. Posee el ítem requerido (o el lugar ya estaba abierto): reproducir éxito y reentregar recompensa
         if (unlockSound != null && AudioManager.Instance != null)
         {
             AudioManager.Instance.PlaySFX(unlockSound);
@@ -104,10 +105,13 @@ public class ConditionalKeyGiverInteractable : Interactable
         }
     }
 
-    private bool IsAlreadyUnlocked()
+    /// <summary>
+    /// Comprueba si el jugador posee actualmente la recompensa (rewardItem) en el inventario.
+    /// </summary>
+    public bool HasRewardInInventory(Player player)
     {
-        if (GameManager.Instance != null && GameManager.Instance.HasFlag(FlagKey)) return true;
-        return rewardItem != null && interactingPlayer != null && interactingPlayer.Inventory != null && interactingPlayer.Inventory.HasItem(rewardItem);
+        if (rewardItem == null || player == null || player.Inventory == null) return false;
+        return player.Inventory.HasItem(rewardItem);
     }
 
     private void HandleSuccessDialogueEnded()
@@ -124,19 +128,20 @@ public class ConditionalKeyGiverInteractable : Interactable
     {
         if (interactingPlayer == null || interactingPlayer.Inventory == null) return;
 
-        // Consumir el ítem requerido si así fue configurado
-        if (consumeRequiredItem && requiredItem != null)
+        // Consumir el ítem requerido únicamente si sigue en el inventario y no se había consumido antes
+        if (consumeRequiredItem && requiredItem != null && interactingPlayer.Inventory.HasItem(requiredItem))
         {
             interactingPlayer.Inventory.RemoveItem(requiredItem);
         }
 
-        // Entregar recompensa
-        if (rewardItem != null)
+        // Entregar la recompensa si no la posee
+        if (rewardItem != null && !interactingPlayer.Inventory.HasItem(rewardItem))
         {
             interactingPlayer.Inventory.AddItem(rewardItem);
+            Debug.Log($"[ConditionalKeyGiver] Recompensa '{rewardItem.name}' entregada al jugador.");
         }
 
-        // Registrar en el GameManager la bandera de progreso
+        // Registrar/mantener en GameManager la bandera de desbloqueo
         GameManager.Instance?.SetFlag(FlagKey);
 
         // Sonido de obtención

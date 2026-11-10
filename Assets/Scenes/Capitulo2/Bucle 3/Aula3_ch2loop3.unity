@@ -2024,7 +2024,7 @@ MonoBehaviour:
       responseLines: []
       actionId: leave_scene
   normalLeaveActionId: leave_scene
-  normalSceneToLoad: kitchen
+  normalSceneToLoad: kitchenloop3
   returnSpawnPointId: 
   requiredNotes: []
   requiredNotesCount: 0

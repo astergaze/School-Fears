@@ -128,6 +128,7 @@ GameObject:
   - component: {fileID: 6574816223582765314}
   - component: {fileID: 2348013393103145579}
   - component: {fileID: 2728410416007238136}
+  - component: {fileID: 2393678623015421148}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -259,17 +260,38 @@ MonoBehaviour:
   localOffset: {x: 0.18, y: -0.14, z: 0.25}
   followSpeed: 14
   viewModelPrefab: {fileID: 0}
-  fogMaterial: {fileID: 2100000, guid: 27f1cdec685dad770b7c694b374b31b1, type: 2}
-  baseDensity: 0.4
-  baseStart: 1
   flashlightDensity: 0.16
   flashlightStart: 3.5
+  fogAngleScale: 1
   fadeTime: 0.35
   toggleClip: {fileID: 0}
   toggleVolume: 0.8
   onToggled:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2393678623015421148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3450362085179103569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e05ffb3fc08643042820ef024d2c4bc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CrouchController
+  controller: {fileID: 0}
+  eyeTransforms:
+  - {fileID: 6612200633239286618}
+  crouchHeight: 1
+  eyeDrop: 0.8
+  transitionSpeed: 5
+  crouchSpeedMultiplier: 0.45
+  crouchAction: {fileID: 7040659881675835329, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  hotkey: 55
+  altHotkey: 0
+  toggleMode: 0
 --- !u!1 &5737843715436817862
 GameObject:
   m_ObjectHideFlags: 0
@@ -335,15 +357,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5117736254700616655, guid: a7a8ccfc11a9af84481dcf23293dfcf7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5117736254700616655, guid: a7a8ccfc11a9af84481dcf23293dfcf7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5117736254700616655, guid: a7a8ccfc11a9af84481dcf23293dfcf7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5117736254700616655, guid: a7a8ccfc11a9af84481dcf23293dfcf7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -431,15 +453,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5301128184729803962, guid: f1a0810720b3aa64d82cb302fa1ed886, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5301128184729803962, guid: f1a0810720b3aa64d82cb302fa1ed886, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5301128184729803962, guid: f1a0810720b3aa64d82cb302fa1ed886, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5301128184729803962, guid: f1a0810720b3aa64d82cb302fa1ed886, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

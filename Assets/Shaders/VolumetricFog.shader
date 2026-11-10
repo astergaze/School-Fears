@@ -74,6 +74,9 @@ Shader "Custom/VolumetricFog"
             float _FlashFogDensity;
             float _FlashFogStart;
 
+            // Niebla extra global (StairsFogZone.cs). Si nadie la setea vale 0 -> no cambia nada.
+            float _FogExtraDensity;
+
             Varyings Vert(Attributes input)
             {
                 Varyings output;
@@ -169,6 +172,10 @@ Shader "Custom/VolumetricFog"
 
                 float fogDensity = lerp(_FogDensity, _FlashFogDensity, flash);
                 float fogStart = lerp(_FogStart, _FlashFogStart, flash);
+
+                // Zona de niebla densa (escalera del buffet): suma densidad y acerca el inicio de la niebla al jugador
+                fogDensity += _FogExtraDensity;
+                fogStart = lerp(fogStart, 0.0, saturate(_FogExtraDensity));
 
                 // Distancia efectiva a partir del umbral del jugador
                 float d = max(0.0, dist - fogStart);

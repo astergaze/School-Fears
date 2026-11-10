@@ -4,15 +4,10 @@ using UnityEngine.InputSystem;
 
 /// <summary>
 /// Linterna en primera persona para School Fears.
-/// Va en el Player (persistente). Al "usar" el ItemData de la linterna desde el inventario
-/// se prende/apaga una SpotLight que sigue la cámara con un pequeño retraso, y a la vez
-/// se le pasa al shader VolumetricFog (como globales) la posición, dirección y ángulo del cono,
-/// y dentro de ese cono la niebla es menos densa y empieza más lejos.
-///
-/// Ya NO toca el material M_VolumetricFog: todo viaja por Shader.SetGlobal*, así que no hay
-/// nada que restaurar en el asset y no puede quedar "pegado" si el editor se cuelga.
+/// Va en el Player (persistente). Valida la posesión física del ItemData en Player.Instance.Inventory
+/// antes de encender la luz (vía hotkey o uso desde inventario) y se apaga automáticamente si el ítem es removido.
 /// </summary>
-[DefaultExecutionOrder(100)] // después de Cinemachine, para que la luz no vaya un frame atrás
+[DefaultExecutionOrder(100)] // Después de Cinemachine, para que la luz no vaya un frame atrás
 public class FlashlightController : MonoBehaviour
 {
     public static FlashlightController Instance { get; private set; }
@@ -39,9 +34,9 @@ public class FlashlightController : MonoBehaviour
     [SerializeField] private GameObject viewModelPrefab;
 
     [Header("Niebla (solo dentro del cono)")]
-    [Tooltip("Densidad de la niebla dentro del cono. Menor = se ve más lejos. (El material usa 0.4)")]
+    [Tooltip("Densidad de la niebla dentro del cono. Menor = se ve más lejos.")]
     [SerializeField] private float flashlightDensity = 0.12f;
-    [Tooltip("Distancia desde la cámara donde empieza la niebla dentro del cono. (El material usa 1)")]
+    [Tooltip("Distancia desde la cámara donde empieza la niebla dentro del cono.")]
     [SerializeField] private float flashlightStart = 4f;
     [Tooltip("Multiplica el ángulo del cono de la luz para el efecto de niebla (1 = igual que la luz).")]
     [SerializeField, Range(0.5f, 1.5f)] private float fogAngleScale = 1f;
@@ -54,7 +49,7 @@ public class FlashlightController : MonoBehaviour
 
     public bool IsOn { get; private set; }
     public bool Unlocked { get; private set; }
-
+    private float fogBlock;
     private static readonly int FlashPosId = Shader.PropertyToID("_FlashPositionWS");
     private static readonly int FlashDirId = Shader.PropertyToID("_FlashDirectionWS");
     private static readonly int FlashRangeId = Shader.PropertyToID("_FlashRange");
@@ -107,32 +102,63 @@ public class FlashlightController : MonoBehaviour
     }
 
     /// <summary>
+    /// Comprueba si el jugador posee físicamente el ItemData de la linterna en su inventario.
+    /// </summary>
+    public bool HasFlashlightInInventory()
+    {
+        if (flashlightItem == null) return true; // Fallback por si no asignaron la referencia en el Inspector
+
+        if (Player.Instance != null && Player.Instance.Inventory != null)
+        {
+            return Player.Instance.Inventory.HasItem(flashlightItem);
+        }
+
+        return false;
+    }
+
+    /// <summary>
     /// Llamar desde el inventario cuando el jugador "usa" un ítem.
-    /// Devuelve true si el ítem era la linterna (y por lo tanto ya fue manejado).
+    /// Devuelve true si el ítem era la linterna y se poseía en el inventario.
     /// </summary>
     public bool TryUse(ItemData item)
     {
         if (item == null || item != flashlightItem) return false;
+        
+        if (!HasFlashlightInInventory())
+        {
+            Debug.LogWarning("[FlashlightController] Intento de uso denegado: el ítem no reside en el inventario del jugador.");
+            return false;
+        }
+
         Unlocked = true;
         Toggle();
         return true;
     }
 
     public void Toggle() => SetOn(!IsOn);
+
     public void RestoreState(bool unlocked, bool on)
     {
-        Unlocked = unlocked;
+        Unlocked = unlocked && HasFlashlightInInventory();
         SetOn(on);
     }
 
+    public void SetFogBlock(float amount) => fogBlock = Mathf.Clamp01(amount);
+
     public void SetOn(bool on)
     {
+        // Bloqueo estricto: si se intenta encender sin tener la linterna en el inventario, fuerza estado apagado
+        if (on && !HasFlashlightInInventory())
+        {
+            on = false;
+        }
+
         if (IsOn == on) return;
         IsOn = on;
 
         if (on)
         {
-            snapRotation = true; // que aparezca ya apuntando a donde mira el jugador
+            snapRotation = true; // Que aparezca apuntando a donde mira el jugador
             spot.enabled = true;
             if (viewModel != null) viewModel.SetActive(true);
         }
@@ -145,11 +171,25 @@ public class FlashlightController : MonoBehaviour
 
     private void Update()
     {
+        // Apagado automático de emergencia si pierde el ítem mientras estaba encendida (ej. purga de detención)
+        if (IsOn && !HasFlashlightInInventory())
+        {
+            SetOn(false);
+        }
+
+        // Activación manual vía Teclado
         if (allowHotkey && Unlocked && Keyboard.current != null
             && Keyboard.current[hotkey].wasPressedThisFrame
-            && Time.timeScale > 0f) // no togglear con inventario/pausa abiertos
+            && Time.timeScale > 0f) // No togglear con inventario/pausa abiertos
         {
-            Toggle();
+            if (HasFlashlightInInventory())
+            {
+                Toggle();
+            }
+            else
+            {
+                SetOn(false);
+            }
         }
 
         // Fundido de luz + niebla (unscaled: se ve el cambio aunque el inventario pause el juego)
@@ -196,7 +236,7 @@ public class FlashlightController : MonoBehaviour
 
     private void PushFogGlobals()
     {
-        float s = Mathf.SmoothStep(0f, 1f, blend);
+        float s = Mathf.SmoothStep(0f, 1f, blend) * (1f - fogBlock);
 
         // Medio ángulo del cono para la niebla; el interior (borde duro) siempre menor que el exterior
         float half = Mathf.Clamp(spotAngle * 0.5f * fogAngleScale, 1f, 89f);
@@ -214,7 +254,6 @@ public class FlashlightController : MonoBehaviour
 
     private void DisableFogEffect() => Shader.SetGlobalFloat(FlashStrengthId, 0f);
 
-    // Apagar siempre el efecto al desactivar/destruir (el global es estático y sobreviviría al Play Mode)
     private void OnDisable() => DisableFogEffect();
 
     private void OnDestroy()
