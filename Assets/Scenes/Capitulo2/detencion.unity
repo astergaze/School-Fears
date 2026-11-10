@@ -9923,8 +9923,8 @@ MonoBehaviour:
   specialActionId: 
   hallwaySceneName: 
   specialResponseLines: []
-  openSound: {fileID: 0}
-  closeSound: {fileID: 0}
+  openSound: {fileID: 8300000, guid: 18673d8e491c8884fa78c2b696fff639, type: 3}
+  closeSound: {fileID: 8300000, guid: 18699343778f1d740926c2ad325e3671, type: 3}
 --- !u!1 &1898197175
 GameObject:
   m_ObjectHideFlags: 0

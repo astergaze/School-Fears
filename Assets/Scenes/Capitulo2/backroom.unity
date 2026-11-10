@@ -9406,7 +9406,7 @@ MonoBehaviour:
   fadeOutOnEnd: 0
   objectivePopupId: 
   objectivePopupText: Linterna recogida.
-  pickupSound: {fileID: 0}
+  pickupSound: {fileID: 8300000, guid: 86ac12f2f61f0684f9fddb67556f613b, type: 3}
   onNotePickedUp:
     m_PersistentCalls:
       m_Calls: []

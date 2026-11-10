@@ -7236,7 +7236,7 @@ MonoBehaviour:
   alreadyTakenLines: []
   popupTextId: 
   popupText: Llave del aula 1 obtenida
-  pickupSound: {fileID: 0}
+  pickupSound: {fileID: 8300000, guid: c16bade9966acb84db7d66ab4771d712, type: 3}
   onKeyTaken:
     m_PersistentCalls:
       m_Calls: []
