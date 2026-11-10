@@ -10808,8 +10808,14 @@ MonoBehaviour:
   - speaker: 0
     textId: mazeNote4_1
     choices: []
-  - speaker: 0
+  - speaker: 3
     textId: mazeNote4_2
+    choices: []
+  - speaker: 3
+    textId: mazeNote4_3
+    choices: []
+  - speaker: 3
+    textId: mazeNote4_4
     choices: []
   fadeOutOnEnd: 0
   objectivePopupId: 

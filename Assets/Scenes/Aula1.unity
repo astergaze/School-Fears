@@ -9587,6 +9587,12 @@ MonoBehaviour:
   - speaker: 3
     textId: mazeNote2_2
     choices: []
+  - speaker: 3
+    textId: mazeNote2_3
+    choices: []
+  - speaker: 3
+    textId: mazeNote2_4
+    choices: []
   fadeOutOnEnd: 0
   objectivePopupId: 
   objectivePopupText: 
