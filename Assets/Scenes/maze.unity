@@ -355,8 +355,12 @@ MonoBehaviour:
   promptKey: promptInteractDefault
   roomSceneName: AulaEmpty
   spawnPointId: Door_aulaEmpty_spawnpoint_5
+  requiredKey: {fileID: 0}
+  lockedLines: []
   openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
   closeSound: {fileID: 8300000, guid: 535bc812c7a47cf9389a640f84ce4377, type: 3}
+  lockedSound: {fileID: 0}
+  unlockSound: {fileID: 0}
 --- !u!114 &20388210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2181,8 +2185,12 @@ MonoBehaviour:
   promptKey: promptInteractDefault
   roomSceneName: AulaEmpty
   spawnPointId: Door_aulaEmpty_spawnpoint_3
+  requiredKey: {fileID: 0}
+  lockedLines: []
   openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
   closeSound: {fileID: 8300000, guid: 535bc812c7a47cf9389a640f84ce4377, type: 3}
+  lockedSound: {fileID: 0}
+  unlockSound: {fileID: 0}
 --- !u!114 &167195739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2706,8 +2714,12 @@ MonoBehaviour:
   promptKey: promptInteractDefault
   roomSceneName: AulaEmpty
   spawnPointId: Door_aulaEmpty_spawnpoint_6
+  requiredKey: {fileID: 0}
+  lockedLines: []
   openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
   closeSound: {fileID: 8300000, guid: 535bc812c7a47cf9389a640f84ce4377, type: 3}
+  lockedSound: {fileID: 0}
+  unlockSound: {fileID: 0}
 --- !u!114 &268334236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4485,8 +4497,12 @@ MonoBehaviour:
   promptKey: promptInteractDefault
   roomSceneName: AulaEmpty
   spawnPointId: Door_aulaEmpty_spawnpoint_4
+  requiredKey: {fileID: 0}
+  lockedLines: []
   openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
   closeSound: {fileID: 8300000, guid: 535bc812c7a47cf9389a640f84ce4377, type: 3}
+  lockedSound: {fileID: 0}
+  unlockSound: {fileID: 0}
 --- !u!114 &410049874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7029,8 +7045,12 @@ MonoBehaviour:
   promptKey: promptInteractDefault
   roomSceneName: SafeRoomChp1
   spawnPointId: defaultspawn
+  requiredKey: {fileID: 0}
+  lockedLines: []
   openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
   closeSound: {fileID: 8300000, guid: 263c00db3030e6f6ca6216895d2b4398, type: 3}
+  lockedSound: {fileID: 0}
+  unlockSound: {fileID: 0}
 --- !u!114 &685758259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7736,8 +7756,12 @@ MonoBehaviour:
   promptKey: promptInteractDefault
   roomSceneName: AulaEmpty
   spawnPointId: Door_aulaEmpty_spawnpoint_1
+  requiredKey: {fileID: 0}
+  lockedLines: []
   openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
   closeSound: {fileID: 8300000, guid: 535bc812c7a47cf9389a640f84ce4377, type: 3}
+  lockedSound: {fileID: 0}
+  unlockSound: {fileID: 0}
 --- !u!114 &785892629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12397,8 +12421,12 @@ MonoBehaviour:
   promptKey: promptInteractDefault
   roomSceneName: Aula3
   spawnPointId: Door_aula3_spawnpoint
+  requiredKey: {fileID: 0}
+  lockedLines: []
   openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
   closeSound: {fileID: 8300000, guid: 535bc812c7a47cf9389a640f84ce4377, type: 3}
+  lockedSound: {fileID: 0}
+  unlockSound: {fileID: 0}
 --- !u!114 &1230466128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18565,8 +18593,12 @@ MonoBehaviour:
   promptKey: promptInteractDefault
   roomSceneName: Aula1
   spawnPointId: Door_aula1_spawnpoint
+  requiredKey: {fileID: 0}
+  lockedLines: []
   openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
   closeSound: {fileID: 8300000, guid: 535bc812c7a47cf9389a640f84ce4377, type: 3}
+  lockedSound: {fileID: 0}
+  unlockSound: {fileID: 0}
 --- !u!114 &1728081288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20467,8 +20499,12 @@ MonoBehaviour:
   promptKey: promptInteractDefault
   roomSceneName: AulaEmpty
   spawnPointId: Door_aulaEmpty_spawnpoint_2
+  requiredKey: {fileID: 0}
+  lockedLines: []
   openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
   closeSound: {fileID: 8300000, guid: 535bc812c7a47cf9389a640f84ce4377, type: 3}
+  lockedSound: {fileID: 0}
+  unlockSound: {fileID: 0}
 --- !u!114 &1931590171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21336,8 +21372,12 @@ MonoBehaviour:
   promptKey: promptInteractDefault
   roomSceneName: Aula2
   spawnPointId: Door_aula2_spawnpoint
+  requiredKey: {fileID: 0}
+  lockedLines: []
   openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
   closeSound: {fileID: 8300000, guid: 535bc812c7a47cf9389a640f84ce4377, type: 3}
+  lockedSound: {fileID: 0}
+  unlockSound: {fileID: 0}
 --- !u!65 &1962770376
 BoxCollider:
   m_ObjectHideFlags: 0
