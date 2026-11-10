@@ -580,7 +580,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &81183792
 MonoBehaviour:
@@ -831,7 +831,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &110016911
 MonoBehaviour:
@@ -1126,7 +1126,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &160430846
 MonoBehaviour:
@@ -1475,7 +1475,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &170908137
 MonoBehaviour:
@@ -1669,7 +1669,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &172651309
 MonoBehaviour:
@@ -2373,7 +2373,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &298567634
 MonoBehaviour:
@@ -2982,7 +2982,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &355311233
 MonoBehaviour:
@@ -3078,7 +3078,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &400801743
 MonoBehaviour:
@@ -3197,7 +3197,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &402876538
 MonoBehaviour:
@@ -3521,7 +3521,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &437338546
 MonoBehaviour:
@@ -3650,7 +3650,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &476875036
 MonoBehaviour:
@@ -4847,7 +4847,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &586265957
 MonoBehaviour:
@@ -5496,7 +5496,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &666862256
 MonoBehaviour:
@@ -6061,7 +6061,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &704339594
 MonoBehaviour:
@@ -6313,7 +6313,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &739411762
 MonoBehaviour:
@@ -6432,7 +6432,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &741567925
 MonoBehaviour:
@@ -6961,7 +6961,7 @@ MonoBehaviour:
   alreadyTakenLines: []
   popupTextId: 
   popupText: 
-  pickupSound: {fileID: 0}
+  pickupSound: {fileID: 8300000, guid: c16bade9966acb84db7d66ab4771d712, type: 3}
   onKeyTaken:
     m_PersistentCalls:
       m_Calls: []
@@ -7067,7 +7067,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &835223400
 MonoBehaviour:
@@ -7546,7 +7546,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &913096668
 MonoBehaviour:
@@ -8193,7 +8193,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &996287581
 MonoBehaviour:
@@ -8307,7 +8307,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &1009004684
 MonoBehaviour:
@@ -8426,7 +8426,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &1025669012
 MonoBehaviour:
@@ -8469,7 +8469,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &1040594760
 MonoBehaviour:
@@ -8587,7 +8587,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &1138348927
 MonoBehaviour:
@@ -9528,7 +9528,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &1205780000
 MonoBehaviour:
@@ -9936,7 +9936,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &1220346632
 MonoBehaviour:
@@ -10194,7 +10194,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &1234443019
 MonoBehaviour:
@@ -10850,7 +10850,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &1332972707
 MonoBehaviour:
@@ -11077,7 +11077,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &1365319139
 MonoBehaviour:
@@ -11433,7 +11433,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &1415564606
 MonoBehaviour:
@@ -11787,7 +11787,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &1463361772
 MonoBehaviour:
@@ -11988,7 +11988,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &1464791469
 MonoBehaviour:
@@ -12102,7 +12102,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &1481344973
 MonoBehaviour:
@@ -12216,7 +12216,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &1483899488
 MonoBehaviour:
@@ -12335,7 +12335,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &1500229927
 MonoBehaviour:
@@ -12806,7 +12806,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &1546505805
 MonoBehaviour:
@@ -12920,7 +12920,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &1554462027
 MonoBehaviour:
@@ -12963,7 +12963,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &1562691559
 MonoBehaviour:
@@ -13105,8 +13105,8 @@ MonoBehaviour:
   alreadyTakenLines: []
   popupTextId: 
   popupText: Obtuviste la Llave del Aula 1
-  unlockSound: {fileID: 0}
-  pickupSound: {fileID: 0}
+  unlockSound: {fileID: 8300000, guid: 930e5cd7857149743975f5186e77506f, type: 3}
+  pickupSound: {fileID: 8300000, guid: c16bade9966acb84db7d66ab4771d712, type: 3}
   onItemUnlocked:
     m_PersistentCalls:
       m_Calls: []
@@ -13227,7 +13227,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &1629803393
 MonoBehaviour:
@@ -13483,7 +13483,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &1639554512
 MonoBehaviour:
@@ -13814,7 +13814,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &1670035336
 MonoBehaviour:
@@ -14266,7 +14266,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &1729239539
 MonoBehaviour:
@@ -14846,7 +14846,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &1868375965
 MonoBehaviour:
@@ -15043,7 +15043,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &1871768449
 MonoBehaviour:
@@ -15157,7 +15157,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &1889163335
 MonoBehaviour:
@@ -15200,7 +15200,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &1939551128
 MonoBehaviour:
@@ -15940,7 +15940,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &2038491509
 MonoBehaviour:
@@ -16498,7 +16498,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &2112327622
 MonoBehaviour:
@@ -16617,7 +16617,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4224
   skin: 0.01
-  scrapeLoop: {fileID: 0}
+  scrapeLoop: {fileID: 8300000, guid: 4610892e2eb727746a5009d54118d220, type: 3}
   scrapeVolume: 0.7
 --- !u!114 &2117430861
 MonoBehaviour:

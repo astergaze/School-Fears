@@ -9402,8 +9402,8 @@ MonoBehaviour:
     choices: []
   openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
   closeSound: {fileID: 8300000, guid: 263c00db3030e6f6ca6216895d2b4398, type: 3}
-  lockedSound: {fileID: 0}
-  unlockSound: {fileID: 0}
+  lockedSound: {fileID: 8300000, guid: f1c2aa8a63f01bf49a31a0624ee27725, type: 3}
+  unlockSound: {fileID: 8300000, guid: 930e5cd7857149743975f5186e77506f, type: 3}
 --- !u!114 &611063495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11705,8 +11705,8 @@ MonoBehaviour:
     choices: []
   openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
   closeSound: {fileID: 8300000, guid: 263c00db3030e6f6ca6216895d2b4398, type: 3}
-  lockedSound: {fileID: 0}
-  unlockSound: {fileID: 0}
+  lockedSound: {fileID: 8300000, guid: f1c2aa8a63f01bf49a31a0624ee27725, type: 3}
+  unlockSound: {fileID: 8300000, guid: 930e5cd7857149743975f5186e77506f, type: 3}
 --- !u!114 &746321343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13419,8 +13419,8 @@ MonoBehaviour:
       responseLines: []
       actionId: leave_scene
   doorBangSound: {fileID: 0}
-  openSound: {fileID: 0}
-  closeSound: {fileID: 0}
+  openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
+  closeSound: {fileID: 8300000, guid: 263c00db3030e6f6ca6216895d2b4398, type: 3}
   footstepClips:
   - {fileID: 8300000, guid: 5cbc9fc23dc96d548ae10e318f6f6791, type: 3}
   - {fileID: 8300000, guid: 0f1b33bf14a92fa09a4d0f919902f97b, type: 3}
@@ -14411,8 +14411,8 @@ MonoBehaviour:
   lockedLines: []
   openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
   closeSound: {fileID: 8300000, guid: 263c00db3030e6f6ca6216895d2b4398, type: 3}
-  lockedSound: {fileID: 0}
-  unlockSound: {fileID: 0}
+  lockedSound: {fileID: 8300000, guid: f1c2aa8a63f01bf49a31a0624ee27725, type: 3}
+  unlockSound: {fileID: 8300000, guid: 930e5cd7857149743975f5186e77506f, type: 3}
 --- !u!114 &880568260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26248,8 +26248,8 @@ MonoBehaviour:
   lockedLines: []
   openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
   closeSound: {fileID: 8300000, guid: 263c00db3030e6f6ca6216895d2b4398, type: 3}
-  lockedSound: {fileID: 0}
-  unlockSound: {fileID: 0}
+  lockedSound: {fileID: 8300000, guid: f1c2aa8a63f01bf49a31a0624ee27725, type: 3}
+  unlockSound: {fileID: 8300000, guid: 930e5cd7857149743975f5186e77506f, type: 3}
 --- !u!114 &1803325430
 MonoBehaviour:
   m_ObjectHideFlags: 0

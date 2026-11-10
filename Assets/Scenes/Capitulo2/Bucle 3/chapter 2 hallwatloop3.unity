@@ -8027,8 +8027,8 @@ MonoBehaviour:
     choices: []
   openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
   closeSound: {fileID: 8300000, guid: 263c00db3030e6f6ca6216895d2b4398, type: 3}
-  lockedSound: {fileID: 0}
-  unlockSound: {fileID: 0}
+  lockedSound: {fileID: 8300000, guid: f1c2aa8a63f01bf49a31a0624ee27725, type: 3}
+  unlockSound: {fileID: 8300000, guid: 930e5cd7857149743975f5186e77506f, type: 3}
 --- !u!114 &611063495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10330,8 +10330,8 @@ MonoBehaviour:
     choices: []
   openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
   closeSound: {fileID: 8300000, guid: 263c00db3030e6f6ca6216895d2b4398, type: 3}
-  lockedSound: {fileID: 0}
-  unlockSound: {fileID: 0}
+  lockedSound: {fileID: 8300000, guid: f1c2aa8a63f01bf49a31a0624ee27725, type: 3}
+  unlockSound: {fileID: 8300000, guid: 930e5cd7857149743975f5186e77506f, type: 3}
 --- !u!114 &746321343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11624,8 +11624,8 @@ MonoBehaviour:
   lockedLines: []
   openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
   closeSound: {fileID: 8300000, guid: 263c00db3030e6f6ca6216895d2b4398, type: 3}
-  lockedSound: {fileID: 0}
-  unlockSound: {fileID: 0}
+  lockedSound: {fileID: 8300000, guid: f1c2aa8a63f01bf49a31a0624ee27725, type: 3}
+  unlockSound: {fileID: 8300000, guid: 930e5cd7857149743975f5186e77506f, type: 3}
 --- !u!4 &846701688 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4167900133788624431, guid: aec3dd3c4cc057a468e3cfec4f7523ad, type: 3}
@@ -12682,8 +12682,8 @@ MonoBehaviour:
   lockedLines: []
   openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
   closeSound: {fileID: 8300000, guid: 263c00db3030e6f6ca6216895d2b4398, type: 3}
-  lockedSound: {fileID: 0}
-  unlockSound: {fileID: 0}
+  lockedSound: {fileID: 8300000, guid: f1c2aa8a63f01bf49a31a0624ee27725, type: 3}
+  unlockSound: {fileID: 8300000, guid: 930e5cd7857149743975f5186e77506f, type: 3}
 --- !u!114 &880568260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22917,8 +22917,8 @@ MonoBehaviour:
   lockedLines: []
   openSound: {fileID: 8300000, guid: 24b649238000dfd2d931c3cb59cb2b09, type: 3}
   closeSound: {fileID: 8300000, guid: 263c00db3030e6f6ca6216895d2b4398, type: 3}
-  lockedSound: {fileID: 0}
-  unlockSound: {fileID: 0}
+  lockedSound: {fileID: 8300000, guid: f1c2aa8a63f01bf49a31a0624ee27725, type: 3}
+  unlockSound: {fileID: 8300000, guid: 930e5cd7857149743975f5186e77506f, type: 3}
 --- !u!1001 &1804302320
 PrefabInstance:
   m_ObjectHideFlags: 0
