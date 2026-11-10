@@ -1,9 +1,25 @@
-// Inventario
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class InventoryInteractable : Interactable
 {
     [SerializeField] private ItemData item;
+
+    // ID automático: escena + ítem + posición (sirve mientras el objeto no se mueva de lugar)
+    private string PickupFlag
+    {
+        get
+        {
+            Vector3 p = transform.position;
+            return $"pickup_{SceneManager.GetActiveScene().name}_{(item != null ? item.name : "none")}_{Mathf.RoundToInt(p.x)}_{Mathf.RoundToInt(p.y)}_{Mathf.RoundToInt(p.z)}";
+        }
+    }
+
+    private void Start()
+    {
+        if (GameManager.Instance != null && GameManager.Instance.HasFlag(PickupFlag))
+            gameObject.SetActive(false);
+    }
 
     public override void Interact(Player player)
     {
@@ -14,7 +30,7 @@ public class InventoryInteractable : Interactable
         }
 
         player.Inventory.AddItem(item);
-        Debug.Log($"Added to inventory: {item.itemName}");
+        GameManager.Instance?.SetFlag(PickupFlag);
         gameObject.SetActive(false);
     }
 }

@@ -119,6 +119,11 @@ public class FlashlightController : MonoBehaviour
     }
 
     public void Toggle() => SetOn(!IsOn);
+    public void RestoreState(bool unlocked, bool on)
+    {
+        Unlocked = unlocked;
+        SetOn(on);
+    }
 
     public void SetOn(bool on)
     {

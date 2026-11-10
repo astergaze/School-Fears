@@ -28,6 +28,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Pause()
     {
+        SaveManager.Instance?.SaveNow();
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         AudioListener.pause = true;
