@@ -8391,9 +8391,9 @@ MonoBehaviour:
     - textId: test
       state: 0
       responseLines: []
-      actionId: 
+      actionId: leave_scene
   normalLeaveActionId: leave_scene
-  normalSceneToLoad: kitchen
+  normalSceneToLoad: Aula3_ch2loop1
   returnSpawnPointId: 
   requiredNotes: []
   requiredNotesCount: 0

@@ -8011,9 +8011,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EndingController
   scriptsToDisableOnEnding: []
-  delayBeforeMenu: 4
-  endingText: Gracias Por Jugar la Demo
-  menuSceneName: menu
+  delayBeforeMenu: 0
+  endingText: 
+  menuSceneName: detencion
 --- !u!4 &483416319 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 291250748575254687, guid: 9db451772dd4df64994a7f4bb8406b8a, type: 3}

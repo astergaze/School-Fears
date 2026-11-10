@@ -2,23 +2,29 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 /// <summary>
-/// Pantalla de "Gracias por jugar" al terminar el juego: desactiva los scripts que
-/// le pases (ej: movimiento del Player), muestra un texto simple en pantalla (creado
-/// 100% en runtime) y vuelve al menú después de unos segundos, reseteando los
-/// singletons persistentes -- mismo patrón que GameOverController, para que volver
-/// al menú desde el final sea equivalente a reiniciar el juego.
-///
-/// Enganchar MessageInteractable.onMessageEnded (en el mensaje final, ej. la Linterna)
-/// -> EndingController.Trigger() en el Inspector.
+/// Controla la transición al finalizar la secuencia de la Linterna en Scenes/Auladestroyed.
+/// Desactiva scripts de input/control del jugador, ejecuta Fade Out y redirige
+/// limpiamente a la escena de detención del Capítulo 2 (o la configurada en Inspector).
 /// </summary>
 public class EndingController : MonoBehaviour
 {
+    [Header("Configuración de Destino")]
+    [Tooltip("Nombre EXACTO o ruta de la escena de destino en Build Settings")]
+    [SerializeField] private string targetSceneName = "Scenes/Capitulo2/detencion";
+    [SerializeField] private float delayBeforeTransition = 2.5f;
+
+    [Header("Interfaz de Pantalla (Opcional)")]
+    [Tooltip("Activar si se desea mostrar un overlay de texto antes de cambiar de escena")]
+    [SerializeField] private bool showEndingTextUI = false;
+    [SerializeField] private string endingText = "CAPÍTULO 2";
+
+    [Header("Desactivación de Control")]
     [Tooltip("Scripts a desactivar al terminar (ej: el script de movimiento/input del Player)")]
     [SerializeField] private MonoBehaviour[] scriptsToDisableOnEnding;
-    [SerializeField] private float delayBeforeMenu = 4f;
-    [SerializeField] private string endingText = "GRACIAS POR JUGAR";
-    [Tooltip("Nombre EXACTO de la escena de menú (tal cual aparece en Build Settings)")]
-    [SerializeField] private string menuSceneName = "menu";
+
+    [Header("Persistencia")]
+    [Tooltip("Resetear singletons persistentes para garantizar un inicio limpio en el Capítulo 2")]
+    [SerializeField] private bool resetSingletons = true;
 
     private bool triggered = false;
 
@@ -32,9 +38,22 @@ public class EndingController : MonoBehaviour
             if (s != null) s.enabled = false;
         }
 
-        ShowEndingUI();
-        Invoke(nameof(GoToMenu), delayBeforeMenu);
+        if (showEndingTextUI)
+        {
+            ShowEndingUI();
+        }
+
+        // Iniciar pantalla a negro usando la firma exacta (1 parámetro: targetAlpha)
+        if (SceneTransitioner.Instance != null)
+        {
+            SceneTransitioner.Instance.FadeScreen(1f);
+        }
+
+        Invoke(nameof(GoToNextScene), delayBeforeTransition);
     }
+
+    // Alias en minúscula por compatibilidad con invocaciones desde UnityEvents
+    public void trigger() => Trigger();
 
     private void ShowEndingUI()
     {
@@ -70,29 +89,29 @@ public class EndingController : MonoBehaviour
         textRect.offsetMax = Vector2.zero;
     }
 
-    private void GoToMenu()
+    private void GoToNextScene()
     {
-        if (Player.Instance != null)
+        if (resetSingletons)
         {
-            Destroy(Player.Instance.gameObject);
-        }
-        else
-        {
-            GameObject playerGO = GameObject.FindGameObjectWithTag("Player");
-            if (playerGO != null) Destroy(playerGO);
-        }
+            if (Player.Instance != null)
+            {
+                Destroy(Player.Instance.gameObject);
+            }
+            else
+            {
+                GameObject playerGO = GameObject.FindGameObjectWithTag("Player");
+                if (playerGO != null) Destroy(playerGO);
+            }
 
-        if (GameManager.Instance != null) Destroy(GameManager.Instance.gameObject);
-        if (DialogueManager.Instance != null) Destroy(DialogueManager.Instance.gameObject);
+            if (GameManager.Instance != null) Destroy(GameManager.Instance.gameObject);
+            if (DialogueManager.Instance != null) Destroy(DialogueManager.Instance.gameObject);
+        }
 
         Time.timeScale = 1f;
         Player.UnlockCursor();
 
-        // InteractionPromptUI y SceneTransitioner son singletons persistentes: si no se
-        // limpian acá, lo que haya quedado en pantalla (el "Presiona E" o el fade a negro
-        // de HandleDialogueEnded) se arrastra tal cual al menú.
         InteractionPromptUI.Instance?.HidePrompt();
-        SceneManager.LoadScene(menuSceneName);
+        SceneManager.LoadScene(targetSceneName);
         SceneTransitioner.Instance?.FadeScreen(0f);
     }
 }
