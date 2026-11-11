@@ -4693,6 +4693,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PauseMenu
   pauseMenuUI: {fileID: 1328790877}
   isPaused: 0
+  menuSceneName: menu
 --- !u!114 &825542284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7371,7 +7372,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 32f88d8d3896c9143951a949eb59b838, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7412,7 +7413,7 @@ Transform:
   m_GameObject: {fileID: 1401356870}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5, y: -0.5, z: 0.5, w: -0.5}
-  m_LocalPosition: {x: -6.932, y: 1.303, z: -3.033}
+  m_LocalPosition: {x: -7.039, y: 1.303, z: -3.033}
   m_LocalScale: {x: 0.012589032, y: 1, z: 0.030336764}
   m_ConstrainProportionsScale: 0
   m_Children: []

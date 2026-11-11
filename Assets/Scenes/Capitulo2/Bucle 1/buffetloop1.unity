@@ -20213,6 +20213,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 8768021049097658472, guid: f289c67f2ca81f141a5dd0f0fc1559cd, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e10710aa71caaf8448807d7611660048, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20466,6 +20470,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PauseMenu
   pauseMenuUI: {fileID: 1154118319}
   isPaused: 0
+  menuSceneName: menu
 --- !u!114 &1511857747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22690,6 +22695,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 8768021049097658472, guid: f289c67f2ca81f141a5dd0f0fc1559cd, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e10710aa71caaf8448807d7611660048, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
