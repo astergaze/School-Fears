@@ -6200,7 +6200,7 @@ MonoBehaviour:
   returnSpawnPointId: Door_aula2_spawnpointch2
   requiredNotes: []
   requiredNotesCount: 0
-  enableSpecialOption: 1
+  enableSpecialOption: 0
   specialChoiceTextId: 
   directSpecialChoiceText: 
   specialActionId: 

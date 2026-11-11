@@ -4216,9 +4216,13 @@ MonoBehaviour:
   promptKey: promptInteractDefault
   baseLines:
   - speaker: 0
-    textId: test
+    textId: ventilacion
     choices:
-    - textId: test
+    - textId: ventilacion_quedarse
+      state: 0
+      responseLines: []
+      actionId: 
+    - textId: ventilacion_entrar
       state: 0
       responseLines: []
       actionId: leave_scene
@@ -4227,7 +4231,7 @@ MonoBehaviour:
   returnSpawnPointId: 
   requiredNotes: []
   requiredNotesCount: 0
-  enableSpecialOption: 1
+  enableSpecialOption: 0
   specialChoiceTextId: 
   directSpecialChoiceText: 
   specialActionId: 

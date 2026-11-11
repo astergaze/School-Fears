@@ -5608,9 +5608,13 @@ MonoBehaviour:
   promptKey: promptInteractDefault
   baseLines:
   - speaker: 0
-    textId: test
+    textId: doorG
     choices:
-    - textId: test
+    - textId: doorOpcion
+      state: 0
+      responseLines: []
+      actionId: 
+    - textId: doorOpcion_1
       state: 0
       responseLines: []
       actionId: leave_scene

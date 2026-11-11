@@ -3646,7 +3646,11 @@ MonoBehaviour:
   - speaker: 0
     textId: detentionDoorInteract
     choices:
-    - textId: test2
+    - textId: doorOpcion
+      state: 0
+      responseLines: []
+      actionId: 
+    - textId: doorOpcion_1
       state: 0
       responseLines: []
       actionId: leave_scene
@@ -3661,7 +3665,7 @@ MonoBehaviour:
   returnSpawnPointId: 
   requiredNotes: []
   requiredNotesCount: 0
-  enableSpecialOption: 1
+  enableSpecialOption: 0
   specialChoiceTextId: 
   directSpecialChoiceText: 
   specialActionId: 
@@ -9442,7 +9446,7 @@ MonoBehaviour:
   promptKey: promptInteractDefault
   lines:
   - speaker: 0
-    textId: test
+    textId: ventilacion
     choices: []
   fadeOutOnEnd: 0
   onMessageEnded:

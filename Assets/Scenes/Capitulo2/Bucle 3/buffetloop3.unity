@@ -895,16 +895,19 @@ MonoBehaviour:
   rector: {fileID: 721691369}
   dialogueLines:
   - speaker: 0
-    textId: test
+    textId: BAdending
     choices: []
   - speaker: 0
-    textId: test2
+    textId: BAdending_1
     choices: []
   - speaker: 0
-    textId: test
+    textId: BAdending_2
     choices: []
   - speaker: 2
-    textId: test3
+    textId: BAdending_3
+    choices: []
+  - speaker: 0
+    textId: BAdending_4
     choices: []
   badEndingFlag: bad_ending_obtained
   badEndingText: BAD ENDING

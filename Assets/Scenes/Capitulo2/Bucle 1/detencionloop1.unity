@@ -10141,7 +10141,7 @@ MonoBehaviour:
   promptKey: promptInteractDefault
   lines:
   - speaker: 0
-    textId: test
+    textId: ventilacion
     choices: []
   fadeOutOnEnd: 0
   onMessageEnded:
