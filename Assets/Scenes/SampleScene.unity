@@ -746,6 +746,66 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 296793072}
   m_CullTransparentMesh: 1
+--- !u!1001 &356033562
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 751c6228a985f544199e11da0abd800f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.48
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 751c6228a985f544199e11da0abd800f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.143
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 751c6228a985f544199e11da0abd800f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.34
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 751c6228a985f544199e11da0abd800f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 751c6228a985f544199e11da0abd800f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 751c6228a985f544199e11da0abd800f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 751c6228a985f544199e11da0abd800f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 751c6228a985f544199e11da0abd800f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 751c6228a985f544199e11da0abd800f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 751c6228a985f544199e11da0abd800f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 751c6228a985f544199e11da0abd800f, type: 3}
+      propertyPath: m_Name
+      value: juggernaut
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 751c6228a985f544199e11da0abd800f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1344094791}
+  m_SourcePrefab: {fileID: 100100000, guid: 751c6228a985f544199e11da0abd800f, type: 3}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1125,7 +1185,6 @@ MonoBehaviour:
   detailName: {fileID: 1622882166}
   detailDescription: {fileID: 1471508134}
   useButton: {fileID: 1032280579}
-  combineButton: {fileID: 1869285966}
 --- !u!114 &828156183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2083,6 +2142,33 @@ MonoBehaviour:
   - {fileID: 1030357086}
   - {fileID: 173137593}
   - {fileID: 1625307673}
+--- !u!1 &1344094790 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 751c6228a985f544199e11da0abd800f, type: 3}
+  m_PrefabInstance: {fileID: 356033562}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1344094791
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344094790}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 751c6228a985f544199e11da0abd800f, type: 3}
+  m_Controller: {fileID: 9100000, guid: bb15b7ec24dd7b84c9b90ba01caa7e84, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1416000466
 GameObject:
   m_ObjectHideFlags: 0
@@ -2211,6 +2297,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineColor: {r: 0.015686274, g: 0.376501, b: 1, a: 1}
   outlineWidth: 0.04
+  emissionIntensity: 2.5
 --- !u!114 &1416000473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2224,18 +2311,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionRange: 2.5
-  interactionPrompt: Interact
+  promptKey: promptInteractDefault
   lines:
   - speaker: 0
-    text: "Increible si funciona sadsadsadasdasdsadsadsadasdsadasdsadasdass \nIncreible
-      si funciona\nIncreible si funciona\nIncreible si funciona\nIncreible si funciona\nIncreible
-      si funciona\n"
+    textId: 
     choices: []
   - speaker: 1
-    text: 'Increible si funciona
-
-'
+    textId: 
     choices: []
+  fadeOutOnEnd: 1
+  onMessageEnded:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1427156343
 GameObject:
   m_ObjectHideFlags: 0
@@ -2673,6 +2760,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   outlineWidth: 0.02
+  emissionIntensity: 2.5
 --- !u!65 &1524549818
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2764,7 +2852,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionRange: 2.5
-  interactionPrompt: Interact
+  promptKey: promptInteractDefault
   item: {fileID: 11400000, guid: 8dcab014c30f29a4c9a26eeaa1595fe5, type: 2}
 --- !u!1 &1622882164
 GameObject:
@@ -3701,3 +3789,4 @@ SceneRoots:
   - {fileID: 850507258}
   - {fileID: 103747905}
   - {fileID: 607551487}
+  - {fileID: 356033562}
