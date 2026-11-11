@@ -69,3 +69,8 @@ aula_pizarron_03;Todo lo demás está rayado.;Everything else is scratched out.
 aula_llave_01;¿Para qué será…?;What could this be for…?
 aula_llave_popup;Encontraste una llave;You found a key
 door_locked;Está cerrada con llave.;It's locked.
+hallwaydialogue;"...Espera, esto es raro... ¿Esto no era un laberinto?";"...Wait, this is weird... Wasn't this a maze?"
+hallwaydialogue_1;"¿Y ahora es un pasillo?";"And now it's a hallway?"
+hallwaydialogue_2;"¿Qué está pasando aquí?...";"What is going on here?..."
+dialogueHal;"¿Esto es extraño?";"Is this strange?"
+dialogueHal_1;"¿De verdad había un laberinto aquí?";"Was there really a maze here?"

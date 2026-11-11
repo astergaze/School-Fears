@@ -12371,6 +12371,86 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d60b296c20aec1044beb948655f84e03, type: 3}
+--- !u!1 &1327459330
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1327459333}
+  - component: {fileID: 1327459332}
+  - component: {fileID: 1327459331}
+  m_Layer: 0
+  m_Name: SpawnDialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1327459331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327459330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a2064ac03749a815aabb105e5700472, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TriggerSceneChoice
+  lines:
+  - speaker: 0
+    textId: hallwaydialogue
+    choices: []
+  - speaker: 0
+    textId: hallwaydialogue_1
+    choices: []
+  - speaker: 0
+    textId: hallwaydialogue_2
+    choices: []
+  leaveActionId: 
+  sceneToLoad: 
+  oneShot: 1
+  persistentFlagId: spawndialogue
+--- !u!65 &1327459332
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327459330}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1327459333
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327459330}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.7155163, z: -0, w: 0.6985961}
+  m_LocalPosition: {x: -1.074, y: 0.49699998, z: 0.999}
+  m_LocalScale: {x: 2.1624, y: 1, z: 1.9487695}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 91.371, z: 0}
 --- !u!1001 &1337215010
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12437,6 +12517,83 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7804796509305436187, guid: fb10d4d8e2fa8c842bcd92066522fb0d, type: 3}
   m_PrefabInstance: {fileID: 792813325}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1375069705
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1375069708}
+  - component: {fileID: 1375069707}
+  - component: {fileID: 1375069706}
+  m_Layer: 0
+  m_Name: dialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1375069706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375069705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a2064ac03749a815aabb105e5700472, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TriggerSceneChoice
+  lines:
+  - speaker: 0
+    textId: dialogueHal
+    choices: []
+  - speaker: 0
+    textId: dialogueHal_1
+    choices: []
+  leaveActionId: 
+  sceneToLoad: 
+  oneShot: 1
+  persistentFlagId: dialoguehallway
+--- !u!65 &1375069707
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375069705}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1375069708
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375069705}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.7052908, z: -0, w: 0.7089182}
+  m_LocalPosition: {x: -9.97, y: 0.49699998, z: 33.12}
+  m_LocalScale: {x: 2.1624, y: 1, z: 6.792544}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 89.706, z: 0}
 --- !u!4 &1378661575 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5093501582127412395, guid: 526d1a29af1de244a87c3f906b1fe0c3, type: 3}
@@ -18902,6 +19059,7 @@ MonoBehaviour:
   leaveActionId: leave_scene
   sceneToLoad: Hallway bad side
   oneShot: 1
+  persistentFlagId: 
 --- !u!65 &2044487006
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20214,6 +20372,8 @@ SceneRoots:
   - {fileID: 178981011}
   - {fileID: 1908522493}
   - {fileID: 1778870598}
+  - {fileID: 1327459333}
+  - {fileID: 1375069708}
   - {fileID: 661714163}
   - {fileID: 1573981437}
   - {fileID: 37807980}

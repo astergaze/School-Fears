@@ -7371,6 +7371,7 @@ MonoBehaviour:
   leaveActionId: 
   sceneToLoad: 
   oneShot: 1
+  persistentFlagId: maze_spawn_intro
 --- !u!65 &806083564
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10528,6 +10529,7 @@ MonoBehaviour:
   leaveActionId: 
   sceneToLoad: 
   oneShot: 1
+  persistentFlagId: dialogue1
 --- !u!65 &1067043536
 BoxCollider:
   m_ObjectHideFlags: 0
