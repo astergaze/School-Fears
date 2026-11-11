@@ -25,6 +25,8 @@ public class ClassroomExitDoor : Interactable
     [SerializeField] private int requiredNotesCount = 4;
 
     [Header("Opción Especial (Hallway)")]
+    [Tooltip("Destildalo en objetos que NO son la puerta del aula (por ej. una ventilación) para que nunca aparezca la opción secreta hacia Hallway.")]
+    [SerializeField] private bool enableSpecialOption = true;
     [Tooltip("ID de localización para la opción especial (ej: 'doorSpecialHallwayOptn'). Si no existe en CSV, usa directSpecialChoiceText")]
     [SerializeField] private string specialChoiceTextId = "doorSpecialHallwayOptn";
     [SerializeField] private string directSpecialChoiceText = "¿El pomo se ve... raro?";
@@ -57,7 +59,7 @@ public class ClassroomExitDoor : Interactable
         if (baseLines == null || baseLines.Length == 0) return baseLines;
 
         // Verificamos si el jugador cumple con las 4 notas
-        bool hasAllNotes = CheckPlayerHasAllNotes(player);
+        bool hasAllNotes = enableSpecialOption && CheckPlayerHasAllNotes(player);
 
         // Creamos una copia superficial del array de líneas
         DialogueLine[] linesCopy = new DialogueLine[baseLines.Length];
