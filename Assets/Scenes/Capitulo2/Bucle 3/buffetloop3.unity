@@ -1080,6 +1080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2e8b02c32ee1ce4e9f4c02d6b54473f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BadEndingTrigger
+  rector: {fileID: 721691369}
   dialogueLines:
   - speaker: 0
     textId: test
@@ -1097,6 +1098,11 @@ MonoBehaviour:
   badEndingText: BAD ENDING
   delayBeforeMenu: 5
   menuSceneName: menu
+  scrollSpeed: 80
+  endHold: 1.5
+  creditsFadeIn: 1.5
+  skipKey: 19
+  skipHintText: 'Saltar [E]'
   endingSound: {fileID: 0}
 --- !u!1001 &89845434
 PrefabInstance:
@@ -20332,6 +20338,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5f1cebdce8d53446b3e93f54cb566f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VolumetricLightFeed
+  occlusion: 1
+  occluders:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  debugRays: 0
 --- !u!114 &1643293148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20378,7 +20389,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1

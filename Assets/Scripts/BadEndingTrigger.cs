@@ -6,16 +6,21 @@ using UnityEngine.UI;
 
 /// <summary>
 /// Trigger para el final malo (Bad Ending) en el Buffet.
-/// 1. Mantiene/ejecuta un Fade to Black.
-/// 2. Despliega la secuencia de diálogos.
-/// 3. Al concluir el diálogo, registra el flag, sincroniza la partida con el servidor (SaveManager)
+/// 1. Congela la IA del Rector para que deje de patrullar.
+/// 2. Mantiene/ejecuta un Fade to Black.
+/// 3. Despliega la secuencia de diálogos.
+/// 4. Al concluir el diálogo, registra el flag, sincroniza la partida con el servidor (SaveManager)
 ///    y muestra la pantalla de Bad Ending.
-/// 4. Después muestra los créditos con scroll lento de abajo hacia arriba (se puede saltear con E).
-/// 5. Regresa al menú principal.
+/// 5. Después muestra los créditos con scroll lento de abajo hacia arriba (se puede saltear con E).
+/// 6. Regresa al menú principal.
 /// </summary>
 [RequireComponent(typeof(Collider))]
 public class BadEndingTrigger : MonoBehaviour
 {
+    [Header("Referencias Opcionales")]
+    [Tooltip("Si se deja vacío, el script buscará automáticamente la IA del Rector en la escena.")]
+    [SerializeField] private BuffetRectorAI rector;
+
     [Header("Diálogos")]
     [SerializeField] private DialogueLine[] dialogueLines;
 
@@ -81,6 +86,10 @@ public class BadEndingTrigger : MonoBehaviour
 
     private IEnumerator ExecuteSequence()
     {
+        // 0. Congelar la IA del Rector (detiene el NavMeshAgent y corta los sonidos de pasos)
+        if (rector == null) rector = FindFirstObjectByType<BuffetRectorAI>();
+        if (rector != null) rector.StopAndFreeze();
+
         // 1. Bloquear entradas e iniciar Fade to Black
         SceneTransitioner.IsTransitioning = true;
         InteractionPromptUI.Instance?.HidePrompt();
@@ -153,8 +162,6 @@ public class BadEndingTrigger : MonoBehaviour
         float viewportH = view.viewport.rect.height;
         float contentH = view.content.rect.height;
 
-        // y = 0 -> el borde superior del texto está en el borde superior de la pantalla.
-        // Arranca justo debajo de la pantalla y termina cuando el final del texto salió por arriba.
         float y = -viewportH;
         float endY = contentH;
         float fadeT = 0f;
@@ -218,7 +225,7 @@ public class BadEndingTrigger : MonoBehaviour
         text.font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
         text.fontSize = 54;
         text.alignment = TextAnchor.MiddleCenter;
-        text.color = new Color(0.8f, 0.1f, 0.1f, 1f); // Rojo carmesí
+        text.color = new Color(0.8f, 0.1f, 0.1f, 1f);
 
         var textRect = textGO.GetComponent<RectTransform>();
         textRect.anchorMin = Vector2.zero;
@@ -229,11 +236,6 @@ public class BadEndingTrigger : MonoBehaviour
         return canvasGO;
     }
 
-    /// <summary>
-    /// Crea la pantalla de créditos: fondo negro, un viewport con máscara y un único Text
-    /// (título + todas las secciones) que se desplaza hacia arriba. Abajo a la derecha
-    /// queda fijo el aviso para saltear.
-    /// </summary>
     private CreditsView BuildCreditsUI()
     {
         GameObject canvasGO = new GameObject("CreditsCanvas_Runtime");
@@ -261,14 +263,14 @@ public class BadEndingTrigger : MonoBehaviour
         bgImage.color = Color.black;
         Stretch(bgGO.GetComponent<RectTransform>());
 
-        // Viewport con máscara (el texto se recorta en los bordes de la pantalla)
+        // Viewport con máscara
         GameObject viewportGO = new GameObject("Viewport", typeof(RectTransform));
         viewportGO.transform.SetParent(canvasGO.transform, false);
         viewportGO.AddComponent<RectMask2D>();
         var viewportRect = viewportGO.GetComponent<RectTransform>();
         Stretch(viewportRect);
 
-        // Texto del scroll: título + secciones en un solo Text con rich text
+        // Texto del scroll
         var sb = new System.Text.StringBuilder();
         sb.Append("<size=64><b><color=#2c00da>CRÉDITOS</color></b></size>\n\n\n");
         int count = Credits.GetLength(0);
@@ -303,9 +305,9 @@ public class BadEndingTrigger : MonoBehaviour
         contentRect.pivot = new Vector2(0.5f, 1f);
         contentRect.offsetMin = new Vector2(0f, 0f);
         contentRect.offsetMax = new Vector2(0f, 0f);
-        contentRect.anchoredPosition = new Vector2(0f, -2000f); // fuera de pantalla hasta el primer frame
+        contentRect.anchoredPosition = new Vector2(0f, -2000f);
 
-        // Aviso para saltear (fijo, abajo a la derecha, fuera del viewport)
+        // Aviso para saltear
         GameObject hintGO = new GameObject("SkipHint");
         hintGO.transform.SetParent(canvasGO.transform, false);
         var hint = hintGO.AddComponent<Text>();
@@ -335,7 +337,6 @@ public class BadEndingTrigger : MonoBehaviour
 
     private void ReturnToMenu()
     {
-        // Limpieza de singletons persistentes
         if (Player.Instance != null) Destroy(Player.Instance.gameObject);
         if (GameManager.Instance != null) Destroy(GameManager.Instance.gameObject);
         if (DialogueManager.Instance != null) Destroy(DialogueManager.Instance.gameObject);

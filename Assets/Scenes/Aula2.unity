@@ -8388,7 +8388,7 @@ MonoBehaviour:
   fadeOutOnEnd: 0
   objectivePopupId: 
   objectivePopupText: 
-  pickupSound: {fileID: 0}
+  pickupSound: {fileID: 8300000, guid: 8c874196c7978a841a2a72a9d1ab844f, type: 3}
   onNotePickedUp:
     m_PersistentCalls:
       m_Calls: []
@@ -12646,6 +12646,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PauseMenu
   pauseMenuUI: {fileID: 1825086676}
   isPaused: 0
+  menuSceneName: menu
 --- !u!114 &2032404469
 MonoBehaviour:
   m_ObjectHideFlags: 0

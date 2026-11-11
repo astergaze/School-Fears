@@ -5310,6 +5310,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PauseMenu
   pauseMenuUI: {fileID: 1166497692}
   isPaused: 0
+  menuSceneName: menu
 --- !u!114 &751758358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8891,7 +8892,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f3274a56c2d752e4a8569bba3422aa6f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.061
+      value: -1.994
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f3274a56c2d752e4a8569bba3422aa6f, type: 3}
       propertyPath: m_LocalPosition.y

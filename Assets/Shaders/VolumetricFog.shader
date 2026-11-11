@@ -63,6 +63,18 @@ Shader "Custom/VolumetricFog"
             float3 _VLightColor;
             float _VLightIntensity;
 
+            // Mapa de oclusión del haz (VolumetricLightFeed.cs): distancia hasta el primer obstáculo
+            // desde la luz, muestreada en una grilla polar (azimut x ángulo respecto al eje del cono).
+            // VOCC_AZ / VOCC_POL deben coincidir con OccAz / OccPol en VolumetricLightFeed.cs.
+            // _VLightOccEnabled = 0 (por defecto, o luz apagada) -> sin oclusión, comportamiento anterior.
+            #define VOCC_AZ 24
+            #define VOCC_POL 6
+            float4 _VLightOcc[(VOCC_AZ * VOCC_POL) / 4];
+            float3 _VLightRightWS;
+            float3 _VLightUpWS;
+            float _VLightOccMaxAngle;
+            float _VLightOccEnabled;
+
             // Linterna del jugador (FlashlightController.cs, también globales).
             // _FlashStrength = 0 -> efecto desactivado, el resto de valores se ignora.
             float3 _FlashPositionWS;
@@ -91,9 +103,45 @@ Shader "Custom/VolumetricFog"
                 return frac(magic.z * frac(dot(pixelCoord, magic.xy)));
             }
 
+            float VOccAt(int az, int pol)
+            {
+                int idx = pol * VOCC_AZ + az;
+                return _VLightOcc[idx >> 2][idx & 3];
+            }
+
+            // 1 = el punto ve la luz, 0 = hay un obstáculo entre la luz y el punto.
+            // dirFromLight: dirección normalizada luz -> punto. dist: distancia luz -> punto.
+            float VLightVisibility(float3 dirFromLight, float3 lightDirN, float dist)
+            {
+                float x = dot(dirFromLight, _VLightRightWS);
+                float y = dot(dirFromLight, _VLightUpWS);
+                float z = clamp(dot(dirFromLight, lightDirN), -1.0, 1.0);
+
+                float theta = acos(z);
+                float phi = atan2(y, x);
+
+                // Azimut con wrap (interpola entre sectores vecinos)
+                float u = (phi / 6.28318530 + 0.5) * VOCC_AZ;
+                float uf = frac(u);
+                int a0 = ((int)floor(u)) % VOCC_AZ;
+                int a1 = (a0 + 1) % VOCC_AZ;
+
+                // Ángulo polar (clamp: más allá del cono el spot ya vale 0)
+                float v = saturate(theta / max(_VLightOccMaxAngle, 1e-4)) * (VOCC_POL - 1);
+                int p0 = min((int)floor(v), VOCC_POL - 1);
+                int p1 = min(p0 + 1, VOCC_POL - 1);
+                float vf = v - p0;
+
+                float d0 = lerp(VOccAt(a0, p0), VOccAt(a1, p0), uf);
+                float d1 = lerp(VOccAt(a0, p1), VOccAt(a1, p1), uf);
+                float occDist = lerp(d0, d1, vf);
+
+                return 1.0 - smoothstep(occDist - 0.05, occDist + 0.25, dist);
+            }
+
             // Ray march simple cámara -> worldPos, acumulando scattering de la spot light.
-            // No consulta shadow maps (no hay oclusión real todavía): si el haz pasa "a través"
-            // de una pared visualmente notorio, se puede agregar sampleo de sombra más adelante.
+            // La oclusión (paredes, mostradores) viene de un mapa de distancias armado con
+            // raycasts en VolumetricLightFeed.cs; no usa shadow maps de URP.
             float3 ComputeVolumetricScatter(float3 camPos, float3 worldPos, float noise)
             {
                 float3 toEnd = worldPos - camPos;
@@ -130,7 +178,12 @@ Shader "Custom/VolumetricFog"
                     float g = _LightScatterG;
                     float phase = (1.0 - g * g) / (4.0 * 3.14159265 * pow(max(1.0 + g * g - 2.0 * g * cosTheta, 1e-4), 1.5));
 
-                    accum += rangeAtten * spotAtten * phase * stepLen;
+                    // Oclusión: si hay un obstáculo entre la luz y este punto, no hay haz
+                    float vis = 1.0;
+                    if (_VLightOccEnabled > 0.5 && rangeAtten * spotAtten > 0.0)
+                        vis = VLightVisibility(-dirToLight, lightDirN, distToLight);
+
+                    accum += rangeAtten * spotAtten * vis * phase * stepLen;
                 }
 
                 return _VLightColor * _VLightIntensity * _LightScatterColor.rgb * _LightScatterIntensity * accum;
