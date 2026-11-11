@@ -1342,7 +1342,7 @@ Transform:
   m_GameObject: {fileID: 97593550}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.32, y: 0.41, z: 22.04}
+  m_LocalPosition: {x: 12.07, y: 0.41, z: 22.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4201,6 +4201,83 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aec3dd3c4cc057a468e3cfec4f7523ad, type: 3}
+--- !u!1 &299005095
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 299005098}
+  - component: {fileID: 299005097}
+  - component: {fileID: 299005096}
+  m_Layer: 0
+  m_Name: SpawnDialogue (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &299005096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299005095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a2064ac03749a815aabb105e5700472, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TriggerSceneChoice
+  lines:
+  - speaker: 0
+    textId: HallwayBsideDialogue
+    choices: []
+  - speaker: 0
+    textId: HallwayBsideDialogue_1
+    choices: []
+  leaveActionId: 
+  sceneToLoad: 
+  oneShot: 1
+  persistentFlagId: spawndialogue
+--- !u!65 &299005097
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299005095}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &299005098
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299005095}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.7155163, z: -0, w: 0.6985961}
+  m_LocalPosition: {x: -9.687, y: 0.49699998, z: 12.848}
+  m_LocalScale: {x: 1.5854448, y: 1, z: 6.1898766}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 91.371, z: 0}
 --- !u!1001 &304293795
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11047,6 +11124,83 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aec3dd3c4cc057a468e3cfec4f7523ad, type: 3}
+--- !u!1 &845685298
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 845685301}
+  - component: {fileID: 845685300}
+  - component: {fileID: 845685299}
+  m_Layer: 0
+  m_Name: SpawnDialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &845685299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845685298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a2064ac03749a815aabb105e5700472, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TriggerSceneChoice
+  lines:
+  - speaker: 0
+    textId: HallwayBside
+    choices: []
+  - speaker: 0
+    textId: HallwayBside_1
+    choices: []
+  leaveActionId: 
+  sceneToLoad: 
+  oneShot: 1
+  persistentFlagId: spawndialogue
+--- !u!65 &845685300
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845685298}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &845685301
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845685298}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.7155163, z: -0, w: 0.6985961}
+  m_LocalPosition: {x: -9.89, y: 0.49699998, z: 4.06}
+  m_LocalScale: {x: 5.9904966, y: 1, z: 6.1898766}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 91.371, z: 0}
 --- !u!1 &852970422
 GameObject:
   m_ObjectHideFlags: 0
@@ -27158,6 +27312,89 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7501932837591191792, guid: d60b296c20aec1044beb948655f84e03, type: 3}
   m_PrefabInstance: {fileID: 1944603576}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1936686272
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1936686275}
+  - component: {fileID: 1936686274}
+  - component: {fileID: 1936686273}
+  m_Layer: 0
+  m_Name: SpawnDialogue (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1936686273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936686272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a2064ac03749a815aabb105e5700472, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TriggerSceneChoice
+  lines:
+  - speaker: 0
+    textId: HallwayBsideDialogue2
+    choices: []
+  - speaker: 0
+    textId: HallwayBsideDialogue2_1
+    choices: []
+  - speaker: 0
+    textId: HallwayBsideDialogue2_2
+    choices: []
+  - speaker: 0
+    textId: HallwayBsideDialogue2_3
+    choices: []
+  leaveActionId: 
+  sceneToLoad: 
+  oneShot: 1
+  persistentFlagId: spawndialogue
+--- !u!65 &1936686274
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936686272}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1936686275
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936686272}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.7155163, z: -0, w: 0.6985961}
+  m_LocalPosition: {x: 9.23, y: 0.49699998, z: 22.91}
+  m_LocalScale: {x: 24.6554, y: 1, z: 1.5886319}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 91.371, z: 0}
 --- !u!4 &1940162877 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7501932837591191792, guid: d60b296c20aec1044beb948655f84e03, type: 3}
@@ -29371,3 +29608,6 @@ SceneRoots:
   - {fileID: 922230739}
   - {fileID: 992868069}
   - {fileID: 877488533}
+  - {fileID: 845685301}
+  - {fileID: 299005098}
+  - {fileID: 1936686275}

@@ -6017,6 +6017,89 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &264733677
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 264733680}
+  - component: {fileID: 264733679}
+  - component: {fileID: 264733678}
+  m_Layer: 0
+  m_Name: dialogue1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &264733678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264733677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a2064ac03749a815aabb105e5700472, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TriggerSceneChoice
+  lines:
+  - speaker: 0
+    textId: auladestroyedspawn
+    choices: []
+  - speaker: 0
+    textId: auladestroyedspawn_1
+    choices: []
+  - speaker: 0
+    textId: auladestroyedspawn_2
+    choices: []
+  - speaker: 0
+    textId: auladestroyedspawn_3
+    choices: []
+  leaveActionId: 
+  sceneToLoad: 
+  oneShot: 1
+  persistentFlagId: dialogue1
+--- !u!65 &264733679
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264733677}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &264733680
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264733677}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.706717, z: -0, w: 0.70749646}
+  m_LocalPosition: {x: -1.2, y: 0.497, z: -1.1}
+  m_LocalScale: {x: 1.5463762, y: 1, z: 2.4672396}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 89.937, z: 0}
 --- !u!1 &321903262
 GameObject:
   m_ObjectHideFlags: 0
@@ -6498,6 +6581,80 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.006000003, y: 0.007000004, z: 0.009500003}
   m_Center: {x: -0.000008977372, y: 0.00072015845, z: 0.004749255}
+--- !u!1 &457166034
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 457166037}
+  - component: {fileID: 457166036}
+  - component: {fileID: 457166035}
+  m_Layer: 0
+  m_Name: dialogue1 (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &457166035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 457166034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a2064ac03749a815aabb105e5700472, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TriggerSceneChoice
+  lines:
+  - speaker: 0
+    textId: auladestroyedDialogue2
+    choices: []
+  leaveActionId: 
+  sceneToLoad: 
+  oneShot: 1
+  persistentFlagId: dialogue1
+--- !u!65 &457166036
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 457166034}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &457166037
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 457166034}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.706717, z: -0, w: 0.70749646}
+  m_LocalPosition: {x: -10.41, y: 0.497, z: -3.72}
+  m_LocalScale: {x: 7.8873043, y: 1, z: 3.0635169}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 89.937, z: 0}
 --- !u!1001 &457705038
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11458,6 +11615,80 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1171562731}
   m_CullTransparentMesh: 1
+--- !u!1 &1178065760
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1178065763}
+  - component: {fileID: 1178065762}
+  - component: {fileID: 1178065761}
+  m_Layer: 0
+  m_Name: dialogue1 (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1178065761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178065760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a2064ac03749a815aabb105e5700472, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TriggerSceneChoice
+  lines:
+  - speaker: 0
+    textId: auladestroyedDialogue1
+    choices: []
+  leaveActionId: 
+  sceneToLoad: 
+  oneShot: 1
+  persistentFlagId: dialogue1
+--- !u!65 &1178065762
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178065760}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1178065763
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178065760}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.706717, z: -0, w: 0.70749646}
+  m_LocalPosition: {x: -5.298, y: 0.497, z: -5.679}
+  m_LocalScale: {x: 4.6553955, y: 1, z: 0.586218}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 89.937, z: 0}
 --- !u!1001 &1181889276
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12128,6 +12359,83 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2243267685414283819, guid: a3abc8f423aaf4747a95c36f13779b5b, type: 3}
   m_PrefabInstance: {fileID: 1881559337}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1265253227
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1265253230}
+  - component: {fileID: 1265253229}
+  - component: {fileID: 1265253228}
+  m_Layer: 0
+  m_Name: dialogue1 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1265253228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265253227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a2064ac03749a815aabb105e5700472, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TriggerSceneChoice
+  lines:
+  - speaker: 0
+    textId: auladestroyedDialogue
+    choices: []
+  - speaker: 0
+    textId: auladestroyedDialogue_1
+    choices: []
+  leaveActionId: 
+  sceneToLoad: 
+  oneShot: 1
+  persistentFlagId: dialogue1
+--- !u!65 &1265253229
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265253227}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1265253230
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265253227}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.706717, z: -0, w: 0.70749646}
+  m_LocalPosition: {x: -6.19, y: 0.497, z: -7.88}
+  m_LocalScale: {x: 0.7289317, y: 1, z: 12.448098}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 89.937, z: 0}
 --- !u!1001 &1267252676
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18594,3 +18902,7 @@ SceneRoots:
   - {fileID: 2046757426}
   - {fileID: 582673096}
   - {fileID: 737719320}
+  - {fileID: 264733680}
+  - {fileID: 1265253230}
+  - {fileID: 1178065763}
+  - {fileID: 457166037}
